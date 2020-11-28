@@ -1,0 +1,79 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Gestionando mi máquina virtual vía web</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="name" content="Carlos Javier Oliva Domínguez" />
+	<link rel="stylesheet" type="text/css" href="/static/style.css"/>
+</head>
+
+<body>
+	<div class="contenedor">
+        <div class="title">
+            <table border="0">
+                <h1>{{vmachine.name}}</h1>
+                <h2 style="color:steelblue;">{{vmachine.os}}</h2>
+                <tr>
+                    <td>{{vmachine.get_status()}}</td>
+                    <td width="135"></td>
+                    <td><a href="/change_status/0" name="stop">Parar</a></td>
+                    <td><a href="/change_status/1" name="start">Arrancar</a></td>
+                    <td><a href="/change_status/2" name="suspend">Suspender</a></td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <br>
+        <div class="results_table">
+            <table border="0">
+                <tr>
+                  <td width="500"></td>
+                  <td width="500">Total</td>
+                  <td width="500">%Usado</td>
+                </tr>
+                <tr>
+                    <td bgcolor="#F9EBBD" width="500">CPU</td>
+                    <td bgcolor="#F9EBBD">{{vmachine.cpu}}Ghz</td>
+                    <td bgcolor="#F9EBBD">{{vmachine.cpu_usage()}}%</td>
+                </tr>
+                <tr>
+                  <td>RAM</td>
+                  <td>{{vmachine.ram}}GB</td>
+                  <td>{{vmachine.ram_usage()}}%</td>
+                </tr>
+                <tr>
+                  <td bgcolor="#F9EBBD">HDD</td>
+                  <td bgcolor="#F9EBBD">{{vmachine.hdd}}MB</td>
+                  <td bgcolor="#F9EBBD">{{vmachine.hdd_usage()}}%</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="lanzador"><a href="/run_process">Lanzar proceso!!!</a></div>
+        <br/>
+        <br/>
+        <div class="proceso">
+            <div class="process_table">
+            <table border="0" width="100%">
+                <tr>
+                    <td>{% for p in vmachine.proc %}
+                PID: {{p["pid"]}}</td>
+                </tr>
+                <tr>
+                <td>RAM: {{p["ram"]}} GB |
+                    CPU: {{p["cpu"]}} GHz |
+                    HDD: {{p["hdd"]}} GB 
+                </td>
+                </tr>
+                <tr>
+                    <td><br>{%endfor%}</td>
+                </tr>
+            </table>
+                
+        </div>
+        </div>
+</body>
+</html>

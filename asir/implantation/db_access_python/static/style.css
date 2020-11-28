@@ -1,0 +1,36 @@
+.contenedor {border-radius: 35px;
+background-color: lightblue;
+height: 280px;
+width: 350px;
+float: left;
+}
+.title h1 {color: red;
+padding-left: 2%;
+}
+
+.title h2 {margin: 0 auto;
+padding-left: 2%}
+
+body {padding: 20px;
+	margin: 20px 60px;
+    background-color: antiquewhite;
+}
+.title table {	font-family: arial;
+	border: 5px yellow;
+	font-size: 70%;
+	margin: 0 auto;
+    float: left;}
+
+.results_table  {padding: 0%;
+    border-radius: 10px;
+background-color: burlywood;}
+
+.lanzador  {color: black;
+    padding-top: 10px;
+    padding-right: 10px;
+	text-align: right;
+	margin: 0 auto;}
+
+.proceso {background-color: whitesmoke;
+	font-family: arial}
+
