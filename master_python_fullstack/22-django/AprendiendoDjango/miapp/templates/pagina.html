@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% load filters %} 
+
+{% block title %}Página de pruebas{% endblock %}
+
+{% block content %}
+    <h1 class="title">Página de mi web</h1>
+
+    <!--Filtros https://docs.djangoproject.com/en/3.1/ref/templates/builtins/ -->
+    <p>{{ "Creado por Carlos Olivares" | cut:"res"}}</p>
+
+    <p>{{lista|join:', '}}</p>
+
+    <p>{{lista|random }}</p>
+
+    <p>{{lista|length}}</p>
+
+    <p>{{lista|upper}}</p>
+
+    <p>{{lista|lower}}</p>
+
+    <p>{{"<h1>Texto</h1> <strong>Pruebas</strong> hola <p>mundo</p>"|striptags}}</p>
+    <p>{{"<h1>Texto</h1> <strong>Pruebas</strong> hola <p>mundo</p>"|striptags|wordcount}}</p>
+
+    {{"Carlos"|saludo|safe}}
+
+{% endblock %}

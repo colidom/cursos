@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+
+    <!--Esto es un comentario en HTML-->
+    {% comment 'Nota para el comentario' %}
+        <h1>Hola hola</h1>
+    {% endcomment %}
+
+    <h1 class="title">Página de {{title}}</h1>
+
+    <p>{{mi_variable}}</p>
+    
+    {% if nombre and nombre == 'Carlos Oliva'%}
+        <p>{{nombre}}</p>
+    {% else %}
+        <strong>El nombre no existe!</strong>
+    {% endif %}
+    
+    <h3>Listado de lenguajes de programación</h3>
+    <ul>
+    {% for lenguaje in lenguajes %}
+        <!--Primero True-->
+        <li>{{lenguaje}}: {{forloop.first}}</li>
+        <!--Contando desde cero
+        <li>{{lenguaje}}: {{forloop.counter0}}</li>
+        Contando desde el final
+        <li>{{lenguaje}}: {{forloop.revcounter0}}</li>
+        -->
+    {% empty %}
+        <strong>NO HAY LENGUAJES QUE MOSTRAR</strong>
+    {% endfor %}
+    </ul>
+    
+    {% include 'fecha-actual.html' with saludo="Hola mundo desde plantilla" %}
+
+{% endblock %}

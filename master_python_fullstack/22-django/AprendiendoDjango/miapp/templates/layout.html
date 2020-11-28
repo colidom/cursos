@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        
+        {% endblock %}
+        | Carlos Oliva
+    </title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+
+    <!--Cabecera de la página-->
+    <header>
+        <div id="logotipo">
+            <!--Logo Django-->
+            <img src="{% static 'images/django.svg' %}">
+            <h1>Sitio web con Django | Carlos Oliva </h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li><a href="{% url 'hola_mundo' %}">Hola Mundo</a></li>
+            <li><a href="{% url 'pagina' %}">Página pruebas</a></li>
+            <li><a href="{% url 'contacto' %}">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+    
+    <div id="content">
+        <div class="box">
+            {% block content %}
+                <!--Código que viene de templates-->
+                <strong>Contenido del bloque original!!!</strong>
+            {% endblock %}
+        </div>
+    </div>
+
+    <footer>
+        Copyright &copy; {% now "Y" %} · Hecho con <img src="{% static 'images/heart.svg' %}"> por Carlos Oliva Domínguez
+    </footer>
+</body>
+</html>
