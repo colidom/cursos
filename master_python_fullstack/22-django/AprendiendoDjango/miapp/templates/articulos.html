@@ -11,6 +11,11 @@
             <li>
             <h4>{{articulo.id}}.{{articulo.title}}</h4>
             <span>{{articulo.created_at}}</span>
+            {% if articulo.public %}
+                <strong>Publicado</strong>
+            {% else %}
+                <strong>Privado</strong>
+            {% endif %}            
             <p>
                 {{articulo.content}}
                 <br>

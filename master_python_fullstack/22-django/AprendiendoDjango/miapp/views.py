@@ -91,6 +91,12 @@ def articulos(request):
     # Less than equal
     # articulos = Article.objects.filter(id__lte=32)
 
+    articulos = Article.objects.filter(
+        title = 'Articulo',
+    ).exclude(
+        public=False
+    )
+
     return render(request, 'articulos.html',{
         'articulos': articulos
     })
