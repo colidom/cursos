@@ -73,6 +73,21 @@ def editar_articulo(request, id):
     return HttpResponse(f"Artículo editador: {articulo.title} - {articulo.content}")
 
 
+def save_article(request):
+    articulo = Article(
+        title = title,
+        content = content,
+        public = public
+    )
+    articulo.save()
+
+    return HttpResponse(f"Artículo creado: {articulo.title} - {articulo.content}")
+
+def create_article(request):
+
+    return render(request, 'create_article.html')
+
+
 def articulos(request):
     
     articulos = Article.objects.all()
