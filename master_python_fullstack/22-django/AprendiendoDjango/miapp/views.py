@@ -74,14 +74,28 @@ def editar_articulo(request, id):
 
 
 def save_article(request):
-    articulo = Article(
-        title = title,
-        content = content,
-        public = public
-    )
-    articulo.save()
 
-    return HttpResponse(f"Artículo creado: {articulo.title} - {articulo.content}")
+    if request.method == 'GET':    
+
+        title = request.GET['title']
+        if len(title) <= 5:
+            return HttpResponse("El título del artículo es muy pequeño")
+
+        content = request.GET['content']
+        public = request.GET['public']
+
+        articulo = Article(
+            title = title,
+            content = content,
+            public = public
+        )
+        articulo.save()
+        return HttpResponse(f"Artículo creado: {articulo.title} - {articulo.content}")
+
+    else:
+        return HttpResponse("<h2>No se ha podido crear el artículo</h2>")
+
+
 
 def create_article(request):
 
@@ -90,7 +104,7 @@ def create_article(request):
 
 def articulos(request):
     
-    articulos = Article.objects.all()
+    articulos = Article.objects.all().order_by('-id')
     # articulos = Article.objects.order_by('id')[1:3] # Usamos Slicing en la consulta
 
     # Lockups
@@ -106,12 +120,11 @@ def articulos(request):
     # articulos = Article.objects.filter(id__lt=32)
     # Less than equal
     # articulos = Article.objects.filter(id__lte=32)
-
+    """
     articulos = Article.objects.filter(
         Q(title__contains="2") | Q(title__contains="3") | Q(public=True)
     )
 
-    """
     articulos = Article.objects.filter(
         title = 'Articulo',
     ).exclude(
