@@ -70,3 +70,13 @@ def editar_articulo(request, id):
     articulo.save()
 
     return HttpResponse(f"Artículo editador: {articulo.title} - {articulo.content}")
+
+
+def articulos(request):
+    
+    articulos = Article.objects.all()
+
+    return render(request, 'articulos.html',{
+        'articulos': articulos
+    })
+    
