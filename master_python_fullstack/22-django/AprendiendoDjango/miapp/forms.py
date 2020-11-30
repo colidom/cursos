@@ -16,7 +16,7 @@ class FormArticle(forms.Form):
         (0, 'No')
     ]
 
-    select = forms.TypedChoiceField(
+    public = forms.TypedChoiceField(
         label = "¿Publicado?",
         choices = public_options
     )
