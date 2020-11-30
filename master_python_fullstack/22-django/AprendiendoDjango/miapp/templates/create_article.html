@@ -6,4 +6,20 @@
 {% block content %}
     <h1 class="title">Formularios en Django</h1>
 
+    <form action="{% url 'save_article' %}" method="GET">
+    
+        <label for="title">Título</label>
+        <input type="text" name="title" placeholder="Introduce tu nombre"/>
+
+        <label for="content">Contenido</label>
+        <textarea name="content"></textarea>
+        
+        <label for="public">¿Publicado?</label>
+        <select name="public">
+            <option value="1">Si</option>
+            <option value="0">No</option>
+        </select>
+
+        <input type="button" value="Guardar">
+    </form>
 {% endblock %}
