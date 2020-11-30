@@ -74,7 +74,8 @@ def editar_articulo(request, id):
 
 def articulos(request):
     
-    articulos = Article.objects.all()
+    # articulos = Article.objects.all()
+    articulos = Article.objects.order_by('id')[1:3] # Usamos Slicing en la consulta
 
     return render(request, 'articulos.html',{
         'articulos': articulos
