@@ -135,6 +135,48 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
+.box form {
+    width: 40%;
+}
+
+.box form input,
+.box form label {
+    display: block;
+    padding: 5px;
+    padding-left: 0px;
+}
+
+.box form input[type="text"],
+.box form textarea,
+.box form select {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.box form select {
+    width: 100px;
+    padding: 5px;
+}
+
+.box form input[type="submit"],
+.box form input[type="button"],
+.box form button {
+    padding: 10px;
+    margin-top: 5px;
+    background: #2ba977;
+    border: 1px solid #444;
+    color: white;
+    transition: 300ms all;
+}
+
+.box form input[type="submit"]:hover,
+.box form input[type="button"]:hover,
+.box form button {
+    cursor: pointer;
+    background: #1f7e58;
+    transition: 300ms all;
+}
+
 .title {
     color: #444;
     letter-spacing: 1px;
