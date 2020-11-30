@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from miapp.models import Article
 from django.db.models import Q
 from miapp.forms import FormArticle
+from django.contrib import messages
 
 # Create your views here.
 # MVC = Modelo Vista Controlador -> Acciones(métodos)
@@ -88,13 +89,12 @@ def save_article(request):
             public = public
         )
         articulo.save()
-        
+ 
         return redirect('articulos')
         # return HttpResponse(f"Artículo creado: {articulo.title} - {articulo.content}")
 
     else:
         return HttpResponse("<h2>No se ha podido crear el artículo</h2>")
-
 
 
 def create_article(request):
@@ -119,7 +119,14 @@ def create_full_article(request):
                 content = content,
                 public = public
             )
-            return HttpResponse(articulo.title + ' ' + articulo.content + ' ' + str(articulo.public))
+
+            articulo.save()
+
+            # Crear mensaje flash(sesión que solo se muestra una vez)
+            messages.success(request, f"Has creado correctamente el articulo {articulo.id}")
+
+            return redirect('articulos')
+            # return HttpResponse(articulo.title + ' ' + articulo.content + ' ' + str(articulo.public))
 
     else:
         formulario = FormArticle()
