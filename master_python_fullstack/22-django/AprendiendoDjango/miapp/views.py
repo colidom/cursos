@@ -77,6 +77,20 @@ def articulos(request):
     articulos = Article.objects.all()
     # articulos = Article.objects.order_by('id')[1:3] # Usamos Slicing en la consulta
 
+    # Lockups
+    # articulos = Article.objects.filter(title__contains="Articulo")
+    # articulos = Article.objects.filter(title__exact="Articulo")
+    # articulos = Article.objects.filter(title__icontains="Articulo")
+
+    # Greater than
+    # articulos = Article.objects.filter(id__gt=32)
+    # Greater than equal
+    # articulos = Article.objects.filter(id__gte=32)
+    # Less than
+    # articulos = Article.objects.filter(id__lt=32)
+    # Less than equal
+    # articulos = Article.objects.filter(id__lte=32)
+
     return render(request, 'articulos.html',{
         'articulos': articulos
     })
