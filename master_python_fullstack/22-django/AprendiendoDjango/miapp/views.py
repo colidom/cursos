@@ -96,7 +96,9 @@ def articulos(request):
     ).exclude(
         public=False
     )
-
+    # Consulta SQL puro
+    articulos = Article.objects.raw("SELECT * FROM miapp_article WHERE title='Articulo' AND public=0")
+    
     return render(request, 'articulos.html',{
         'articulos': articulos
     })
