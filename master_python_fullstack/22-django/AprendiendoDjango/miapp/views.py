@@ -79,9 +79,6 @@ def save_article(request):
     if request.method == 'POST':    
 
         title = request.POST['title']
-        if len(title) <= 5:
-            return HttpResponse("El título del artículo es muy pequeño")
-
         content = request.POST['content']
         public = request.POST['public']
 

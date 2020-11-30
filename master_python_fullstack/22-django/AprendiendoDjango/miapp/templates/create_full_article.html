@@ -6,6 +6,10 @@
 {% block content %}
     <h1 class="title">Formularios en Django</h1>
 
+    {% if form.errors %}
+        <strong class="rojo">Hay errores en el Formulario</strong>
+    {% endif %}
+
     <form action="{% url 'save_article' %}" method="POST">
     
         {% csrf_token %}
