@@ -48,6 +48,7 @@ def crear_articulo(request, title, content, public):
 
     return HttpResponse(f"Artículo creado: {articulo.title} - {articulo.content}")
 
+
 def articulo(request):
     
     try:
@@ -57,3 +58,15 @@ def articulo(request):
         response = "<h1>Artículo no encontrado!</h1>"
         
     return HttpResponse(response)
+
+
+def editar_articulo(request, id):
+
+    articulo = Article.objects.get(pk=id)
+
+    articulo.title = "Badman"
+    articulo.content = "Pelicula del 2017"
+    articulo.public = False
+    articulo.save()
+
+    return HttpResponse(f"Artículo editador: {articulo.title} - {articulo.content}")
