@@ -47,3 +47,13 @@ def crear_articulo(request, title, content, public):
     articulo.save()
 
     return HttpResponse(f"Artículo creado: {articulo.title} - {articulo.content}")
+
+def articulo(request):
+    
+    try:
+        articulo = Article.objects.get(pk=1, public=True)
+        response = f"Artículo: {articulo.id}-{articulo.title}"
+    except:
+        response = "<h1>Artículo no encontrado!</h1>"
+        
+    return HttpResponse(response)
