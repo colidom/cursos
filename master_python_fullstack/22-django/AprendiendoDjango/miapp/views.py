@@ -38,12 +38,12 @@ def contacto(request, nombre="", apellidos=""):
     return render(request, 'contacto.html')
     
 
-def crear_articulo(request):
+def crear_articulo(request, title, content, public):
     articulo = Article(
-        title = 'Primer artículo!!!',
-        content = 'Contenido del artículo',
-        public = True
+        title = title,
+        content = content,
+        public = public
     )
     articulo.save()
 
-    return HttpResponse("Artículo creado:")
+    return HttpResponse(f"Artículo creado: {articulo.title} - {articulo.content}")
