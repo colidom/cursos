@@ -8,8 +8,8 @@ class Article(models.Model):
     content = models.TextField(verbose_name = "Contenido")
     image = models.ImageField(default='null', verbose_name = "Miniatura")
     public = models.BooleanField(verbose_name = "Público")
-    created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True, auto_now_add=False)
+    created_at = models.DateTimeField(auto_now=False, auto_now_add=True, verbose_name="Creado")
+    updated_at = models.DateTimeField(auto_now=True, auto_now_add=False, verbose_name="Última modificación")
     
     class Meta:
         verbose_name = "Artículo"
