@@ -4,10 +4,10 @@ from django.db import models
 # https://docs.djangoproject.com/en/3.1/ref/models/fields/
 # https://docs.djangoproject.com/en/3.1/ref/models/options/
 class Article(models.Model):
-    title = models.CharField(max_length=150)
-    content = models.TextField()
-    image = models.ImageField(default='null')
-    public = models.BooleanField()
+    title = models.CharField(max_length=150, verbose_name = "Título")
+    content = models.TextField(verbose_name = "Contenido")
+    image = models.ImageField(default='null', verbose_name = "Miniatura")
+    public = models.BooleanField(verbose_name = "Público")
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, auto_now_add=False)
     
@@ -17,8 +17,8 @@ class Article(models.Model):
         ordering = ['-created_at']
 
 class Category(models.Model):
-    name = models.CharField(max_length=110)
-    description = models.CharField(max_length=250)
+    name = models.CharField(max_length=110, verbose_name = "Nombre")
+    description = models.CharField(max_length=250, verbose_name = "Descripción")
     created_at = models.DateField()
     
     class Meta:
