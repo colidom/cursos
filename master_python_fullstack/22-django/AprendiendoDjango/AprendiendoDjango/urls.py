@@ -42,7 +42,11 @@ urlpatterns = [
 ]
 
 # Configurar el título del panel de administración
-admin.site.site_header = "Máster en Python - Carlos Oliva"
+title = "Máster en Python - Carlos Oliva"
+panel = "Panel de gestión"
+admin.site.site_header = title
+admin.site.title_title = title
+admin.site.index_title = panel
 
 # Configuración para cargar imágenes
 if settings.DEBUG:
