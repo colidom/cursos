@@ -15,6 +15,9 @@
     {% endif %}
     <ul>
         {% for articulo in articulos %}
+            {% if articulo.image != 'null' and articulo.image.url|length >= 1 %}
+                <img src="{{articulo.image.url}}">
+            {% endif %}
             <li>
             <h4>{{articulo.id}}.{{articulo.title}}</h4>
             <span>{{articulo.created_at}}</span>
