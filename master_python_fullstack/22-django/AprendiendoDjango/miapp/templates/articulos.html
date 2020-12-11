@@ -13,27 +13,25 @@
             </div>
         {% endfor %}
     {% endif %}
-    <ul>
+
         {% for articulo in articulos %}
-            {% if articulo.image != 'null' and articulo.image.url|length >= 1 %}
-                <img src="{{articulo.image.url}}">
-            {% endif %}
-            <li>
-            <h4>{{articulo.id}}.{{articulo.title}}</h4>
-            <span>{{articulo.created_at}}</span>
-            {% if articulo.public %}
-                <strong>Publicado</strong>
-            {% else %}
-                <strong>Privado</strong>
-            {% endif %}            
-            <p>
-                {{articulo.content}}
-                <br>
-                <a href="{% url 'borrar' articulo.id %}">Eliminar</a>
-            </p>
-            <hr>
-            </li>
+            <article class="article-item">
+                {% if articulo.image != 'null' and articulo.image.url|length >= 1 %}
+                    <div class="image">
+                        <img src="{{articulo.image.url}}"/>
+                    </div>
+                {% endif %}
+                <div class="data">
+                    <h2>{{articulo.title}}</h2>
+                    <span class="date">{{articulo.created_at}}</span>        
+                    <p>
+                        {{articulo.content}}
+                    
+                        <a href="{% url 'borrar' articulo.id %}" class="btn btn-delete">Eliminar</a>
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+            </article>
         {% endfor %}
-    </ul>
 
 {% endblock %}

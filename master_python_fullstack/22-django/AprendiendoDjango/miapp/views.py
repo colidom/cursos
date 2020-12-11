@@ -138,7 +138,7 @@ def create_full_article(request):
 
 def articulos(request):
     
-    articulos = Article.objects.all().order_by('-id')
+    articulos = Article.objects.filter(public=True).order_by('-id')
     # articulos = Article.objects.order_by('id')[1:3] # Usamos Slicing en la consulta
 
     # Lockups
