@@ -17,6 +17,10 @@
                 <p>
                     {% for category in article.categories.all %}
                         <a href="#">{{category}}</a>
+                        
+                        {% if forloop.counter < article.categories.all|length %}
+                            {{'-'}}
+                        {% endif %}
                     {% endfor %}
                 </p>
                 <span class="date">
