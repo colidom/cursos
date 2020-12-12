@@ -70,28 +70,68 @@ nav {
     font-size: 15px;
 }
 
-nav ul {
+nav > ul {
     list-style: none;
     text-decoration: none;
 }
 
-nav ul li {
+nav > ul > li {
     line-height: 40px;
     float: left;
 }
 
-nav ul li a {
+nav > ul > li > a {
     display: block;
     padding-left: 15px;
     padding-right: 15px;
     color: #d1d4d6;
 }
 
-nav ul li a:hover {
+nav > ul > li > a:hover {
     background: #2ba977;
     box-shadow: 0px 0px 5px #444 inset;
     color: white;
     transition: all 500ms;
+}
+
+nav > ul > li > ul {
+    display: none;
+    position: absolute;
+    color: white;
+    text-align: left;
+    width: 160px;
+    box-shadow: 0px 2px 2px gray;
+}
+
+nav > ul > li:hover > ul {
+    display: block;
+    color: white;
+    margin: 0px;
+    list-style: none;
+}
+
+nav > ul > li:hover > ul > li {
+    background: #f2f1f0;
+    border-bottom: 1px solid #d6d6d6;
+    padding:8px;
+    line-height: 25px;
+    font-size: 13px;
+    transition: all 300ms;
+}
+
+nav > ul > li:hover > ul > li a {
+    color: #666;
+    transition: all 300ms;
+}
+
+nav > ul > li:hover > ul > li:hover{
+    background: #2ba977;
+    color: white;
+    transition: all 500ms;
+}
+
+nav > ul > li:hover > ul > li:hover a {
+    color: white;
 }
 
 .barra {
