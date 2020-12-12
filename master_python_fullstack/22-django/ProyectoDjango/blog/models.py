@@ -26,8 +26,8 @@ class Article(models.Model):
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Editado el')
 
     class Meta:
-    verbose_name = 'Artículo'
-    verbose_name_plural = 'Artículos'
-    
+        verbose_name = 'Artículo'
+        verbose_name_plural = 'Artículos'
+        
     def __str__(self):
         return self.name
