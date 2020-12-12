@@ -30,4 +30,4 @@ class Article(models.Model):
         verbose_name_plural = 'Artículos'
         
     def __str__(self):
-        return self.name
+        return self.title
