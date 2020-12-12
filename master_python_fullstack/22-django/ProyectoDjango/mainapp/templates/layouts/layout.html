@@ -31,9 +31,9 @@
             <li>
                 <a href="{% url 'list_articles' %}">Categorías</a>
                 <ul>
-                    <li><a href="{% url 'list_articles' %}">Programación</a></li>
-                    <li><a href="{% url 'list_articles' %}">Desarrollo Web</a></li>
-                    <li><a href="{% url 'list_articles' %}">Sistemas</a></li>
+                    {% for category in categories %}
+                        <li><a href="{% url 'index' %}">{{category.1}}</a></li>
+                    {% endfor %}
                 </ul>
             </li>
             {% for page in pages %}
