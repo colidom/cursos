@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'mainapp',
     'pages.apps.PagesConfig',
+    'blog',
 ]
 
 MIDDLEWARE = [
