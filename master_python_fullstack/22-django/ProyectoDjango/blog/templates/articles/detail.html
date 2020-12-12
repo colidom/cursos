@@ -3,6 +3,14 @@
 {% block title %}{{article.title}}{% endblock title %}
 
 {% block content %}
+
+    {% if article.image != 'null' and article.image.url|length >= 1 %}
+        <div class="image">
+            <img src="{{article.image.url}}"/>
+        </div>
+    {% endif %}
+
+
     <h1 class="title">{{article.title}}</h1>
     <span class="date">{{article.created_at}}</span>
     <p class="content">
