@@ -28,7 +28,9 @@
     <nav>
         <ul>
             <li><a href="{% url 'index' %}">Inicio</a></li>
-            <li><a href="{% url 'about' %}">Sobre nosotros</a></li>
+            {% for page in pages %}
+                <li><a href="#">{{page.1}}</a></li>
+            {% endfor %}
             <li><a href="{% url 'admin' %}">Admin</a></li>
         </ul>
     </nav>
