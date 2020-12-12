@@ -6,7 +6,9 @@
             </div>
         {% endif %}
         <div class="data">
-            <h2>{{article.title}}</h2>
+            <h2>
+                <a href="{% url 'article' article.id %}">{{article.title}}</a>
+            </h2>
             <p>
                 {% for category in article.categories.all %}
                     <a href="{% url 'category' category.id %}">{{category.name}}</a>

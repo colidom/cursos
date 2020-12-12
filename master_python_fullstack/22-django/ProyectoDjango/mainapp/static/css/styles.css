@@ -180,6 +180,15 @@ nav > ul > li:hover > ul > li:hover a {
     margin: 0 auto;
 }
 
+.box a {
+    transition: all 300ms;
+    color: #444;
+}
+
+.box a:hover {
+    color: #1f7e58;
+}
+
 .box form {
     width: 40%;
 }
