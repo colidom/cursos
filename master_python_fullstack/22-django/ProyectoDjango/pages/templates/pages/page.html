@@ -3,9 +3,9 @@
 {% block title %}{{page.title}}{% endblock title %}
 
 {% block content %}
-    <h1>{{page.title}}</h1>
-    <span>{{page.created_at}}</span>
-    <p>
+    <h1 class="title">{{page.title}}</h1>
+    <span class="date">{{page.created_at}}</span>
+    <p class="content">
         {{page.content}}
     </p>
 {% endblock content %}

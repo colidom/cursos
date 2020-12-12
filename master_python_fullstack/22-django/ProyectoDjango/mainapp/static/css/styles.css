@@ -195,17 +195,16 @@ nav ul li a:hover {
     margin-top: 5px;
 }
 
-/* Estilos footer */
-footer {
-    width: 1250px;
-    background-color: #1b1e1f;
-    border: 1px solid #333;
-    color: #d1d4d6;
-    text-align: center;
-    margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    box-shadow: 0px 0px 20px gray;
+.date {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: gray;
+}
+
+.content {
+    line-height: 25px;
+    text-align: justify;
 }
 
 .article-item {
@@ -255,6 +254,19 @@ footer {
     margin-top: 15px;
     width: 100px;
     text-align: center;
+}
+
+/* Estilos footer */
+footer {
+    width: 1250px;
+    background-color: #1b1e1f;
+    border: 1px solid #333;
+    color: #d1d4d6;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 20px gray;
 }
 
 footer img{
