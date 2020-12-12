@@ -1,9 +1,9 @@
 {% extends 'layouts/layout.html' %}
 
-{% block title %}{{title}}{% endblock title %}
+{% block title %}{{category.name}}{% endblock title %}
 
 {% block content %}
-    <h1 class="title">{{title}}</h1>
+    <h1 class="title">{{category.name}}</h1>
 
     {% include 'articles/articles.html' %}
 
