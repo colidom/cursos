@@ -1,14 +1,21 @@
 from django.shortcuts import render, get_object_or_404
+from django.core.paginator import Paginator
 from blog.models import Category, Article
 
 # Create your views here.
 def list(request):
 
+    # Sacar artículos
     articles = Article.objects.all()
+    # Paginar artículos
+    paginator = Paginator(articles, 2)
+    # Recoger número página
+    page = request.GET.get('page')
+    page_articles = paginator.get_page(page)
 
     return render(request, 'articles/list.html', {
         'title': 'Artículos',
-        'articles': articles
+        'articles': page_articles
     })
 
 def category(request, category_id):
