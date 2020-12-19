@@ -19,7 +19,7 @@ class Article(models.Model):
     title = models.CharField(max_length=150, verbose_name='Título')
     content = RichTextField(verbose_name='Contenido')
     image = models.ImageField(default='null', verbose_name='Imágen', upload_to='articles')
-    public = models.BooleanField(verbose_name='¿Publicado')
+    public = models.BooleanField(verbose_name='¿Publicado?')
     user = models.ForeignKey(User, editable=False, on_delete=models.CASCADE, verbose_name='Usuario')
     categories = models.ManyToManyField(Category,  verbose_name='Categorías', blank=True)
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Creado el')
