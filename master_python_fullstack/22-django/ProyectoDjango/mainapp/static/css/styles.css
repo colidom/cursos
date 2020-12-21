@@ -242,12 +242,17 @@ nav > ul > li:hover > ul > li:hover a {
 }
 
 .message, 
-.alert-success {
+.alert-success,
+.alert {
     padding: 20px;
     background: #1f7e58;
     color: white;
     text-align: center;
     margin-bottom: 10px;
+}
+
+.alert-warning {
+    background: #972824;
 }
 
 .box form input[type="submit"]:hover,

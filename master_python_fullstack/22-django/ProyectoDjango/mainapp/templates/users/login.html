@@ -4,6 +4,13 @@
 
 {% block content %}
     <h1>{{title}}</h1>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-warning">
+                {{message}}
+            </div>
+        {% endfor %}
+    {% endif %}
 
     {{register_form.errors}}
     <form method='post' action="">
@@ -12,7 +19,7 @@
         <label for="username">Usuario: </label>
         <input type="text" name='username'>
         <label for="password">Contraseña: </label>
-        <input type="text" name='password'>
+        <input type="password" name='password'>
         <input type="submit" value='Identificarse'/>
     </form>
 {% endblock content %}
