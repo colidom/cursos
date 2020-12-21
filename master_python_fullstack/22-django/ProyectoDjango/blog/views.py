@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
 from blog.models import Category, Article
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required(login_url='login')
 def list(request):
 
     # Sacar artículos

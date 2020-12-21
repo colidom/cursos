@@ -17,22 +17,24 @@ def about(request):
 
 def register_page(request):
 
-    register_form = RegisterForm()
+    if request.user.is_authenticated:
+        return redirect('/inicio')
+    else:
+        register_form = RegisterForm()
 
-    if request.method == 'POST':
-        register_form = RegisterForm(request.POST)
+        if request.method == 'POST':
+            register_form = RegisterForm(request.POST)
 
-        if register_form.is_valid():
-            register_form.save()
-            messages.success(request, 'Te has registrado correctamente😋')
+            if register_form.is_valid():
+                register_form.save()
+                messages.success(request, 'Te has registrado correctamente😋')
 
-            return redirect('/inicio')
+                return redirect('/inicio')
 
-    return render(request, 'users/register.html', {
-        'title': 'Registro',
-        'register_form': register_form
-    })
-
+        return render(request, 'users/register.html', {
+            'title': 'Registro',
+            'register_form': register_form
+        })
 
 def login_page(request):
 
@@ -51,3 +53,7 @@ def login_page(request):
     return render(request, 'users/login.html', {
         'title': 'Identifícate'
     })
+
+def logout_user(request):
+    logout(request)
+    return redirect('/login')
