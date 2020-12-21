@@ -4,4 +4,13 @@
 
 {% block content %}
     <h1>{{title}}</h1>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success">
+                {{message}}
+            </div>
+        {% endfor %}
+    {% endif %}
+
 {% endblock content %}

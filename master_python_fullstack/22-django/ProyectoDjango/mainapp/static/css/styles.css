@@ -208,9 +208,12 @@ nav > ul > li:hover > ul > li:hover a {
     display: block;
     padding: 5px;
     padding-left: 0px;
+    padding: 10px;
 }
 
 .box form input[type="text"],
+.box form input[type="email"],
+.box form input[type="password"],
 .box form textarea,
 .box form select {
     width: 100%;
@@ -236,6 +239,15 @@ nav > ul > li:hover > ul > li:hover a {
 .rojo {
     color: red;
     box-shadow: 0px 0px 4px black;
+}
+
+.message, 
+.alert-success {
+    padding: 20px;
+    background: #1f7e58;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .box form input[type="submit"]:hover,
