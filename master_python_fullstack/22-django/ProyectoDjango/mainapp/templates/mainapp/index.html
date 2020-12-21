@@ -4,7 +4,7 @@
 
 {% block content %}
     <h1>{{title}}</h1>
-
+    <hr>
     {% if messages %}
         {% for message in messages %}
             <div class="alert alert-success">
@@ -13,4 +13,10 @@
         {% endfor %}
     {% endif %}
 
+    {% if user.email %}
+        <h2>Bienvenido, {{user.first_name}} {{user.last_name}}</h2>
+    {% else %}
+        <h2>Identifícate para ver más cosas</h2>
+    {% endif %}
+    
 {% endblock content %}

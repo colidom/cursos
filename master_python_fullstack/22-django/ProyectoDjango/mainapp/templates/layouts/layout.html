@@ -28,7 +28,8 @@
     <nav>
         <ul>
             <li><a href="{% url 'index' %}">Inicio</a></li>
-            <li>
+            {% if user.email %}
+                <li>
                 <a href="{% url 'list_articles' %}">Categorías</a>
                 <ul>
                     {% for category in categories %}
@@ -36,11 +37,15 @@
                     {% endfor %}
                 </ul>
             </li>
+
             {% for page in pages %}
                 <li><a href="{% url 'page' page.2 %}">{{page.1}}</a></li>
             {% endfor %}
-            <li><a href="{% url 'register' %}">Registro</a></li>
-            <li><a href="{% url 'login' %}">Login</a></li>
+            
+            {% else %}            
+                <li><a href="{% url 'register' %}">Registro</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+            {% endif %}
         </ul>
     </nav>
     <div class="barra">
