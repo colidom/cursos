@@ -31,3 +31,11 @@ def register_page(request):
         'title': 'Registro',
         'register_form': register_form
     })
+
+
+def login_page(request):
+
+
+    return render(request, 'users/login.html', {
+        'title': 'Identifícate'
+    })
