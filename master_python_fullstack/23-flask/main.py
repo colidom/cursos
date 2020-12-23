@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', dato1='valor', dato2='valor2', lista= ["uno", "dos", "tres"])
 
 @app.route('/informacion')
 @app.route('/informacion/<string:nombre>')
