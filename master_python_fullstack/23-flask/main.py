@@ -1,6 +1,14 @@
 from flask import Flask, redirect, url_for, render_template
+from datetime import datetime
 
 app = Flask(__name__)
+
+# Context processors
+@app.context_processor
+def date_now():
+    return {
+        'now': datetime.utcnow()
+    }
 
 @app.route('/')
 def index():
