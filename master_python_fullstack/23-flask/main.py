@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, redirect, url_for
 
 app = Flask(__name__)
 
@@ -22,7 +22,12 @@ def informacion(nombre = None, apellidos = None):
     """
 
 @app.route('/contacto')
-def contacto():
+@app.route('/contacto/<redireccion>')
+def contacto(redireccion = None):
+
+    if redireccion is not None:
+        return redirect(url_for('lenguajes'))
+
     return "<h1>Página de contacto </h1>"
 
 @app.route('/lenguajes-de-programacion')
