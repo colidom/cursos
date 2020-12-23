@@ -7,24 +7,40 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
 </head>
 <body>
+    <!--Cabecera de la página-->
+    <header>
+        <div id="logotipo">
+            <!--Logo Django-->
+            <img src="{{url_for('static', filename='img/flask.svg')}}">
+            <h1>Proyecto con Flash | Carlos Oliva </h1>
+        </div>
+    </header>
 
-    <h1>Aprendiendo Flask</h1>
-    <hr>
+    <nav>
         <ul>
             <li><a href="/">Inicio</a></li>
             <li><a href="{{url_for('informacion')}}">Información</a></li>
             <li><a href="{{url_for('contacto')}}">Contacto</a></li>
             <li><a href="{{url_for('lenguajes')}}">Lenguajes de Programación</a></li>
         </ul>
-    <hr>
+    </nav>
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+    
+    <div id="content">
+        <div class="box">
+            {% block content %}
+                <!--Código que viene de templates-->
+                <strong>Contenido del bloque original!!!</strong>
+            {% endblock %}
+        </div>
+    </div>
 
-    <section if="content">
-        {% block content %}
-
-        {% endblock content %}
-    </section>
-
-    <hr>
-    <footer>Máster en Python con Flask</footer>
+    <footer>
+        Copyright &copy; · Hecho con <img src="{{url_for('static', filename='img/heart.svg')}}"> por Carlos Oliva Domínguez
+    </footer>
 </body>
 </html>
