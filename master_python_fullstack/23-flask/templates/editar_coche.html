@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Editar coche
+    {{super()}}
+{% endblock title %}
+
+{% block content %}
+
+    {% if coche %}
+        <h1>Editar coche: {{coche.1}} {{coche.2}}</h1>
+    {% else %}
+        <h1>Crear coche</h1>
+    {% endif %}
+
+    <form action="" method='POST'>
+        <label for="marca">Marca</label>
+        <input type="text" name='marca' value="{{coche.1}}">
+
+        <label for="modelo">Modelo</label>
+        <input type="text" name='modelo' value="{{coche.2}}">
+
+        <label for="precio">Precio</label>
+        <input type="text" name='precio' value="{{coche.3}}">
+
+        <label for="ciudad">Ciudad</label>
+        <input type="text" name='ciudad' value="{{coche.4}}">
+
+        <button type='submit' value='crear'>Editar coche</button>
+    </form>
+
+{% endblock content %}

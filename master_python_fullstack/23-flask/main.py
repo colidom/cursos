@@ -111,5 +111,15 @@ def borrar_coche(coche_id):
     return redirect(url_for('coches'))
 
 
+@app.route('/editar-coche/<coche_id>', methods=['GET', 'POST'])
+def editar_coche(coche_id):
+    cursor = mysql.connection.cursor()
+    cursor.execute("SELECT * FROM coches WHERE id = %s", (coche_id))
+    coche = cursor.fetchall()
+    cursor.close()
+
+    return render_template('editar_coche.html', coche=coche[0])
+
+
 if __name__ == '__main__':
     app.run(debug=True)
