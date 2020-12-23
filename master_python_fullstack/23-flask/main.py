@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, redirect, url_for, render_template, request
 from datetime import datetime
 from flask_mysqldb import MySQL
 
@@ -55,13 +55,17 @@ def contacto(redireccion = None):
 def lenguajes():
     return render_template('lenguajes.html')
 
-@app.route('/insertar-coche')
-def insertar_coche():
-    cursor = mysql.connection.cursor()
-    cursor.execute(f"INSERT INTO coches VALUES(NULL,'Lambo', 'Gallardo', '100.000', 'LA')")
-    cursor.connection.commit()
+@app.route('/crear-coche')
+def crear_coche():
+    if request.method == 'POST':
+        cursor = mysql.connection.cursor()
+        cursor.execute(f"INSERT INTO coches VALUES(NULL,'Lambo', 'Gallardo', '100.000', 'LA')")
+        cursor.connection.commit()
 
-    return redirect(url_for('index'))
+        return redirect(url_for('index'))
+
+    return render_template('crear_coche.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
