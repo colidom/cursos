@@ -6,13 +6,19 @@ app = Flask(__name__)
 def index():
     return ("Aprendiendo Flask")
 
-@app.route('/informacion/<string:nombre>/<string:apellidos>/<int:edad>')
-def informacion(nombre, apellidos, edad):
+@app.route('/informacion')
+@app.route('/informacion/<string:nombre>')
+@app.route('/informacion/<string:nombre>/<string:apellidos>')
+def informacion(nombre = None, apellidos = None):
+
+    texto = ""
+    if nombre != None and apellidos != None:
+        texto = f"<h3>Bienvenid@, {nombre} {apellidos}</h3>"
+
     return f"""
             <h1>Página de información</h1>
             <p>Esta es la página de información</p>
-            <h3>Bienvenid@, {nombre} {apellidos}</h3>
-            <h4>Edad: {edad}</h4>
+                {texto}
     """
 
 @app.route('/contacto')
