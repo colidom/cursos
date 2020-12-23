@@ -12,7 +12,15 @@ def date_now():
 
 @app.route('/')
 def index():
-    return render_template('index.html', dato1='valor', dato2='valor2', lista= ["uno", "dos", "tres"])
+
+    edad = 30
+
+    return render_template('index.html', 
+                            edad=edad,
+                            dato1='valor', 
+                            dato2='valor2', 
+                            lista= ["uno", "dos", "tres"])
+
 
 @app.route('/informacion')
 @app.route('/informacion/<string:nombre>')
