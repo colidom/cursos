@@ -1,24 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprendiendo Flask</title>
-</head>
-<body>
+{% extends 'layout.html' %}
 
-    <h1>Aprendiendo Flask</h1>
-    <hr>
-        <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="{{url_for('informacion')}}">Información</a></li>
-            <li><a href="{{url_for('contacto')}}">Contacto</a></li>
-            <li><a href="{{url_for('lenguajes')}}">Lenguajes de Programación</a></li>
-        </ul>
-    <hr>
+{% block title %}
+    Info
+{% endblock title %}
 
+{% block content %}
     <h1>Página de información</h1>
     <p>Esta es la página de información</p>
     <h3>{{texto}}</h3>
-</body>
-</html>
+{% endblock content %}
