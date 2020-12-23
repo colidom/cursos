@@ -6,9 +6,14 @@ app = Flask(__name__)
 def index():
     return ("Aprendiendo Flask")
 
-@app.route('/información')
-def informacion():
-    return "<h1>Página de información </h1>"
+@app.route('/informacion/<string:nombre>/<string:apellidos>/<int:edad>')
+def informacion(nombre, apellidos, edad):
+    return f"""
+            <h1>Página de información</h1>
+            <p>Esta es la página de información</p>
+            <h3>Bienvenid@, {nombre} {apellidos}</h3>
+            <h4>Edad: {edad}</h4>
+    """
 
 @app.route('/contacto')
 def contacto():
