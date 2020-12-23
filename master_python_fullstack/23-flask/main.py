@@ -1,8 +1,10 @@
-from flask import Flask, redirect, url_for, render_template, request
+from flask import Flask, flash, redirect, url_for, render_template, request
 from datetime import datetime
 from flask_mysqldb import MySQL
 
 app = Flask(__name__)
+
+app.secret_key = 'clave_secreta_flask'
 
 # Conexión DB
 app.config['MYSQL_HOST'] = 'localhost'
@@ -67,9 +69,8 @@ def crear_coche():
         cursor = mysql.connection.cursor()
         cursor.execute("INSERT INTO coches VALUES(NULL, %s, %s, %s, %s)", (marca, modelo, precio, ciudad))
         cursor.connection.commit()
-
+        flash('Has creado el coche correctamente!!!')
         return redirect(url_for('index'))
-
 
     return render_template('crear_coche.html')
 

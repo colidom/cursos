@@ -8,6 +8,16 @@
 {% block content %}
     <h1>Página de inicio con Flask</h1>
 
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="message alert-success">
+                {{message}}
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
     {% include 'includes/edad.html' %}
     {% include 'includes/personas.html' %}
 
