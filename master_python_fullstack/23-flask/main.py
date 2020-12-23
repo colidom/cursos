@@ -1,7 +1,16 @@
 from flask import Flask, redirect, url_for, render_template
 from datetime import datetime
+from flask_mysqldb import MySQL
 
 app = Flask(__name__)
+
+# Conexión DB
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_DB'] = 'proyectoFlask'
+
+mysql = MySQL(app)
 
 # Context processors
 @app.context_processor
