@@ -21,6 +21,7 @@ def date_now():
         'now': datetime.utcnow()
     }
 
+
 @app.route('/')
 def index():
 
@@ -44,6 +45,7 @@ def informacion(nombre = None, apellidos = None):
 
     return render_template('informacion.html', texto=texto)
 
+
 @app.route('/contacto')
 @app.route('/contacto/<redireccion>')
 def contacto(redireccion = None):
@@ -53,9 +55,11 @@ def contacto(redireccion = None):
 
     return render_template('contacto.html')
 
+
 @app.route('/lenguajes-de-programacion')
 def lenguajes():
     return render_template('lenguajes.html')
+
 
 @app.route('/crear-coche', methods=['GET', 'POST'])
 def crear_coche():
@@ -74,6 +78,7 @@ def crear_coche():
 
     return render_template('crear_coche.html')
 
+
 @app.route('/coches')
 def coches():
     cursor = mysql.connection.cursor()
@@ -82,6 +87,16 @@ def coches():
     cursor.close()
 
     return render_template('coches.html', coches=coches)
+
+
+@app.route('/coche/<coche_id>')
+def coche(coche_id):
+    cursor = mysql.connection.cursor()
+    cursor.execute("SELECT * FROM coches WHERE id = %s", (coche_id))
+    coche = cursor.fetchall()
+    cursor.close()
+
+    return render_template('coche.html', coche=coche[0])
 
 if __name__ == '__main__':
     app.run(debug=True)
