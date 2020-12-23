@@ -82,7 +82,7 @@ def crear_coche():
 @app.route('/coches')
 def coches():
     cursor = mysql.connection.cursor()
-    cursor.execute("SELECT * FROM coches")
+    cursor.execute("SELECT * FROM coches ORDER BY id DESC")
     coches = cursor.fetchall()
     cursor.close()
 
@@ -113,6 +113,29 @@ def borrar_coche(coche_id):
 
 @app.route('/editar-coche/<coche_id>', methods=['GET', 'POST'])
 def editar_coche(coche_id):
+
+    if request.method == 'POST':
+
+        marca = request.form['marca']
+        modelo = request.form['modelo']
+        precio = request.form['precio']
+        ciudad = request.form['ciudad']
+
+        cursor = mysql.connection.cursor()
+        cursor.execute("""
+            UPDATE coches
+            SET marca = %s,
+                modelo = %s,
+                precio = %s,
+                ciudad = %s
+            WHERE id = %s
+        """, (marca, modelo, precio, ciudad, coche_id))
+        cursor.connection.commit()
+
+        flash('Has editado el coche correctamente!!!')
+
+        return redirect(url_for('coches'))
+
     cursor = mysql.connection.cursor()
     cursor.execute("SELECT * FROM coches WHERE id = %s", (coche_id))
     coche = cursor.fetchall()
