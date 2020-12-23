@@ -7,6 +7,17 @@
 
 {% block content %}
     <h1>Listado de coches</h1>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="message alert-success">
+                {{message}}
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
     {% for coche in coches %}
     <article class="article-item">
         <div class="data">
@@ -23,7 +34,7 @@
             </p>
             <p>
                 <a href="" class="btn btn-warning">Editar</a>
-                <a href="" class="btn">Eliminar</a>
+                <a href="{{url_for('borrar_coche', coche_id=coche.0)}}" class="btn">Eliminar</a>
             </p>
 
         </div>
