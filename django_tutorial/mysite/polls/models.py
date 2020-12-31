@@ -22,3 +22,6 @@ class Choise(models.Model):
     
     def __str__(self):
         return self.choice_text
+
+Seguir aquí 
+https://docs.djangoproject.com/es/3.1/intro/tutorial03/
