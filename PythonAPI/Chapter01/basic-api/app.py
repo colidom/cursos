@@ -34,7 +34,19 @@ def get_recipe(recipe_id):
     return jsonify({'message': 'recipe not found'}), HTTPStatus.NOT_FOUND
 
 
-
+@app.route('/recipes', methods=['POST'])
+def create_recipe():
+    data = request.get_json()
+    name = data.get('name')
+    description = data.get('description')
+    recipe = {
+        'id': len(recipes) + 1,
+        'name': name,
+        'description': description
+    }
+    recipes.append(recipe)
+    
+    return jsonify(recipe), HTTPStatus.CREATED 
 
 
 if __name__ == "__main__":
