@@ -20,12 +20,14 @@ recipes = [
 def hello():
     return "Hello World!"
 
-
+# Get recipe
+# Ex.: http GET localhost:5000/recipes
 @app.route('/recipes', methods=['GET'])
 def get_recipes():
     return jsonify({'data': recipes})
 
-
+# Get recipe by id
+# Ex.: http GET localhost:5000/recipes/3
 @app.route('/recipes/<int:recipe_id>', methods=['GET'])
 def get_recipe(recipe_id):
     recipe = next((recipe for recipe in recipes if recipe['id'] == recipe_id), None)
@@ -33,7 +35,8 @@ def get_recipe(recipe_id):
         return jsonify(recipe)
     return jsonify({'message': 'recipe not found'}), HTTPStatus.NOT_FOUND
 
-
+# Create recipe
+# Ex.: http POST localhost:5000/recipes name="Cheese Pizza" description="This is a lovely cheese pizza"
 @app.route('/recipes', methods=['POST'])
 def create_recipe():
     data = request.get_json()
@@ -48,7 +51,8 @@ def create_recipe():
 
     return jsonify(recipe), HTTPStatus.CREATED 
 
-
+# Update recipe
+# Ex.: http PUT localhost:5000/recipes/3 name="Lovely Cheese Pizza" description="This is a lovely cheese pizza recipe."
 @app.route('/recipes/<int:recipe_id>', methods=['PUT'])
 def update_recipe(recipe_id):
     recipe = next((recipe for recipe in recipes if recipe['id'] == recipe_id), None)
