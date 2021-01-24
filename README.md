@@ -1,4 +1,4 @@
-# Cursos:
+# 💾 Cursos:
 # Master en Python: Aprender Python 3, Django, Flask y Tkinter
 [<img src="https://img-a.udemycdn.com/course/480x270/2264216_b701_3.jpg">](https://www.udemy.com/share/102OwsAksbcFlRQn4)
 *Aprende a programar desde cero con Python 3 y desarrollo web con los frameworks Django 3 y Flask paso a paso (+30 horas)*
@@ -39,7 +39,7 @@ Durante las más de 30 horas del curso verás como desarrollar varios proyectos 
 - Trataremos todos los temas paso a paso y poco a poco hasta conseguir un buen nivel en Programación, Python, MySQL, SQLite, POO, Tkinker, Django 3, Flask, etc.
 
 ---
-# Libros:
+# 📚 Libros:
 # Python API Development Fundamentals
 [<img src="https://static.packt-cdn.com/products/9781838983994/cover/smaller">](https://subscription.packtpub.com/book/web_development/9781838983994)
 
