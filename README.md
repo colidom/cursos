@@ -40,6 +40,7 @@ Bienvenido al Máster en Python, en el que aprenderemos todo lo necesario para d
     - Proyectos web con Flask.
     - Trataremos todos los temas paso a paso y poco a poco hasta conseguir un buen nivel en Programación, Python, MySQL, SQLite, POO, Tkinker, Django 3, Flask, etc.
 </details>
+
 ---
 
 # 📚 Libros:
