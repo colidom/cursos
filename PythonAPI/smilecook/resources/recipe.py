@@ -40,3 +40,19 @@ class RecipeResource(Resource):
         recipe.cook_time = data['cook_time']
         recipe.directions = data['directions']
         return recipe.data, HTTPStatus.OK
+
+
+class RecipePublishResource(Resource):
+    def put(self, recipe_id):
+        recipe = next((recipe for recipe in recipe_list if recipe.id == recipe_id), None)
+        if recipe is None:
+            return {'message': 'recipe not found'}, HTTPStatus.NOT_FOUND
+        recipe.is_publish = True
+        return {}, HTTPStatus.NO_CONTENT
+
+    def delete(self, recipe_id):
+        recipe = next((recipe for recipe in recipe_list if recipe.id == recipe_id), None)
+        if recipe is None:
+            return {'message': 'recipe not found'}, HTTPStatus.NOT_FOUND
+        recipe.is_publish = False
+        return {}, HTTPStatus.NO_CONTENT
