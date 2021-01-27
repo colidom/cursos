@@ -1,4 +1,5 @@
 # 💾 Cursos:
+---
 # Master en Python: Aprender Python 3, Django, Flask y Tkinter
 [<img src="https://img-a.udemycdn.com/course/480x270/2264216_b701_3.jpg">](https://www.udemy.com/share/102OwsAksbcFlRQn4)
 
@@ -43,8 +44,43 @@ Bienvenido al Máster en Python, en el que aprenderemos todo lo necesario para d
 </details>
 
 ---
+# Curso Práctico de Django: Aprende Creando 3 Webs
+[<img src="https://static.djangoproject.com/img/logos/django-logo-positive.png">](https://www.udemy.com/course/curso-django-2-practico-desarrollo-web-python-3/)
+
+*Aprende Django 2.x desde cero mientras creas 3 didácticos proyectos y 10 apps reutilizables para futuros desarrollos.*
+
+Bienvenidos al Curso Práctico de Django 2.x, el framework web de referencia para desarrollar backends con Python.
+
+
+#### Este no es un curso cualquiera, estás ante un máster completo en el que aprenderemos:
+<details>
+  <summary>Seguir leyendo...</summary>
+
+**Proyectos:**
+
+- Web Personal: un proyecto básico de introducción al framework, basado en la creación de una web sencilla con un portafolio dinámico y un panel de administrador para manejar los proyectos del portafolio.
+- Web Empresarial: un proyecto intermedio para practicar lo aprendido e introducir nuevos conceptos, basado en realizar la web de presentación de una cafetería con varias secciones dinámicas manejadas desde el panel de administrador.
+- Web Playground: un proyecto avanzado y de especialización, centrado puramente en el backend. Aquí aprenderás a manejar la autenticación y el registro de usuarios, a crear secciones internas sólo para usuarios identificados, perfiles de usuario y lo mejor de todo: un sistema de mensajería privada.
+
+**Lo que aprenderás**
+
+- Cómo funciona Django 2 y su MVT basado en Modelos, Vistas y Templates
+- A desarrollar una colección de 10 apps reutilizables para tus futuros proyectos.
+- A crear tus propios backends, con panel administrable, listos para darles un uso real.
+- También aprenderás a desplegar Django en un servidor de producción gratuito en la nube.
+- Obtendrás experiencia práctica con proyectos reales, como una web personal o para un negocio.
+- Serás un experto en el uso de las CBV, las Vistas Basadas en Clases.
+- Cómo gestionar usuarios, autenticación, registro y perfiles utilizando los módulos nativos de Django.
+- Aprenderás a crear peticiones asíncronas utilizando la API Fetch de JavaScript
+- Te introducirás en el desarrollo guiado por pruebas: el TDD (Test Driven Development).
+- Y docenas de funcionalidades más: Tags, Contextos, Formularios, Mixins, CRUD, Paginación, Señales, Managers, Tests...
+
+</details>
+
+---
 
 # 📚 Libros:
+---
 # Python API Development Fundamentals
 [<img src="https://static.packt-cdn.com/products/9781838983994/cover/smaller">](https://subscription.packtpub.com/book/web_development/9781838983994)
 
