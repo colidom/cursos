@@ -1,6 +1,6 @@
 # 💾 Cursos:
 ---
-# Curso Práctico de Django: Aprende Creando 3 Webs
+# Curso Maestro de Python 3: Aprende Desde Cero
 [<img src="https://www.python.org/static/community_logos/python-logo-inkscape.svg">](https://www.udemy.com/course/python-3-al-completo-desde-cero/)
 
 *Aprende a programar con clases y objetos, a usar ficheros y bases de datos SQLite, interfaces gráficas y más con Python!*
