@@ -56,3 +56,4 @@ class RecipePublishResource(Resource):
             return {'message': 'recipe not found'}, HTTPStatus.NOT_FOUND
         recipe.is_publish = False
         return {}, HTTPStatus.NO_CONTENT
+https://subscription.packtpub.com/book/web_development/9781838983994/2/ch02lvl1sec20/configuring-endpoints
