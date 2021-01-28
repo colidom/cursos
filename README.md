@@ -28,7 +28,7 @@ Bienvenidos al Curso Práctico de Django 2.x, el framework web de referencia par
 
 *Aprende Django 2.x desde cero mientras creas 3 didácticos proyectos y 10 apps reutilizables para futuros desarrollos.*
 
-#### Este no es un curso cualquiera, estás ante un máster completo en el que aprenderemos:
+#### En este curso aprenderemos:
 <details>
   <summary>Seguir leyendo...</summary>
 
@@ -59,7 +59,7 @@ Bienvenidos al Curso Práctico de Django 2.x, el framework web de referencia par
 
 *Aprende a programar desde cero con Python 3 y desarrollo web con los frameworks Django 3 y Flask paso a paso (+30 horas)*
 
-#### Este no es un curso cualquiera, estás ante un máster completo en el que aprenderemos:
+#### En este curso aprenderemos:
 <details>
   <summary>Seguir leyendo...</summary>
 
