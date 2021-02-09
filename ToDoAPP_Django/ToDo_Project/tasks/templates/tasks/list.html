@@ -12,30 +12,26 @@
 </head>
 <body>
     {% block content %}
-        <div id="content">
-            <div class="box">
-                <div class="center-column">
-                    <form method="POST" action="/">
-                        {% csrf_token %}
-                        {{form.title}}
-                        <input class="btn btn-info" type="submit" name="Create Task">
-                    </form>
+        <div class="center-column">
+            <form method="POST" action="/">
+                {% csrf_token %}
+                {{form.title}}
+                <input class="btn btn-info" type="submit" name="Create Task">
+            </form>
 
-                    <div class="todo-list">
-                        {% for task in tasks %}
-                            <div class="item-row">
-                                <a class="btn btn-sm btn-info" href="{% url 'update_task' task.id %}">Update</a>
-                                <a class="btn btn-sm btn-danger" href="{% url 'delete_task' task.id %}">Delete</a>
+            <div class="todo-list">
+                {% for task in tasks %}
+                    <div class="item-row">
+                        <a class="btn btn-sm btn-info" href="{% url 'update_task' task.id %}">Update</a>
+                        <a class="btn btn-sm btn-danger" href="{% url 'delete_task' task.id %}">Delete</a>
 
-                                {% if task.completed == True %}
-                                <strike>{{task}}</strike>
-                                {% else %}
-                                <span>{{task}}</span>
-                                {% endif %}
-                            </div>
-                        {% endfor %}
+                        {% if task.completed == True %}
+                        <strike>{{task}}</strike>
+                        {% else %}
+                        <span>{{task}}</span>
+                        {% endif %}
                     </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     {% endblock %}
