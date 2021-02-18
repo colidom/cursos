@@ -2,9 +2,14 @@
 {% load static %}
 {% block content %}
 
-    <form type="submit" method="POST">
+    <form action="" method="POST">
         {% csrf_token %}
-        {{form}}
+        {{ formset.management_form }}
+        <br>
+        {% for form in formset %}
+            {{form}}
+            <hr>
+        {% endfor %}
         <input type="submit" name="Submit">
     </form>
 
