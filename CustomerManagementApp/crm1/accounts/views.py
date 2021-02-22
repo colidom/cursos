@@ -1,12 +1,16 @@
+from django import forms
 from django.shortcuts import render, redirect
 from django.forms import inlineformset_factory
+from django.contrib.auth.forms import UserChangeForm
+
 from .models import *
 from .forms import OrderForm
 from . filters import OrderFilter
 
 # Create your views here.
 def registerPage(request):
-    context = {}
+    form = UserChangeForm()
+    context = {'form': form}
     return render(request, 'accounts/register.html', context)
 
 def loginPage(request):
