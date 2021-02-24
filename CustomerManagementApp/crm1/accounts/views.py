@@ -2,6 +2,7 @@ from django import forms
 from django.shortcuts import render, redirect
 from django.forms import inlineformset_factory
 from django.contrib.auth.forms import UserChangeForm
+from django.contrib import messages
 
 from .models import *
 from .forms import OrderForm, CreateUserForm
@@ -15,6 +16,8 @@ def registerPage(request):
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
+            user = form.cleaned_data.get('username')
+            messages.success(request, f'La cuenta ha sido creada para {user}')
             return redirect('login')
 
     context = {'form': form}
