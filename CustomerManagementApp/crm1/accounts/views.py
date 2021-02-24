@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from django.forms import inlineformset_factory
 from django.contrib.auth.forms import UserChangeForm
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
 from .models import *
@@ -42,9 +43,10 @@ def loginPage(request):
 
 def logoutUser(request):
     logout(request)
-    
+
     return redirect('login')
 
+@login_required(login_url='login')
 def home(request):
     orders = Order.objects.all()
     customers = Customer.objects.all()
@@ -64,12 +66,14 @@ def home(request):
         }
     return render(request, 'accounts/dashboard.html', context)
 
+@login_required(login_url='login')
 def products(request):
     products = Product.objects.all()
 
     context = {'products':products}
     return render(request, 'accounts/products.html', context)
 
+@login_required(login_url='login')
 def customer(request, pk_test):
     customer = Customer.objects.get(id=pk_test)
 
@@ -82,6 +86,7 @@ def customer(request, pk_test):
     context = {'customer':customer, 'orders':orders, 'order_count':order_count, 'myFilter':myFilter}
     return render(request, 'accounts/customer.html', context)
 
+@login_required(login_url='login')
 def createOrder(request, pk):
     OrderFormSet = inlineformset_factory(Customer, Order, fields=('product', 'status'), extra=10)
     customer = Customer.objects.get(id=pk)
@@ -98,6 +103,7 @@ def createOrder(request, pk):
     context = {'formset':formset}
     return render(request, 'accounts/order_form.html', context)
 
+@login_required(login_url='login')
 def updateOrder(request, pk):
 
     order = Order.objects.get(id=pk)
@@ -113,6 +119,7 @@ def updateOrder(request, pk):
     context = {'form':form}
     return render(request, 'accounts/order_form.html', context)
 
+@login_required(login_url='login')
 def deleteOrder(request, pk):
     order = Order.objects.get(id=pk)
     if request.method == 'POST':
