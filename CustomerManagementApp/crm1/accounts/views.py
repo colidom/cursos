@@ -133,7 +133,6 @@ def updateOrder(request, pk):
             form.save()
             return redirect('/')
 
-
     context = {'form':form}
     return render(request, 'accounts/order_form.html', context)
 
