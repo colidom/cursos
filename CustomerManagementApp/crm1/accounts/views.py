@@ -86,7 +86,17 @@ def home(request):
 def userPage(request):
     orders = request.user.customer.order_set.all()
 
-    context = {'orders': orders}
+    total_orders = orders.count()
+    delivered = orders.filter(status='Delivered').count()
+    pending = orders.filter(status='Pending').count()
+
+    context = {
+        'orders':orders,
+        'total_orders':total_orders,
+        'delivered':delivered,
+        'pending':pending,
+        }
+
     return render(request, 'accounts/user.html', context)
 
 @login_required(login_url='login')
