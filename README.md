@@ -75,9 +75,9 @@ Bienvenidos al Curso Práctico de Django 2.x, el framework web de referencia par
   - Habilidades full-stack, haciendo cientos de ejercicios, prácticas y proyectos completos.
   - Si quieres ser programador o desarrollador web profesional, o incluso si ya te dedicas al esto, aprender a trabajar con estas tecnologías y frameworks es casi obligatorio.
   - La metodología de aprendizaje es la ideal:
-  - Todo explicado desde cero y paso a paso.
-  - Decenas de horas de contenido en clases en vídeo (30 horas y subiendo).
-  - Cientos de prácticas y ejercicios.
+    - Todo explicado desde cero y paso a paso.
+    - Decenas de horas de contenido en clases en vídeo (30 horas y subiendo).
+    - Cientos de prácticas y ejercicios.
 
   **Al finalizar el curso:**
   - Sabrás programar y tendrás conocimientos para aplicarlos a cualquier lenguaje de programación.
@@ -106,39 +106,39 @@ Bienvenidos al Curso Práctico de Django 2.x, el framework web de referencia par
 <details>
   <summary>Seguir leyendo...</summary>
 
-##### En este curso, construiremos una aplicación de comercio electrónico / carrito de la compra completamente personalizada desde cero utilizando Django y REACT con la siguiente funcionalidad...
+#### En este curso, construiremos una aplicación de comercio electrónico / carrito de la compra completamente personalizada desde cero utilizando Django y REACT con la siguiente funcionalidad...
 
-- Carrito de compras completo
-- Comentarios y valoraciones de productos
-- Carrusel de productos principales
-- Paginación de productos
-- Búsqueda de productos
-- Perfil de usuario con pedidos
-- Gestión de productos por parte del administrador
-- Gestión de usuarios administrativos
-- Página de detalles del pedido del administrador
-- Opción de marcar los pedidos como entregados
-- Proceso de compra (envío, forma de pago, etc.)
-- Integración de PayPal / tarjeta de crédito
+- Carrito de compras completo.
+- Comentarios y valoraciones de productos.
+- Carrusel de productos principales.
+- Paginación de productos.
+- Búsqueda de productos.
+- Perfil de usuario con pedidos.
+- Gestión de productos por parte del administrador.
+- Gestión de usuarios administrativos.
+- Página de detalles del pedido del administrador.
+- Opción de marcar los pedidos como entregados.
+- Proceso de compra (envío, forma de pago, etc.).
+- Integración de PayPal / tarjeta de crédito.
 
-##### Este no es un curso de documentación. Se trata de un curso en el que se puede participar y ensuciarse las manos y, al final, tener un proyecto real para utilizar y poner en su cartera. Usted aprenderá lo siguiente al completar este curso..
+#### Este no es un curso de documentación. Se trata de un curso en el que se puede participar y ensuciarse las manos y, al final, tener un proyecto real para utilizar y poner en su cartera. Usted aprenderá lo siguiente al completar este curso:
 
-- React con Componentes Funcionales y Hooks
-- Enrutador React
-- Librería React-Bootstrap UI
-- Cómo estructurar los componentes
-- Estado a nivel de componente y props
-- Gestión del estado global con Redux (Actions & Reducers)
-- Uso del estado Redux en los componentes (useDispatch & useSelector)
-- Creación de un back end extenso con Express
-- Autenticación JWT (tokens web JSON)
-- Manejador de errores personalizado
-- Integración de la API de PayPal
-- Despliegue del proyecto
+- React con Componentes Funcionales y Hooks.
+- Enrutador React.
+- Librería React-Bootstrap UI.
+- Cómo estructurar los componentes.
+- Estado a nivel de componente y props.
+- Gestión del estado global con Redux (Actions & Reducers).
+- Uso del estado Redux en los componentes (useDispatch & useSelector).
+- Creación de un back end extenso con Express.
+- Autenticación JWT (tokens web JSON).
+- Manejador de errores personalizado.
+- Integración de la API de PayPal.
+- Despliegue del proyecto.
 
-*Y mucho más.*
+*Y mucho más...*
 
-##### Este proyecto es una colaboración con `Brad Traversy` donde tomaremos su curso original de comercio electrónico MEARN Stack y lo construiremos con un backend `Django` en lugar de Node, JS y Express. Brad y yo decidimos que sería divertido rehacer exactamente el mismo proyecto con un backend/API de Django y conectarlo al mismo frontend/diseño de React.
+#### Este proyecto es una colaboración con `Brad Traversy` donde tomaremos su curso original de comercio electrónico MEARN Stack y lo construiremos con un backend `Django` en lugar de Node, JS y Express. Brad y yo decidimos que sería divertido rehacer exactamente el mismo proyecto con un backend/API de Django y conectarlo al mismo frontend/diseño de React.
 
 *Mi esperanza es que aprendas no sólo a construir esta aplicación sino a añadirle tus propias características. Aprendemos mejor construyendo y personalizando nuestros propios proyectos.*
 
@@ -158,7 +158,7 @@ Bienvenidos al Curso Práctico de Django 2.x, el framework web de referencia par
   - Conozca cuáles son las herramientas y la metodología exactas para probar sus aplicaciones y cómo utilizarlas.
 
   Lo que aprenderá:
-  - Entender el concepto de una API RESTful
+  - Entender el concepto de una API RESTful.
   - Construir una API RESTful usando Flask y la extensión Flask-Restful.
   - Manipular una base de datos usando Flask-SQLAlchemy y Flask-Migrate.
   - Enviar correos electrónicos en texto plano y en formato HTML utilizando la API Mailgun.
@@ -166,7 +166,7 @@ Bienvenidos al Curso Práctico de Django 2.x, el framework web de referencia par
   - Utilizar el almacenamiento en caché para mejorar el rendimiento de la API y obtener eficazmente la información más reciente.
   - Desplegar una aplicación en Heroku y probarla con Postman.
 
-  Acerca de
+  Acerca de:
   Python es un lenguaje flexible que puede utilizarse para mucho más que el desarrollo de scripts. Conociendo el funcionamiento de las APIs RESTful de Python, podrás construir un potente backend para aplicaciones web y aplicaciones móviles usando Python.
 
   Darás tus primeros pasos construyendo una APIsencilla y aprendiendo cómo la interfaz web del frontend puede comunicarse con el backend. También aprenderás a serializar y deserializar objetos utilizando la librería marshmallow. A continuación, aprenderás a autenticar y autorizar a los usuarios utilizando Flask-JWT. También aprenderás a mejorar tus APIs añadiendo funciones útiles, como el correo electrónico, la carga de imágenes, la búsqueda y la paginación. Terminarás el libro desplegando tus APIsen la nube.
