@@ -121,7 +121,7 @@ Bienvenidos al Curso Práctico de Django 2.x, el framework web de referencia par
 - Proceso de compra (envío, forma de pago, etc.)
 - Integración de PayPal / tarjeta de crédito
 
-###### Este no es un curso de documentación. Se trata de un curso en el que se puede participar y ensuciarse las manos y, al final, tener un proyecto real para utilizar y poner en su cartera. Usted aprenderá lo siguiente al completar este curso..
+##### Este no es un curso de documentación. Se trata de un curso en el que se puede participar y ensuciarse las manos y, al final, tener un proyecto real para utilizar y poner en su cartera. Usted aprenderá lo siguiente al completar este curso..
 
 - React con Componentes Funcionales y Hooks
 - Enrutador React
@@ -138,18 +138,13 @@ Bienvenidos al Curso Práctico de Django 2.x, el framework web de referencia par
 
 *Y mucho más.*
 
-
-
-###### Este proyecto es una colaboración con `Brad Traversy` donde tomaremos su curso original de comercio electrónico MEARN Stack y lo construiremos con un backend `Django` en lugar de Node, JS y Express. Brad y yo decidimos que sería divertido rehacer exactamente el mismo proyecto con un backend/API de Django y conectarlo al mismo frontend/diseño de React.
+##### Este proyecto es una colaboración con `Brad Traversy` donde tomaremos su curso original de comercio electrónico MEARN Stack y lo construiremos con un backend `Django` en lugar de Node, JS y Express. Brad y yo decidimos que sería divertido rehacer exactamente el mismo proyecto con un backend/API de Django y conectarlo al mismo frontend/diseño de React.
 
 *Mi esperanza es que aprendas no sólo a construir esta aplicación sino a añadirle tus propias características. Aprendemos mejor construyendo y personalizando nuestros propios proyectos.*
-
 
 </details>
 
 ---
-
-
 # 📚 Libros:
 # Python API Development Fundamentals
 [<img src="https://static.packt-cdn.com/products/9781838983994/cover/smaller">](https://subscription.packtpub.com/book/web_development/9781838983994)
