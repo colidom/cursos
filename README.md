@@ -97,6 +97,58 @@ Bienvenidos al Curso Práctico de Django 2.x, el framework web de referencia par
 </details>
 
 ---
+# Django with React | An Ecommerce Website
+[<img src="https://s3.eu-central-1.wasabisys.com/courseupload/2021/02/Screen-Shot-2021-02-02-at-11.25.34-AM.png">](https://www.udemy.com/share/1043DYAksbcFlRQn4=/)
+
+*Construye una plataforma de comercio electrónico desde cero con `React`, `Redux`, `Django` y `Postgres`.*
+
+#### En este curso aprenderemos:
+<details>
+  <summary>Seguir leyendo...</summary>
+
+##### En este curso, construiremos una aplicación de comercio electrónico / carrito de la compra completamente personalizada desde cero utilizando Django y REACT con la siguiente funcionalidad...
+
+- Carrito de compras completo
+- Comentarios y valoraciones de productos
+- Carrusel de productos principales
+- Paginación de productos
+- Búsqueda de productos
+- Perfil de usuario con pedidos
+- Gestión de productos por parte del administrador
+- Gestión de usuarios administrativos
+- Página de detalles del pedido del administrador
+- Opción de marcar los pedidos como entregados
+- Proceso de compra (envío, forma de pago, etc.)
+- Integración de PayPal / tarjeta de crédito
+
+###### Este no es un curso de documentación. Se trata de un curso en el que se puede participar y ensuciarse las manos y, al final, tener un proyecto real para utilizar y poner en su cartera. Usted aprenderá lo siguiente al completar este curso..
+
+- React con Componentes Funcionales y Hooks
+- Enrutador React
+- Librería React-Bootstrap UI
+- Cómo estructurar los componentes
+- Estado a nivel de componente y props
+- Gestión del estado global con Redux (Actions & Reducers)
+- Uso del estado Redux en los componentes (useDispatch & useSelector)
+- Creación de un back end extenso con Express
+- Autenticación JWT (tokens web JSON)
+- Manejador de errores personalizado
+- Integración de la API de PayPal
+- Despliegue del proyecto
+
+*Y mucho más.*
+
+
+
+###### Este proyecto es una colaboración con `Brad Traversy` donde tomaremos su curso original de comercio electrónico MEARN Stack y lo construiremos con un backend `Django` en lugar de Node, JS y Express. Brad y yo decidimos que sería divertido rehacer exactamente el mismo proyecto con un backend/API de Django y conectarlo al mismo frontend/diseño de React.
+
+*Mi esperanza es que aprendas no sólo a construir esta aplicación sino a añadirle tus propias características. Aprendemos mejor construyendo y personalizando nuestros propios proyectos.*
+
+
+</details>
+
+---
+
 
 # 📚 Libros:
 # Python API Development Fundamentals
