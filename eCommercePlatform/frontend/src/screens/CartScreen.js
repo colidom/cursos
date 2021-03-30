@@ -12,7 +12,6 @@ function CartScreen({match, location, history}) {
     const dispatch = useDispatch()
     const cart = useSelector(state => state.cart)
     const {cartItems} = cart
-    console.log('cartitems: ', cartItems)
 
     useEffect(() =>{
         if(productId){
@@ -20,9 +19,14 @@ function CartScreen({match, location, history}) {
         }
     }, [dispatch, productId, qty])
     return (
-        <div>
-            Cart
-        </div>
+        <Row>
+            <Col md={8}>
+                <h1>Carrito de compra</h1>
+            </Col>
+            <Col md={4}>
+            
+            </Col>
+        </Row>
     )
 }
 
