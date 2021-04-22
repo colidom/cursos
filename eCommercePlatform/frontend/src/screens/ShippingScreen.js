@@ -8,14 +8,14 @@ import { saveShippingAddress } from '../actions/cartActions'
 function ShippingScreen({ history }) {
 
     const cart = useSelector(state => state.cart)
-    const {shippingAddress} = cart
+    const { shippingAddress } = cart
 
     const dispatch = useDispatch()
 
     const [address, setAddress] = useState(shippingAddress.address)
-    const [city, setCity] = useState(shippingAddress.address)
-    const [postalCode, setpostalCode] = useState(shippingAddress.address)
-    const [country, setCountry] = useState(shippingAddress.address)
+    const [city, setCity] = useState(shippingAddress.city)
+    const [postalCode, setPostalCode] = useState(shippingAddress.postalCode)
+    const [country, setCountry] = useState(shippingAddress.country)
 
     const submitHandler = (e) => {
         e.preventDefault()
@@ -65,7 +65,7 @@ function ShippingScreen({ history }) {
                         type='text'
                         placeholder='Introduzca su código postal'
                         value={postalCode ? postalCode : ''}
-                        onChange={(e) => setpostalCode(e.target.value)}
+                        onChange={(e) => setPostalCode(e.target.value)}
                     >
                     </Form.Control>
                 </Form.Group>
