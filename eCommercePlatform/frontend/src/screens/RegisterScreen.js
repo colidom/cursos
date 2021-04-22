@@ -30,9 +30,9 @@ function RegisterScreen({location, history}) {
     const submitHandler = (e) => {
         e.preventDefault()
 
-        if(password !== confirmPassword){
+        if (password !== confirmPassword){
             setMessage('¡Las contraseñas introducidas no coinciden!')
-        }else{
+        } else {
             dispatch(register(name, email, password))
         }
     }

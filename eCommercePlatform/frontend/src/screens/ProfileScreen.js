@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import { Link } from 'react-router-dom'
 import { Form, Button, Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Loader from "../components/Loader";
@@ -7,7 +6,7 @@ import Message from "../components/Message";
 import { getUserDetails, updateUserProfile } from '../actions/userActions'
 import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants'
 
-function ProfileScreen( {history} ) {
+function ProfileScreen({ history }) {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -28,11 +27,11 @@ function ProfileScreen( {history} ) {
     useEffect(() => {
         if (!userInfo){
             history.push('/login')
-        }else{
+        } else {
             if (!user || !user.name || success){
                 dispatch({ type:USER_UPDATE_PROFILE_RESET })
                 dispatch(getUserDetails('profile'))
-            }else{
+            } else {
                 setName(user.name)
                 setEmail(user.email)
             }
@@ -42,9 +41,9 @@ function ProfileScreen( {history} ) {
     const submitHandler = (e) => {
         e.preventDefault()
 
-        if(password !== confirmPassword){
+        if (password !== confirmPassword){
             setMessage('¡Las contraseñas introducidas no coinciden!')
-        }else{
+        } else {
             dispatch(updateUserProfile({
                 'id':user._id,
                 'name':name,
