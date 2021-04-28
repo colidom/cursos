@@ -145,6 +145,45 @@ Bienvenidos al Curso Práctico de Django 2.x, el framework web de referencia par
 </details>
 
 ---
+# Aprende programación básica con PHP
+[<img src="https://tutorialesenpdf.com/wp-content/uploads/2016/06/php-tutorial-pdf.jpg">](https://www.udemy.com/course/aprende-programacion-basica-con-php/)
+
+*Aprende las bases de la programación con el lenguaje PHP*
+
+#### En este curso aprenderemos:
+<details>
+  <summary>Seguir leyendo...</summary>
+
+##### PHP es uno de los lenguajes de programación del momento, es sin duda el lenguaje en el lado del servidor más utilizado actualmente en el desarrollo de aplicaciones web  y cuenta con múltiples ventajas con respecto a otros.
+
+En este curso irás desde un nivel cero aprendiendo poco a poco los fundamentos básicos de la programación usando PHP.
+
+Al finalizar el curso entenderás como trabajar con los aspectos fundamentales de un lenguaje de programación y con las estructuras de control for, while, if, foreach usando PHP y tendrás la capacidad de seguir profundizando en el aprendizaje del lenguaje.
+
+Trataremos los aspectos más importantes de un lenguaje, trabajo con variables, estructuras de control, parámetros GET, incluso haremos varios ejercicios prácticos.
+
+Si quieres aprender lo básico de la programación con PHP sin dolor, practicando poco a poco, de forma fácil y en poco tiempo ¡este es tu curso!
+
+Échale un vistazo al currículo del curso para ver todos temas que aprenderás.
+
+Únete al curso y sin darte cuenta habrás aprendido las bases de la programación estructurada: ¡¡ Aprende programación básica con PHP !!
+
+Tener las nociones básicas de la programación
+Saber usar estructuras de control
+Dar los primeros pasos con PHP
+
+*¿Hay requisitos para realizar el curso?*
+- HTML
+- Trabajar con un sistema operativo
+
+*¿Para quién es este curso?*
+- Estudiantes
+- Diseñadores
+- Apasionados por la web
+
+</details>
+
+---
 # 📚 Libros:
 # Python API Development Fundamentals
 [<img src="https://static.packt-cdn.com/products/9781838983994/cover/smaller">](https://subscription.packtpub.com/book/web_development/9781838983994)
