@@ -80,7 +80,7 @@ function PlaceOrderScreen() {
 
                             <ListGroup.Item>
                                 <Row>
-                                    <Col>Items:</Col>
+                                    <Col>Productos:</Col>
                                     <Col>{cart.itemsPrice}€</Col>
                                 </Row>
                             </ListGroup.Item>
