@@ -28,7 +28,15 @@ def addOrderItems(request):
             totalPrice=data['totalPrice']
         )
         # (2) Create shipping address
+        shipping = ShippingAddress.objects.create(
+            order=order,
+            address=data['shippingAddress']['address'],
+            city=data['shippingAddress']['city'],
+            postalCode=data['shippingAddress']['postalCode'],
+            country=data['shippingAddress']['country'],
+        )
         # (3) Create order items and set the orderItem relationship
+        
         # (4) Update stock
 
     return Response('ORDER')
