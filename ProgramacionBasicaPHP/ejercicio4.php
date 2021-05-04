@@ -1,4 +1,4 @@
-<h2>Ejercicio 3</h2>
+<h2>Ejercicio 4</h2>
 <?php
 /*Escribe un programa que multiplique los 
 20 primeros números naritales. Utiliza el bucle while*/

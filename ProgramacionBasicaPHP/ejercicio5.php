@@ -1,4 +1,4 @@
-<h2>Ejercicio 3</h2>
+<h2>Ejercicio 5</h2>
 <?php
 /*Imprimir por pantalla la tabla de multiplicar
 de un número pasado por parámetro GET por la url*/
