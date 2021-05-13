@@ -4,7 +4,7 @@ from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.response import Response
 
 from ..models import Product, Order, OrderItem, ShippingAddress
-from ..serializers import ProductSerializer
+from ..serializers import ProductSerializer, OrderItemSerializer
 
 from rest_framework import status
 
@@ -36,7 +36,20 @@ def addOrderItems(request):
             country=data['shippingAddress']['country'],
         )
         # (3) Create order items and set the orderItem relationship
-        
-        # (4) Update stock
+        for i in orderItems:
+            product = Product.objects.get(_id=i['product'])
 
-    return Response('ORDER')
+            item = OrderItem.objects.create(
+                product=product,
+                order=order,
+                name=product.name,
+                qty=i['qty'],
+                price=i['price'],
+                image=product.image.url,
+            )
+
+            # (4) Update stock
+            product.countInStock -= item.qty
+            product.save()
+    serializer = OrderItemSerializer(order, many=False)
+    return Response(serializer.data)
