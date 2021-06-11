@@ -9,7 +9,7 @@ import { listProducts } from '../actions/productActions'
 function HomeScreen() {
     const dispatch = useDispatch()
     const productList = useSelector(state => state.productList)
-    const {error, loading, products} = productList
+    const { error, loading, products } = productList
 
     useEffect(()=> {
         dispatch(listProducts())
