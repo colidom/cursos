@@ -71,4 +71,4 @@ def getOrderById(request, pk):
             Response({'detail':'No autorizado para ver esta orden'}, 
             status=status.HTTP_400_BAD_REQUEST)
     except:
-        return Response({'detail': 'La orden no existe'}, status.HTTP_400_BAD_REQUEST)
+        return Response({'detail': 'La orden no existe'}, status=status.HTTP_400_BAD_REQUEST)
