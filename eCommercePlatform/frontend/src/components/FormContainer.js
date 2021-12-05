@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 
 function FormContainer({ children }) {
@@ -8,7 +8,7 @@ function FormContainer({ children }) {
                 <Col xs={12} md={6}>
                     {children}
                 </Col>
-            </Row>        
+            </Row>
         </Container>
     )
 }

@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { Form, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import FormContainer from "../components/FormContainer";
-import CheckoutSteps from "../components/CheckoutSteps";
+import FormContainer from '../components/FormContainer'
+import CheckoutSteps from '../components/CheckoutSteps'
 import { saveShippingAddress } from '../actions/cartActions'
 
 function ShippingScreen({ history }) {
@@ -19,27 +19,22 @@ function ShippingScreen({ history }) {
 
     const submitHandler = (e) => {
         e.preventDefault()
-        dispatch(saveShippingAddress({ 
-            address, 
-            city, 
-            postalCode, 
-            country
-        }))
+        dispatch(saveShippingAddress({ address, city, postalCode, country }))
         history.push('/payment')
     }
 
     return (
         <FormContainer>
             <CheckoutSteps step1 step2 />
-            <h1>Envío</h1>
+            <h1>Shipping</h1>
             <Form onSubmit={submitHandler}>
 
                 <Form.Group controlId='address'>
-                    <Form.Label>Dirección</Form.Label>
+                    <Form.Label>Address</Form.Label>
                     <Form.Control
                         required
                         type='text'
-                        placeholder='Introduzca su dirección'
+                        placeholder='Enter address'
                         value={address ? address : ''}
                         onChange={(e) => setAddress(e.target.value)}
                     >
@@ -47,11 +42,11 @@ function ShippingScreen({ history }) {
                 </Form.Group>
 
                 <Form.Group controlId='city'>
-                    <Form.Label>Ciudad</Form.Label>
+                    <Form.Label>City</Form.Label>
                     <Form.Control
                         required
                         type='text'
-                        placeholder='Introduzca su ciudad'
+                        placeholder='Enter city'
                         value={city ? city : ''}
                         onChange={(e) => setCity(e.target.value)}
                     >
@@ -59,11 +54,11 @@ function ShippingScreen({ history }) {
                 </Form.Group>
 
                 <Form.Group controlId='postalCode'>
-                    <Form.Label>Código postal</Form.Label>
+                    <Form.Label>Postal Code</Form.Label>
                     <Form.Control
                         required
                         type='text'
-                        placeholder='Introduzca su código postal'
+                        placeholder='Enter postal code'
                         value={postalCode ? postalCode : ''}
                         onChange={(e) => setPostalCode(e.target.value)}
                     >
@@ -71,11 +66,11 @@ function ShippingScreen({ history }) {
                 </Form.Group>
 
                 <Form.Group controlId='country'>
-                    <Form.Label>País</Form.Label>
+                    <Form.Label>Country</Form.Label>
                     <Form.Control
                         required
                         type='text'
-                        placeholder='Introduzca su país'
+                        placeholder='Enter country'
                         value={country ? country : ''}
                         onChange={(e) => setCountry(e.target.value)}
                     >
@@ -83,9 +78,8 @@ function ShippingScreen({ history }) {
                 </Form.Group>
 
                 <Button type='submit' variant='primary'>
-                    Siguiente
+                    Continue
                 </Button>
-
             </Form>
         </FormContainer>
     )
