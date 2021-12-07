@@ -6,11 +6,11 @@ body {
     font-size: 16px; /* 1rem = 10px */
 }
 
-h1 { 
+.title { 
     text-align: center;
     font-size: 3.8rem;
 }
 
-span {
+.title span {
     font-size: 2rem;
 }
