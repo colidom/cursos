@@ -17,7 +17,7 @@ body {
 .title { 
     text-align: center;
     font-size: 3.8rem;
-    color: var(--primary);
+    font-family: 'Krub', sans-serif;
 }
 
 .title span {
