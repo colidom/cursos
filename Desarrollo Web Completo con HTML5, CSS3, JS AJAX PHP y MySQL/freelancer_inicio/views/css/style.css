@@ -35,5 +35,10 @@ body {
 }
 
 .navigation-main {
-    
+    padding: 1rem;
+}
+
+.navigation-main a {
+    color: var(--white);
+    text-decoration: none;
 }
