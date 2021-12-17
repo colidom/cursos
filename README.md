@@ -183,6 +183,32 @@ Dar los primeros pasos con PHP
 
 </details>
 
+
+---
+# Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL
+[![Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL](./pictures/the-complete-web-developer-course.jpg)](https://www.udemy.com/course/aprende-programacion-basica-con-php/)
+
+
+#### En este curso aprenderemos:
+<details>
+  <summary>Seguir leyendo...</summary>
+
+##### Lo que aprenderás
+
+- Convertir y crear sus propios diseños en páginas web
+- Crear páginas web con HTML y CSS
+- Escribir código JavaScript y jQuery
+- Crear sitios web dínamicos con PHP y MYSQL
+- Entender como funciona JavaScript y PHP
+- Aplicar a un empleo de Desarrollador Web Junior
+- Aprende AJAX, para crear páginas web dínamicas que cargaran información sin recargar la página
+- Agregar pagos de PayPal a tus sitios web
+- Crear aplicaciones CRUD con PHP y MySQL
+- Crear aplicaciones seguras con PHP, Ajax y MySQL
+- Crear un área de administración con AdminLTE, PHP y MySQL
+
+</details>
+
 ---
 # 📚 Libros:
 # Python API Development Fundamentals
