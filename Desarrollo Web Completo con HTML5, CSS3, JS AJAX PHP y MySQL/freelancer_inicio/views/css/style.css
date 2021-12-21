@@ -51,3 +51,15 @@ body {
     background-color: var(--primary);
     color: var(--dark);
 }
+
+@media (min-width: 480px) {
+    h1 {
+
+    }   
+}
+
+@media (min-width: 768px) {
+    h1 {
+
+    }
+}
