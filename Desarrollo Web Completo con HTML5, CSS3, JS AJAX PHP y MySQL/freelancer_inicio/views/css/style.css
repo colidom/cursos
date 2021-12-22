@@ -25,7 +25,7 @@ body {
 }
 
 .container {
-    width: 120rem;
+    max-width: 120rem;
     margin: 0 auto; /* top-bot = 0 y rigth-left = auto */
 
 }
@@ -36,10 +36,20 @@ body {
 
 .navigation-main {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
+@media (min-width: 768px) {
+    .navigation-main {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
 .navigation-main a {
+    display: block;
+    text-align: center;
     padding: 1rem;
     color: var(--white);
     text-decoration: none;
