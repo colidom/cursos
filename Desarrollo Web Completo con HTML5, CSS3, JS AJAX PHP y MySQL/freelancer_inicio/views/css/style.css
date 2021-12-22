@@ -72,5 +72,13 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
-    padding: 20px;
+    position: relative;
+}
+
+.contenido-hero {
+  position: absolute;
+  background-color: rgba(0, 0, 0, .7); /* Forma anterior */
+  background-color: rgb(0 0 0 / 70%); /* Nueva forma */
+  width: 100%;
+  height: 100%;
 }
