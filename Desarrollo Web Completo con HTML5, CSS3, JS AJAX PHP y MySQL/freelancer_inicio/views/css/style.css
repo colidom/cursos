@@ -62,14 +62,8 @@ body {
     color: var(--dark);
 }
 
-@media (min-width: 480px) {
-    h1 {
-
-    }   
-}
-
-@media (min-width: 768px) {
-    h1 {
-
-    }
+.hero {
+    background-image: url("../../media/img/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
