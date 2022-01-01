@@ -6,9 +6,10 @@
     --gray: #757575;
 }
 
+/* Globales */
 html {
     font-size: 62.5%;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Hack para Box model */
 }
 
 *, *:before, *:after {
@@ -18,26 +19,6 @@ html {
 body {
     font-size: 16px; /* 1rem = 10px */
     font-family: 'Krub', sans-serif;
-}
-
-h1 {
-    font-size: 3.8rem;
-}
-
-h2 {
-    font-size: 2.8rem;
-}
-
-h3 {
-    font-size: 1.8rem;
-}
-
-h1, h2, h3 { 
-    text-align: center;
-}
-
-.title span {
-    font-size: 2rem;
 }
 
 .container {
@@ -66,6 +47,29 @@ h1, h2, h3 {
     }
 }
 
+/* Tipografía */
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1, h2, h3 { 
+    text-align: center;
+}
+
+/* Títulos */
+.title span {
+    font-size: 2rem;
+}
+
+/* Navegación principal */
 .nav-bg {
     background-color: var(--secondary);
 }
@@ -82,7 +86,6 @@ h1, h2, h3 {
     }
 }
 
-
 .navigation-main a {
     display: block;
     text-align: center;
@@ -98,6 +101,7 @@ h1, h2, h3 {
     color: var(--dark);
 }
 
+/* Hero */
 .hero {
     background-image: url("../../media/img/hero.jpg");
     background-repeat: no-repeat;
@@ -124,7 +128,7 @@ h1, h2, h3 {
     color: var(--white)
 }
 
-.ubicacion {
+.contenido-hero .ubicacion {
     display: flex;
     align-items: flex-end;
 }
