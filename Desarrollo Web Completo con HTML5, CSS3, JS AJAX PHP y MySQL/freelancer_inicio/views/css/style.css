@@ -4,6 +4,7 @@
     --primary: #ffc107;
     --secondary: #0097a7;
     --gray: #757575;
+    --lightGray: #DFE9F3;
 }
 
 /* Globales */
@@ -19,6 +20,7 @@ html {
 body {
     font-size: 16px; /* 1rem = 10px */
     font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--lightGray) 0%, var(--white) 100%); /* Degradado en el fondo de la página */
 }
 
 .container {
