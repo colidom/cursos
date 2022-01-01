@@ -20,9 +20,20 @@ body {
     font-family: 'Krub', sans-serif;
 }
 
-.title { 
-    text-align: center;
+h1 {
     font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1, h2, h3 { 
+    text-align: center;
 }
 
 .title span {
@@ -81,4 +92,19 @@ body {
   background-color: rgb(0 0 0 / 70%); /* Nueva forma */
   width: 100%;
   height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p {
+    color: var(--white)
+}
+
+.ubicacion {
+    display: flex;
+    align-items: flex-end;
 }
