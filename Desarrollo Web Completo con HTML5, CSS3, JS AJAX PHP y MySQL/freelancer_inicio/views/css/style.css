@@ -152,5 +152,6 @@ h1, h2, h3 {
         /* grid-template-columns: 1fr 1fr 1fr; */  /* 1fr = 33.3% */
         /* grid: repeat(3, 1fr); /* Forma corta de hacer lo de arriba */
         grid-template-columns: repeat(3, 1fr);
+        column-gap: 5rem;
     }
 }
