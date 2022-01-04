@@ -182,3 +182,25 @@ h1, h2, h3 {
     justify-content: space-evenly;
     align-items: center;
 }
+
+/* Contacto  */
+.form {
+    background-color: var(--gray);
+    width: min(60rem, 100%); /* Utilizar el valor más pequeño */
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.form fieldset {
+    border: none;
+}
+
+.form legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primary)
+}

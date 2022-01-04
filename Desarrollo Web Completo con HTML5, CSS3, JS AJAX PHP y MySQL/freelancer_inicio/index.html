@@ -105,28 +105,30 @@
         <section>
             <h2>Contacto</h2>
 
-            <form action="submit">
+            <form class="form" action="submit">
                 <fieldset>
                     <legend>Contáctame llenando todos los campos</legend>
 
-                    <div>
-                        <label>Nombre</label>
-                        <input type="text" name="name" id="name" placeholder="Nombre">
-                    </div>
-                    <div>
-                        <label>Teléfono</label>
-                        <input type="tel" name="phone" id="phone" placeholder="Teléfono">
-                    </div>
-                    <div>
-                        <label>Correo</label>
-                        <input type="email" name="email" id="email" placeholder="E-mail">
-                    </div>
-                    <div>
-                        <label>Mensaje</label>
-                        <textarea name="message" id="message"></textarea>
-                    </div>
-                    <div>
-                        <input type="submit" value="Enviar">
+                    <div class="fields-container">
+                        <div class="field">
+                            <label>Nombre</label>
+                            <input type="text" name="name" id="name" placeholder="Nombre">
+                        </div>
+                        <div class="field">
+                            <label>Teléfono</label>
+                            <input type="tel" name="phone" id="phone" placeholder="Teléfono">
+                        </div>
+                        <div class="field">
+                            <label>Correo</label>
+                            <input type="email" name="email" id="email" placeholder="E-mail">
+                        </div>
+                        <div class="field">
+                            <label>Mensaje</label>
+                            <textarea name="message" id="message"></textarea>
+                        </div>
+                        <div class="field">
+                            <input type="submit" value="Enviar">
+                        </div> <!-- .fields-container -->
                     </div>
                 </fieldset>
             </form>
