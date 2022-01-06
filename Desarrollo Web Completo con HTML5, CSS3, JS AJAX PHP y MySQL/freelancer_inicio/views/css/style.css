@@ -41,12 +41,17 @@ body {
     border-radius: .5rem;
     width: 90%;
     text-align: center;
+    border: none;
 }
 
 @media (min-width: 768px) {
     .button {
         width: auto;
     }
+}
+
+.button:hover {
+    cursor: pointer;
 }
 
 .shadow {
@@ -78,6 +83,25 @@ h1, h2, h3 {
 /* Títulos */
 .title span {
     font-size: 2rem;
+}
+
+/* Utilidades */
+.w-sm-100 {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;
+    }   
+}
+
+.flex {
+    display: flex;
+}
+
+.align-right {
+    justify-content: flex-end;
 }
 
 /* Navegación principal */
@@ -203,4 +227,26 @@ h1, h2, h3 {
     font-weight: 700;
     margin-bottom: 2rem;
     color: var(--primary)
+}
+
+.fields-container {
+    
+}
+
+.field {
+    margin-bottom: 1rem;
+}
+
+.field label {
+    color: var(--white);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
 }
