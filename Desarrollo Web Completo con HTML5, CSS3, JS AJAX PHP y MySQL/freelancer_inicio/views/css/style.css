@@ -11,6 +11,15 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box; /* Hack para Box model */
+    scroll-snap-type: y mandatory;
+}
+
+/* Scroll snap */
+.services, 
+.navigation-main,
+.form {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 *, *:before, *:after {
