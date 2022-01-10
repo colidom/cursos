@@ -68,9 +68,21 @@ h3 { font-size: 2.4rem; }
 
 /* Navegación */
 .nav {
-
+    background-color: var(--primaryDark);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem
 }
 
 .nav__link {
-    
+    font-family: var(--mainFont);
+    color: var(--white);
+    font-size: 3rem;
 }
+
+.nav__link--active,
+.nav__link:hover {
+    color: var(--secondary);
+}
+
