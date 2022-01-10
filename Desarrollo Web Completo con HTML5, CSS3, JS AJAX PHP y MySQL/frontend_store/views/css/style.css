@@ -66,6 +66,19 @@ h3 { font-size: 2.4rem; }
     margin: 3rem 0;
 }
 
+/* Footer */
+.footer {
+    background-color: var(--primaryDark);
+    padding: 1rem 0;
+    margin-top: 2rem;
+
+}
+.footer__text {
+    text-align: center;
+    font-family: var(--mainFont);
+    font-size: 2.2rem;
+}
+
 /* Navegación */
 .nav {
     background-color: var(--primaryDark);
