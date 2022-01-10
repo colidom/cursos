@@ -85,14 +85,19 @@ h3 { font-size: 2.4rem; }
     padding: 1rem 0;
     display: flex;
     justify-content: center;
-    gap: 2rem
+    gap: 2rem   /* Separación entre elementos forma nueva */
 }
 
 .nav__link {
     font-family: var(--mainFont);
     color: var(--white);
     font-size: 3rem;
+    /* margin-right: 2rem; */ /* Separación entre elementos forma anterior */
 }
+
+/* .nav__link:last-of-type { Selecciona el último enlace
+    margin-right: 0;
+} */
 
 .nav__link--active,
 .nav__link:hover {
