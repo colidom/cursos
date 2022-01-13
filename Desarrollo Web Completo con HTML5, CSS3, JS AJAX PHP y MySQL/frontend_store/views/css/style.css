@@ -191,3 +191,28 @@ h3 { font-size: 2.4rem; }
         grid-column: 2 / 3;
     }
 }
+
+/* Bloques */
+.blocks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);   
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .blocks {
+        grid-template-columns: repeat(4, 1fr);   
+    }
+}
+
+.block {
+    text-align: center;
+}
+
+.block__image {
+    width: 100%;
+}
+
+.block__title {
+    margin: 0;
+}
