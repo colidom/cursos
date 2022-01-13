@@ -30,7 +30,7 @@ a {
 	text-decoration: none;
 	color: #C5CD87;
 }
-#header {
+header {
 	width: 100%;
 	background-color: #5C6429;
 	background-image: url(header.jpg);
@@ -39,19 +39,19 @@ a {
 	position: relative;
 	z-index: 0;
 }
-.navbar {
+nav {
 	font-size: small;
 	background-color: #5C6429;
 	border: thin solid #AC9C7B;
 	padding: 2px;
 }
 
-.navbar ul {
+nav ul {
 	list-style-type: none;
 	margin-left: 5px;
 	padding: 0;
 }
-.navbar li {
+nav li {
 	display: inline;
 	padding-right: 20px;
 }
@@ -59,13 +59,13 @@ a {
 	float: right;
 	margin-left: 10px;
 }
-.seccion {
+section {
 	clear: left;
 	float: left;
 	margin-bottom: 20px;
 	margin-top: 5px;
 }
-#sidebar {
+aside {
 	float: left;
 	width: 220px;
 	color: #ffffff;
@@ -74,7 +74,7 @@ a {
 	margin-right: 20px;
 }
 
-#footer {
+footer {
 	clear: both;
 }
 
