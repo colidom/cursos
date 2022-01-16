@@ -1,0 +1,228 @@
+﻿@charset "utf-8";
+/* Reglas generales */
+#comentarios_post h1 {
+	font-size: 1.5em;
+}
+header, nav, aside, article, section, footer {
+	display: block;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #3C3D3F;
+	background-color: #4b4b4b;
+	background-image: url(images/img01.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	color: #2B2522;
+}
+
+h1 {
+	font-size: 3.8em;
+}
+
+h2 {
+	font-size: 2em;
+	font-style: italic;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+p, ul, ol {
+	margin-top: 0;
+	line-height: 180%;
+}
+
+a {
+	text-decoration: underline;
+	color: #2B2522;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* Contenedor para centrar la página */
+#container {
+	width: 980px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+/* Encabezado */
+#encabezado_principal {
+	width: 100%;
+	margin: 0 auto;
+	padding: 40px 0px 0px 0px;
+}
+
+#buscar {
+	float: right;
+	width: 300px;
+	padding: 0;
+}
+
+
+#txtBuscar {
+	width: 160px;
+	border: none;
+	background-color: #ffffff;
+	text-transform: lowercase;
+	font: normal 11px Arial, Helvetica, sans-serif;
+	color: #5D781D;
+}
+
+#btnBuscar {
+	border: none;
+	background-color: #4b4b4b;
+	color: #ffffff;
+}
+
+/* Menú de navegación */
+#nav_sup {
+	float: left;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#nav_sup ul {
+	margin-left: 5px;
+	padding: 0;
+	list-style-type: none;
+	line-height: normal;
+}
+
+#nav_sup li {
+	display: inline;
+	padding-right: 20px;
+}
+
+#nav_sup a:link, #nav_sup a:visited, #nav_sup a:hover {
+	text-decoration: none;	
+}
+
+/* Contenido principal */
+#content {
+	margin-left: 20px;
+	float: left;
+	width: 610px;
+	padding: 20px 30px 20px 30px;
+	background-color: #ffffff;
+	border-radius: 10px;
+}
+
+body > article {
+	border-bottom-style: dotted;
+	border-bottom-width: 3px;
+	border-bottom-color: black;
+	margin-bottom: 20px;
+	clear:both;
+	overflow: hidden;
+}
+
+article article {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	padding-top: 10px;
+}
+.leermas {
+	float:left;
+}
+
+.comentarios {
+	float:right;
+}
+
+.foto_centrada {
+	display: block;
+	margin: 0 auto;
+}
+
+/* Barra lateral */
+aside {
+	float: right;
+	width: 220px;
+	padding: 140px 20px 0px 0px;
+}
+
+aside ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+aside li {
+	margin: 0;
+	padding: 0;
+}
+
+aside li ul {
+	margin: 0px 0px;
+	padding-bottom: 30px;
+}
+
+aside li li {
+	line-height: 35px;
+	border-bottom: 1px solid #342C29;
+	margin: 0px 20px 0px 20px;
+	border-left: none;
+	text-align: left;
+}
+
+aside li li a {
+	padding: 0px 0px 0px 15px;
+}
+
+aside h3 {
+	height: 31px;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	text-transform: uppercase;
+	letter-spacing: -.5px;
+	font-size: 1em;
+	color: #ffffff;
+}
+
+aside a {
+	border: none;
+	color: #847F7E;
+}
+
+aside a:hover {
+	text-decoration: underline;
+	color: #847F7E;
+}
+
+.bloque_sidebar {
+	margin-bottom: 20px;	
+}
+
+/* Pie de página */
+footer {
+	clear: both;
+	float: left;
+	width: 560px;
+	margin: 0 auto;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 20px 30px 20px 30px;
+}
+
+.copyright {
+	font-size: x-small;
+	text-align: center;
+	color: #847F7E;
+	text-transform: uppercase;
+}

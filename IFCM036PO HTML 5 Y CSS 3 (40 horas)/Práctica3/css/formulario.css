@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+#frmPedido {
+	width: 650px;
+	border-radius: 5px;
+	padding: 10px;
+	background-color: #CCF;
+	margin-left: 0px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+#frmPedido fieldset {
+	margin-bottom: 10px;	
+}
+#frmPedido legend {
+	color: #384313;
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+#frmPedido ol li {
+   background: rgba(255,255 ,255,.3);
+   border-color: #e3ebc3;
+   border-color: rgba(255,255,255,.6);
+   border-style: solid;
+   border-width: 2px;
+   border-radius: 5px;
+   line-height: 30px;
+   list-style: none;
+   padding: 1px 10px;
+   margin-bottom: 2px;
+}
+#frmPedido label {
+   float: left;
+   font-size: 13px;
+   width: 110px;
+}
+#frmPedido textarea {
+	background: #ffffff;
+	border: none;
+	border-radius: 3px;
+	font: italic 13px Georgia, "Times New Roman", Times, serif;
+	outline: none;
+	width: 420px;
+}
+
+#frmPedido input[type="text"], #frmPedido input[type="email"], #frmPedido input[type="tel"] {
+	width: 420px;	
+}
+#frmPedido input[type="submit"] {
+	border: none;
+	border-radius: 20px;
+	color: #ffffff;
+	display: block;
+	letter-spacing: 1px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 7px 25px;
+	text-shadow: 0 1px 1px #000000;
+	text-transform: uppercase;
+	background-color: #A6A6FF;
+	width: 150px;
+}
+#frmPedido input[type="submit"]:hover {
+	cursor: pointer;
+}
