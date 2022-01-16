@@ -12,15 +12,15 @@
 <ol>
 	<li>
    	<label for="txtNombre">Nombre*:</label>
-   	<input id="txtNombre" name="txtNombre" type="text">
+   	<input id="txtNombre" name="txtNombre" type="text" placeholder="Nombre" required autofocus>
 	</li>
 	<li>
 	<label for="txtEmail">Email*:</label>
-	<input id="txtEmail" name="txtEmail" type="email">
+	<input id="txtEmail" name="txtEmail" type="email" placeholder="Email" required>
 	</li>
 	<li>
 	<label for="txtTelefono">Teléfono:</label>
-	<input id="txtTelefono" name="txtTelefono" type="tel">
+	<input id="txtTelefono" name="txtTelefono" type="tel" placeholder="Teléfono" required>
 	</li>
 </ol>
 </fieldset>
@@ -29,11 +29,11 @@
 <ol>
 	<li>
 	<label for="txtDireccion">Dirección*:</label>
-	<textarea id="txtDireccion" name="txtDireccion" rows=3></textarea>
+	<textarea id="txtDireccion" name="txtDireccion" rows=3></textarea required>
 	</li>
 	<li>
     <label for="txtCodigoPostal">Código postal*:</label>
-    <input id="txtCodigoPostal" name="txtCodigoPostal" type="text">
+    <input id="txtCodigoPostal" name="txtCodigoPostal" type="text" required>
     </li>
     <li>
     <label for="txtCiudad">Ciudad:</label>
@@ -41,7 +41,14 @@
     </li>
     <li>
     <label for="txtProvincia">Provincia:</label>
-    <input type="text" name="txtProvincia" id="txtProvincia">
+    <input type="text" name="txtProvincia" id="txtProvincia" list="provincias">
+	<datalist id="provincias">
+		<option label="Álava" value="Álava">
+		<option label="Albacete" value="Albacete">
+		<option label="Alicante" value="Alicante">    
+		<option label="Almería" value="Almería">  
+		<option label="Asturias" value="Asturias">
+	</datalist>
     </li>
 </ol>
 </fieldset>
@@ -50,15 +57,15 @@
 <ol>
 	<li>
    	<label for="txtNombreHotel">Nombre del hotel:</label>
-   	<input id="txtNombreHotel" name="txtNombreHotel" type="text" value="Hotel Experia II">
+   	<input id="txtNombreHotel" name="txtNombreHotel" type="text" value="Hotel Experia II" readonly>
 	</li>
 	<li>
 	<label for="txtNumeroNoches">Noches*:</label>
-	<input id="txtNumeroNoches" name="txtNumeroNoches" type="number" min="1" max="10">
+	<input id="txtNumeroNoches" name="txtNumeroNoches" type="number" min="1" max="10" required>
 	</li>
 	<li>
 	<label for="txtFechaEntrada">Fecha entrada*:</label>
-	<input id="txtFechaEntrada" name="txtFechaEntrada" type="date">
+	<input id="txtFechaEntrada" name="txtFechaEntrada" type="date" required>
 	</li>
 </ol>
 </fieldset>
