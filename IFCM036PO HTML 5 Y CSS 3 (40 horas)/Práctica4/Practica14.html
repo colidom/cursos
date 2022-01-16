@@ -3,9 +3,58 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Uso de RGraph</title>
+<script src="RGraph/libraries/RGraph.common.core.js"></script>
+<script src="RGraph/libraries/RGraph.common.dynamic.js"></script>
+<script src="RGraph/libraries/RGraph.common.annotate.js"></script>
+<script src="RGraph/libraries/RGraph.common.context.js"></script>
+<script src="RGraph/libraries/RGraph.common.effects.js"></script>
+<script src="RGraph/libraries/RGraph.common.key.js"></script>
+<script src="RGraph/libraries/RGraph.common.resizing.js"></script>
+<script src="RGraph/libraries/RGraph.common.tooltips.js"></script>
+<script src="RGraph/libraries/RGraph.common.zoom.js"></script>
+<script src="RGraph/libraries/RGraph.bar.js"></script>
+<script src="RGraph/libraries/RGraph.bipolar.js"></script>
+<script src="RGraph/libraries/RGraph.fuel.js"></script>
+<script src="RGraph/libraries/RGraph.funnel.js"></script>
+<script src="RGraph/libraries/RGraph.gantt.js"></script>
+<script src="RGraph/libraries/RGraph.gauge.js"></script>
+<script src="RGraph/libraries/RGraph.hbar.js"></script>
+<script src="RGraph/libraries/RGraph.hprogress.js"></script>
+<script src="RGraph/libraries/RGraph.line.js"></script>
+<script src="RGraph/libraries/RGraph.meter.js"></script>
+<script src="RGraph/libraries/RGraph.odo.js"></script>
+<script src="RGraph/libraries/RGraph.pie.js"></script>
+<script src="RGraph/libraries/RGraph.radar.js"></script>
+<script src="RGraph/libraries/RGraph.rose.js"></script>
+<script src="RGraph/libraries/RGraph.rscatter.js"></script>
+<script src="RGraph/libraries/RGraph.scatter.js"></script>
+<script src="RGraph/libraries/RGraph.semicircularprogress.js"></script>
+<script src="RGraph/libraries/RGraph.thermometer.js"></script>
+<script src="RGraph/libraries/RGraph.vprogress.js"></script>
+<script src="RGraph/libraries/RGraph.waterfall.js"></script>
 </head>
-
 <body>
-
+<canvas id="miCanvas" width="650" height="250">Contenido alternativo al elemento canvas</canvas>
+<script>
+window.addEventListener("load", function () {
+        var data = [280, 45, 133, 166, 84, 259, 266, 960, 219, 311, 67, 89];
+	    var bar = new RGraph.Bar({
+               				id: 'miCanvas',
+            				data: data,
+	    			        options: {
+                				   labels: [
+                    				   	'Ene', 'Feb',
+                    					'Mar', 'Abr',
+                    					'May', 'Jun',
+                    					'Jul', 'Ago',
+                    					'Sep', 'Oct',
+                    					'Nov', 'Dic'
+                				  ],
+               				      gutterLeft: 35
+            				}
+        		}).draw();
+        },
+        false);
+</script>
 </body>
 </html>
