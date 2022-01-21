@@ -1,0 +1,16 @@
+@charset "utf-8";
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input {
+    margin: 10px;
+}
+
+#content {
+  background: grey;
+  width: 600px; 
+  padding: 20px;
+  border: 10px solid black;
+  margin: 20px auto;
+}
