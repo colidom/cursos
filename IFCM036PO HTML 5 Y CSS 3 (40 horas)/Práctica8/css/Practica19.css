@@ -1,0 +1,29 @@
+@charset "utf-8";
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input {
+    margin: 10px;
+}
+
+#content {
+  background: grey;
+  width: 600px; 
+  padding: 20px;
+  border: 10px solid black;
+  margin: 20px auto;
+}
+
+.border {
+    box-sizing: border-box;
+}
+
+.twoColumns {
+    column-count: 2;   
+}
+
+.columnsSeparator {
+    column-gap: 30px;
+    column-rule: 4px double #ffffff;
+}
