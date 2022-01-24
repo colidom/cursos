@@ -55,7 +55,7 @@ Bienvenidos al Curso Práctico de Django 2.x, el framework web de referencia par
 
 ---
 # Master en Python: Aprender Python 3, Django, Flask y Tkinter
-[<img src="https://img-a.udemycdn.com/course/480x270/2264216_b701_3.jpg">](https://www.udemy.com/share/102OwsAksbcFlRQn4)
+[![Master en Python: Aprender Python 3, Django, Flask y Tkinter](./pictures/maxresdefault.jpg)](https://www.udemy.com/share/102OwsAksbcFlRQn4)
 
 *Aprende a programar desde cero con Python 3 y desarrollo web con los frameworks Django 3 y Flask paso a paso (+30 horas)*
 
