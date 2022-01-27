@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<HTML>
+	<head>
+		<title>Práctica 3a</title>
+		<meta charset="UTF-8">
+		
+		<script>
+			window.addEventListener("load", function(){
+				var formu = document.getElementById("formuAcceso");
+				formu.addEventListener("submit", compruebaAcceso, false);
+			});
+			
+			function compruebaAcceso(){
+				var formu = document.getElementById("formuAcceso");
+				var elnombre = document.getElementById("nombre");
+				var laclave = document.getElementById("clave");
+				
+				if(elnombre.value!="Elena"){
+					alert("Lo siento, usted no es una persona autorizada");
+				}
+				else{
+					if(laclave.value!="Fresas"){
+						alert("Su contraseña es incorrecta");
+					}
+					else{
+						alert("Bienvenida, Elena");
+					}
+				}
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+	<form name="formuAcceso" id="formuAcceso">
+		<div>
+			<label for="nombre">Nombre:</label> 
+			<input type="text" name="nombre" id="nombre">
+		</div>
+		<div>
+			<label for="clave">Contraseña:</label> 
+			<input type="password" name="clave" id="clave">
+		</div>
+		<div>
+			<input type="submit" value="Entrar">
+		</div>
+		
+	</form>
+	
+	
+			
+	</body>
+</HTML>
