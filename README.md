@@ -210,6 +210,54 @@ Dar los primeros pasos con PHP
 </details>
 
 ---
+# F182043AA/60/024 IFCM036PO HTML 5 Y CSS 3
+[![F182043AA/60/024 IFCM036PO HTML 5 Y CSS 3](./pictures/html-lernen-t.jpg)](https://www.cursosfemxa.es/html5-css3-gratuito-online-estatal-tajamar-autonomos-erte-curso)
+
+
+#### ¿Cuáles son los objetivos del curso?
+Con este curso gratuito de HTML 5 y  CSS 3 aprenderás los conocimientos sobre las ventajas comparativas que aportan los estandar HTML5 y CSS3 para la simplificación de la construcción de páginas web, en especial en las nuevas capacidades que aportan sobre contenidos dinámicos y multimedia.
+
+<details>
+  <summary>Seguir leyendo...</summary>
+
+##### ¿Qué vas a aprender?
+- HTML5 y CSS3.
+
+  - Elementos estructurales de HTML5.
+  - Trabajando con esquemas HTML5.
+  - Formularios HTML5.
+  - Dibujar con el elemento canvas (Parte 1).
+  - Dibujar con el elemento canvas (Parte 2).
+  - Vídeo y audio en HTML5.
+  - Introducción a CSS3 (Parte 1).
+  - Introducción a CSS3 (Parte 2).
+
+- FUNDAMENTOS DE JAVASCRIPT.
+  - Introducción.
+  - Introducción a JavaScript.
+  - Fundamentos de programación.
+  - Objetos y Arrays en JavaScript.
+  - Los objetos location e history.
+  - El objeto document.
+  - El objeto form.
+  - Modelo de Objetos del Documento (DOM)..
+  - Manipulación del DOM.
+  - Buenas prácticas.
+
+##### ¿Cómo son las clases? 
+
+Este curso se imparte en **modalidad online** con una duración de **40 horas**.  
+
+La formación se realiza a través de nuestro **Campus Virtual**, dispondrás de todo el contenido didáctico en la plataforma del curso y estará accesible, desde el día de inicio de curso, las 24 horas todos los días de la semana. Además tendrás acceso a un equipo de tutores, a través del correo electrónico y/o el teléfono gratuito.
+
+Si aún tienes dudas con esta modalidad, consulta nuestro post del Blog:  [7 Beneficios de la formación online](https://www.cursosfemxa.es/blog/13898-7-beneficios-de-la-formacion-online)
+
+Formación 100% Subvencionada por:
+[![](./pictures/logo_sepe_ministerio6.jpg)]()
+
+</details>
+
+---
 # 📚 Libros:
 # Python API Development Fundamentals
 [<img src="https://static.packt-cdn.com/products/9781838983994/cover/smaller">](https://subscription.packtpub.com/book/web_development/9781838983994)
