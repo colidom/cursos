@@ -222,7 +222,6 @@ Con este curso gratuito de HTML 5 y  CSS 3 aprenderás los conocimientos sobre l
 
 ##### ¿Qué vas a aprender?
 - HTML5 y CSS3.
-
   - Elementos estructurales de HTML5.
   - Trabajando con esquemas HTML5.
   - Formularios HTML5.
@@ -266,6 +265,8 @@ Formación 100% Subvencionada por:
 <details>
   <summary>Seguir leyendo...</summary>
 
+
+##### ¿Qué vas a aprender?
   - Profundice en el principio de la API RESTful
   - Aprender a construir una aplicación web escalable con la arquitectura de la API RESTfuly el framework Flask.
   - Conozca cuáles son las herramientas y la metodología exactas para probar sus aplicaciones y cómo utilizarlas.
