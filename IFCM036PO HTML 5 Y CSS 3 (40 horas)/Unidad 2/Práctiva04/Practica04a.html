@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica04a</title>
+
+    <script>
+        var newWindow = null;
+
+        function OpenWindow() {
+            newWindow = window.open("", "new", "width=200,height=100");
+        }
+
+        function CloseWindow() {
+            if (newWindow) {
+                newWindow.close();
+                newWindow = null;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="button" value="Abrir ventana" onclick="OpenWindow();">
+        <input type="button" value="Cerrar ventana" onclick="CloseWindow();">
+    </form>
+</body>
+</html>
