@@ -1,0 +1,59 @@
+﻿@charset "utf-8";
+body,td,th {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 14px;
+}
+p, h3, form {
+	margin: 0px;
+	padding: 0px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+}
+.miformulario {
+	background-color: #ebf4fb;
+	border: 2px solid #b7ddf2;
+	width: 400px;
+	overflow: hidden;
+}
+p {
+	font-size: 11px;
+	color: #666666;
+	margin-bottom: 20px;
+	border-bottom: solid 1px #b7ddf2;
+	padding-bottom: 10px;
+}
+label {
+	font-weight: bold;
+	text-align: right;
+	float: left;
+	width: 165px;
+}
+input[type="text"], input[type="password"] {
+	float: left;
+	width: 200px;
+	margin-top: 2px;
+	margin-right: 0px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	padding-top: 4px;
+	padding-right: 2px;
+	padding-bottom: 0px;
+	padding-left: 2px;
+}
+.boton{
+	clear: both;
+	float: left;
+	margin-left: 150px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	width: 125px;
+	height: 31px;
+	background: #666666;
+	text-align: center;
+	line-height: 31px;
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: bold;
+}
