@@ -1,0 +1,40 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Comentarios en un blog</title>
+<style type="text/css">
+.comentario {
+   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+   font-size: 10px;
+}
+#leermas {
+   color: green;
+   text-decoration: none;
+}
+</style>
+<script>
+    function MasComentarios() {
+        var nuevo_div = document.createElement("div");
+        var nuevo_h2 = document.createElement("h2");
+        var nuevo_h2_texto = document.createTextNode("Comentario");
+        var nuevo_p = document.createElement("p");
+        nuevo_p.setAttribute("class", "comentario");
+        var nuevo_p_texto = document.createTextNode("Texto del comentario.");
+
+        nuevo_p.appendChild(nuevo_p_texto);
+        nuevo_h2.appendChild(nuevo_h2_texto);
+        nuevo_div.appendChild(nuevo_h2);
+        nuevo_div.appendChild(nuevo_p);
+        document.body.appendChild(nuevo_div);
+    }
+</script>
+</head>
+<body>
+<h1>Título del post</h1>
+<div>
+<h2>Comentario</h2>
+<p class="comentario">Texto del comentario.</p>
+</div>
+<p><a id="leermas" href="#" onclick="MasComentarios();return false;">Leer más comentarios</a></p>
+</body>
+</html>

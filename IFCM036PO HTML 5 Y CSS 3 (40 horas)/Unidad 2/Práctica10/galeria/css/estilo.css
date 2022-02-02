@@ -1,0 +1,39 @@
+﻿@charset "utf-8";
+body,td,th {
+	background-color: #ffffff;
+	color: #574C38;
+	font-family: Verdana, Arial, "Helvetica Narrow", sans-serif;
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#container {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+h1 {
+	color: #ffffff;
+	margin: 0px;
+	background-color: #574C38;
+	padding-left: 5px;
+}
+li {
+   list-style-type: none;
+   display: inline;
+}
+a img {
+   border: 0;
+}
+.imagenGrande {
+   display: block;
+   margin-left: 145px;
+   float: left;
+   padding-right: 10px;	
+}
+.textoDescripcion {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: large;
+	padding-top: 110px;	
+}
