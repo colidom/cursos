@@ -3,10 +3,62 @@
 <head>
 <title>Acceso restringido</title>
 <link href="formulario.css" rel="stylesheet" type="text/css">
+<script>
+function ValidarEmail(email) {
+	var caracter;
+	var arroba = 0;
+	var punto = 0;
+	var espacio = 0;
+	if (email.length != 0) {
+		for (var i = 0; i < email.length; i++) {
+			caracter = email.substring(i, i + 1);
+			if (caracter == "@") {
+				arroba++;
+			} else if (caracter == ".") {
+				punto++;
+			} else if (caracter == " ") {
+				espacio++;
+			}
+		}
+		if ((espacio != 0) || (arroba != 1) || (punto < 1)) {
+			alert("La dirección de correo electrónico no es correcta: no se admiten espacios en blanco y debe contener el carácter arroba (@) y el carácter punto (.).");
+			document.frmAcceso.txtEmail.focus();
+			document.frmAcceso.txtEmail.select();
+			return false;
+		} else {
+			return true;
+    	}
+   } else {
+	alert("No ha introducido su dirección de correo electrónico.");
+	return false;
+   }
+}
+function ValidarPassword(password) {
+	if ((password.length < 6) || (password.length > 15)) {
+		alert("La contraseña debe tener entre 6 y 15 caracteres.");
+		return false;
+	} else {
+		return true;
+	}
+}
+function ValidarFormulario(elemento1, elemento2) {
+	var email;
+	var password;
+
+	email = ValidarEmail(elemento1);
+	password = ValidarPassword(elemento2);
+	if ((email == true) && (password == true)) {
+		alert("Bienvenido, " + document.frmAcceso.txtIdentificador.value);
+		return true;
+   	} else {
+   		return false;
+   	}
+}
+</script>
 </head>
 <body>
 <div class="miformulario" id="wrapper">
-<form name="frmAcceso" id="frmAcceso" method="post" action="#">
+<form name="frmAcceso" id="frmAcceso" method="post" action="#" onsubmit="return ValidarFormulario(document.frmAcceso.txtEmail.value, document.frmAcceso.txtPassword.value);">
 <h3>Formulario de acceso</h3>
 <p>Acceda a su cuenta de usuario</p>
 
