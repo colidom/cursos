@@ -1,0 +1,31 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Práctica 6 de JavaScript</title>
+</head>
+<body>
+<img src="images6/imagen0.gif" width="100" height="57">
+<img src="images6/imagen1.gif" widht="100" height="57">
+<img src="images6/imagen2.gif" width="100" height="57">
+<img src="images6/imagen3.gif" width="100" height="57">
+<script>
+var i = 0;
+var j = 0;
+i = prompt("Indique el índice de la primera imagen (0 a 3):", "0");
+while ((i < 0) || (i > 3)) {
+   i = prompt("Por favor, introduzca de nuevo el índice de la primera imagen (0 a 3):", "0");
+}
+j = prompt("Indique el índice de la segunda imagen (0, 3):", "0");
+while ((j < 0) || (j > 3)) {
+   j = prompt("Por favor, introduzca de nuevo el índice de la segunda imagen (0 a 3):", "0");
+}
+if (j > i) {
+   var aux = document.images[i].src;
+   document.images[i].src = document.images[j].src;
+   document.images[j].src = aux;
+} else {
+   alert("El primer índice debe ser inferior al segundo.");
+}
+</script>
+</body>
+</html>
