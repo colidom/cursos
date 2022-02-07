@@ -39,3 +39,13 @@ h1 {
 }
 
 /** CODIGO AQUI **/
+@media (min-width: 768px) {
+    .two-colums {
+        display: grid;
+     /* grid-template-columns: 50% 50%;         Varias formas de hacer lo mismo
+        grid-template-columns: repeat(2, 50%);  Varias formas de hacer lo mismo
+        grid-template-columns: 1fr 1fr;         Varias formas de hacer lo mismo */
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
