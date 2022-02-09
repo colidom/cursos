@@ -48,3 +48,21 @@ p {
 }
 
 /** CODIGO AQUI **/
+@media (min-width: 768px) {
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-content {
+        flex-basis: calc(60% - 1rem);
+    }
+
+    .sidebar {
+        flex-basis: calc(20% - 1rem);
+    }
+
+    .sidebar-1 {
+        order: -1;
+    }
+}
