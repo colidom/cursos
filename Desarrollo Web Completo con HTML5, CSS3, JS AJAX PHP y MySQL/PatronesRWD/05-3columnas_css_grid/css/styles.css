@@ -49,3 +49,24 @@ p {
 
 
 /** CODIGO AQUI **/
+@media (min-width: 768px) {
+    .container-grid {
+        display: grid;
+        grid-template-areas: "izquierda contenido derecha";
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-auto-flow: column;
+        column-gap: 2rem;
+    }
+
+    .main-container {
+        grid-area: contenido;
+    }
+
+    .sidebar-1 {
+        grid-area: izquierda;
+    }
+
+    .sidebar-2 {
+        grid-area: derecha;
+    }
+}
