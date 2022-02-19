@@ -68,3 +68,8 @@ img {
 .center-text {
     text-align: center;
 }
+
+/* Header */
+.header {
+    background-image: url(../banner.jpg);
+}
