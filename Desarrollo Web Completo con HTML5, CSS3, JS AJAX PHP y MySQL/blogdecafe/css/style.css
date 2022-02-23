@@ -166,3 +166,35 @@ img {
 .bottom--primary {
     background-color: var(--black);
 }
+
+.bottom--secondary {
+    background-color: var(--primary);
+}
+
+.courses {
+    list-style: none;
+}
+
+.widget-course {
+    border-bottom: 1px solid var(--grey);
+    margin-bottom: 2rem;
+}
+
+.widget-course:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+
+.widget-course__label {
+    font-family: var(--headingFont);
+    font-weight: bold;
+}
+
+.widget-course__info {
+    font-weight: normal;
+}
+
+.widget-course__label,
+.widget-course__info {
+    font-size: 2rem;
+}
