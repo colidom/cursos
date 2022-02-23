@@ -92,6 +92,10 @@ img {
     }
 }
 
+.bar {
+    padding-top: 4rem;
+}
+
 @media (min-width: 768px) {
     .bar {
         display: flex;
