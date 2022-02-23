@@ -199,3 +199,9 @@ img {
 .widget-course__info {
     font-size: 2rem;
 }
+
+.footer {
+    background-color: var(--black);
+    padding: 3rem 0rem;
+    margin-top: 4rem;
+}
