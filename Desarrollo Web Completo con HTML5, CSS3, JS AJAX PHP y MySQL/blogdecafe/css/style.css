@@ -25,8 +25,7 @@ body {
 
 /* Globales */
 .container {
-    max-width: 120rem;
-    width: 90%;
+    width: min(90%, 120rem);
     margin: 0 auto;
 }
 
@@ -206,6 +205,6 @@ img {
 
 .footer {
     background-color: var(--black);
-    padding: 3rem 0rem;
+    padding-bottom: 3rem;
     margin-top: 4rem;
 }
