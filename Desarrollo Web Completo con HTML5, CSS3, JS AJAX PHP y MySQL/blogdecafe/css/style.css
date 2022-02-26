@@ -189,17 +189,21 @@ img {
     margin-bottom: 0;
 }
 
-.widget-course__label {
+.widget-course__label,
+.course__label {
     font-family: var(--headingFont);
     font-weight: bold;
 }
 
-.widget-course__info {
+.widget-course__info,
+.course__info {
     font-weight: normal;
 }
 
 .widget-course__label,
-.widget-course__info {
+.widget-course__info,
+.course__label,
+.course__info {
     font-size: 2rem;
 }
 
@@ -235,4 +239,3 @@ img {
 .course:last-of-type {
     border: none;
 }
-
