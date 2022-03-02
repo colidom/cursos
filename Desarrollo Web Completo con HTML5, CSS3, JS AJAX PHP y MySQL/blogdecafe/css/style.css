@@ -159,12 +159,17 @@ img {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
+    border: none
 }
 
 @media (min-width: 768px) {
     .bottom {
         display: inline-block;
     }
+}
+
+.bottom:hover {
+    cursor: pointer;
 }
 
 .bottom--primary {
