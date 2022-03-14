@@ -17,6 +17,6 @@ var product1 = 'Ordenador',
 var produc_name = 'Monitor HD'; // Underscore
 var productName = 'Monitor HD'; // Camel Case
 var NombreProducto = 'Monitor HD'; // Pascal Case
-var NombreProducto = 'Monitor HD';
+var nombreProducto = 'Monitor HD';
 
 console.log(produc_name);
