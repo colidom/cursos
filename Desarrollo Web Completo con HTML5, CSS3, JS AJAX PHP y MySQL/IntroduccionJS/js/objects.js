@@ -11,6 +11,7 @@ const product = {
 // Acceso a datos
 // Forma 1
 console.log(product);
+/*
 console.log(product.productName);
 console.log(product.price);
 console.log(product.stock);
@@ -22,4 +23,11 @@ console.log(product['price']);
 for (p in product){
     console.log(p);
 }
+ */
+// Agregar propiedad
+product.image = 'image.jpg';
+console.log(product);
 
+// Eliminar propiedad
+delete product.stock;
+console.log(product);
