@@ -19,8 +19,7 @@ const months = [
   "December",
 ];
 console.table(months);
-
-const arreglo = [
+/*const arreglo = [
   "Hola",
   10,
   true,
@@ -43,4 +42,9 @@ console.log(months.length);
 
 months.forEach(function (months) {
   console.log(months);
-});
+}); */
+// Añade un valor a un arreglo, sin saber su longitud(se recomienda no modificar los arreglos)
+numbers.push(60); // Al final de larreglo
+numbers.unshift(-10, -20, -30, -5); // Al inicio del arreglo
+
+console.table(numbers);
