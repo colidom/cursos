@@ -52,3 +52,7 @@ months.shift(); // Elimina elemento del inicio del arreglo
 
 months.splice(2, 1); // Elimina un elemento a partir de la posición 2
 console.table(months);
+
+// Rest Operator o Spread Operator
+const newArreglo = [...months, "June"]; // Copia el arreglo original y añade un nuevo valor
+console.table(newArreglo);
