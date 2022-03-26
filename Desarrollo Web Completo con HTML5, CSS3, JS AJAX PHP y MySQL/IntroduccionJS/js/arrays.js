@@ -44,7 +44,11 @@ months.forEach(function (months) {
   console.log(months);
 }); */
 // Añade un valor a un arreglo, sin saber su longitud(se recomienda no modificar los arreglos)
-numbers.push(60); // Al final de larreglo
+numbers.push(60); // Al final del arreglo
 numbers.unshift(-10, -20, -30, -5); // Al inicio del arreglo
 
-console.table(numbers);
+months.pop(); // Elimina elemento del final del arreglo
+months.shift(); // Elimina elemento del inicio del arreglo
+
+months.splice(2, 1); // Elimina un elemento a partir de la posición 2
+console.table(months);
