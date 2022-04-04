@@ -23,4 +23,4 @@ total = addCart(600);
 console.log(total);
 const totalPayment = calculateVat(total);
 
-console.log(totalPayment);
+console.log("El total a pagar con impuestos es de " + totalPayment + "€");
