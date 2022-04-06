@@ -6,3 +6,9 @@ if (points == 1000) { // == que sea el mismo valos y === comprueba además el ti
 } else {
     console.log("No es igual");
 }
+
+if (points !== 1000) { // == que sea el mismo valos y === comprueba además el tipo de dato
+    console.log("No es igual");
+} else {
+    console.log("Si los puntos son 1000");
+}
