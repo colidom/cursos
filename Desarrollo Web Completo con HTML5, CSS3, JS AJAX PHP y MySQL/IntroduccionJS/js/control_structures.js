@@ -12,7 +12,7 @@ if (points !== 1000) { // == que sea el mismo valos y === comprueba además el t
 } else {
     console.log("Si los puntos son 1000");
 }
- */
+ 
 const cash = 1000;
 const cart = 800;
 
@@ -21,3 +21,8 @@ if (cash > cart) {
 } else {
     console.log("Fondos insuficientes");
 }
+*/
+
+const rol = "ADMINISTRADOR"
+
+if (rol === "ADMINISTRADOR") {}
