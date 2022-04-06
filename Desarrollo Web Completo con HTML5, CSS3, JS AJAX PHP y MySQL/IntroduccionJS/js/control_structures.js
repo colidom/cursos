@@ -25,4 +25,8 @@ if (cash > cart) {
 
 const rol = "ADMINISTRADOR"
 
-if (rol === "ADMINISTRADOR") {}
+if (rol === "ADMINISTRADOR") {
+    console.log("Acceso a todo el sistema");
+} else {
+    console.log("No tienes acceso");
+}
