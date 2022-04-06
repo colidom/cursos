@@ -27,6 +27,8 @@ const rol = "ADMINISTRADOR"
 
 if (rol === "ADMINISTRADOR") {
     console.log("Acceso a todo el sistema");
+} else if ( rol === "EDITOR") {
+    console.log("Eres etitorm puedes entrar pero no admiistrar el sitio");
 } else {
     console.log("No tienes acceso");
 }
