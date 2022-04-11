@@ -21,7 +21,5 @@ while (i <= 100 ) { // Condición
     } else {
         console.log(`El número ${i} es IMPAR`);
     }
-
-
     i++; // Incremento
 }
