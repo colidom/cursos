@@ -23,3 +23,10 @@ while (i <= 100 ) { // Condición
     }
     i++; // Incremento
 }
+
+// Do while loop
+let j = 0;
+do {
+    console.log(j);
+    j++;
+} while (j < 10);
