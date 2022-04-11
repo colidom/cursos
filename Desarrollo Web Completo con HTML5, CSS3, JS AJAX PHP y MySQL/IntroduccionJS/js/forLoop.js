@@ -10,3 +10,18 @@ for(let i = 0; i < 10; i++) {
         console.log("Impar");
     }
 }
+
+// While loop
+
+let i = 1; // Valor inicial
+
+while (i <= 100 ) { // Condición
+    if (i % 2 == 0) {
+        console.log(`El número ${i} es PAR`);
+    } else {
+        console.log(`El número ${i} es IMPAR`);
+    }
+
+
+    i++; // Incremento
+}
