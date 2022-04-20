@@ -13,6 +13,11 @@ cart.forEach(function(product) {  // Forma normal
     console.log(product);
 })
 
-cart.forEach(product => { console.log(product)}); // Arrow function
+const array1 = cart.forEach(product => { console.log(product)}); // Arrow function
 
 /* Map */
+const array2 = cart.map(product => product.name); // Arrow function
+
+
+console.log(array1); // Undefined
+console.log(array2);
