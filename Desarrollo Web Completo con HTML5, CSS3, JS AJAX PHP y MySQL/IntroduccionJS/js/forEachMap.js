@@ -8,16 +8,16 @@ const cart = [
     { name: 'Ratón', price: 40 },
 ];
 
-/* forEach */
+/* forEach : Para iterar en consola*/
 cart.forEach(function(product) {  // Forma normal
     console.log(product);
 })
 
-const array1 = cart.forEach(product => { console.log(product)}); // Arrow function
+const array1 = cart.forEach(product => console.log(product)); // Arrow function
 
-/* Map */
+/* Map : Para crear un nuevo arreglo*/
 const array2 = cart.map(product => product.name); // Arrow function
 
 
 console.log(array1); // Undefined
-console.log(array2);
+console.log(array2); // Crea un nuevo arreglo
