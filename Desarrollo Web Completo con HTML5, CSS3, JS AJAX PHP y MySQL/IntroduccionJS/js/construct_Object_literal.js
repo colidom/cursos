@@ -32,6 +32,8 @@ const product3 = new Product("Monitor QHD 35", 300);
 const customer = new Customer("Carlos", "Oliva");
 
 console.log(product2);
+console.log(customer);
 console.log(product2.formatProduct());
 console.log(product3.formatProduct());
+console.log(customer.formatCustomer());
 /* console.log(formatProduct(product2)); */
