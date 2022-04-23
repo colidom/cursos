@@ -22,23 +22,16 @@ function Product(name, price) {
     this.price = price;
 }
 
-
 // Crear funciones que solo se utilizan en un objeto en específico
 Product.prototype.formatProduct = function() {
     return `El producto ${this.name} tiene un precio de ${this.price}€`;
 }
 
-
 const product2 = new Product("Monitor Curvo de 49", 800);
 const product3 = new Product("Monitor QHD 35", 300);
-
 const customer = new Customer("Carlos", "Oliva");
-console.log(customer);
 
-function formatProduct(product) {
-    return `El producto ${product.name} tiene un precio de ${product.price}€`;
-}
-
+console.log(product2);
 console.log(product2.formatProduct());
 console.log(product3.formatProduct());
 /* console.log(formatProduct(product2)); */
