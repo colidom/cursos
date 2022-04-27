@@ -35,7 +35,7 @@ class Book extends Product {
     }
 
     formatProduct() {
-        return `El producto ${this.name} tiene un precio de ${this.price}€ y su ISBN es ${this.isbn}`;
+        return `${super.formatProduct()} y su ISBN es ${this.isbn}`; // Se invoca el método formatProduct de la clase padre
     }
 }
 
