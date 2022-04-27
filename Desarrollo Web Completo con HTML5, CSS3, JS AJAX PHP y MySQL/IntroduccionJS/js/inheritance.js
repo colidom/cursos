@@ -33,6 +33,10 @@ class Book extends Product {
     getBookPrice() {
         return this.price + '€';
     }
+
+    formatProduct() {
+        return `El producto ${this.name} tiene un precio de ${this.price}€ y su ISBN es ${this.isbn}`;
+    }
 }
 
 book1 = new Book('JavaScript la Revolución', 45, '2232323452352387387423');
