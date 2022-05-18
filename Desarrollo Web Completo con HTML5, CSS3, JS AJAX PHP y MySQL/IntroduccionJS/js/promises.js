@@ -5,7 +5,7 @@
 // Rejected: Se ha rechazado o no se pudo cumplor.
 
 const userAuthenticated = new Promise((resolve, reject) => {
-    const auth = true;
+    const auth = false;
 
     if (auth) {
         resolve('Usuario autenticado'); // El promise se cumple
@@ -14,4 +14,12 @@ const userAuthenticated = new Promise((resolve, reject) => {
     }
 });
 
-console.log(userAuthenticated);
+userAuthenticated
+    .then(function (result) {
+        // Mostramos el mensaje del promise(Fulfilled)
+        console.log(result);
+    })
+    .catch(function (error) {
+        // Mostramos el mensaje del promise(Rejected)
+        console.log(error);
+    });
