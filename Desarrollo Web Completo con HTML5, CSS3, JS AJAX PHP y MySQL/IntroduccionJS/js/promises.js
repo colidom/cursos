@@ -23,3 +23,9 @@ userAuthenticated
         // Mostramos el mensaje del promise(Rejected)
         console.log(error);
     });
+
+userAuthenticated
+    // Mostramos el mensaje del promise(Fulfilled)
+    .then((result) => console.log(result))
+    // Mostramos el mensaje del promise(Rejected)
+    .catch((error) => console.log(error));
