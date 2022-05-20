@@ -1,0 +1,24 @@
+{
+    "customers": [
+        {
+            "id": 1,
+            "name": "Carlos",
+            "position": "Desarrollador Web"
+        },
+        {
+            "id": 2,
+            "name": "Javier",
+            "position": "Sysadmin"
+        },
+        {
+            "id": 3,
+            "name": "Andrea",
+            "position": "MKT"
+        },
+        {
+            "id": 3,
+            "name": "Karen",
+            "position": "Servidores"
+        }
+    ]
+}
