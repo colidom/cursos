@@ -81,5 +81,8 @@ class HelloViewSet(viewsets.ViewSet):
 
     def retrieve(self, request, pk=None):
         """ Handle getting an object by its ID"""
-
         return Response({'http:method': 'GET'})
+
+    def uptade(self, response, pk=None):
+        """ Actualiza un objeto"""
+        return Response({'http:method': 'PATCH'})
