@@ -85,4 +85,4 @@ class HelloViewSet(viewsets.ViewSet):
 
     def uptade(self, response, pk=None):
         """ Actualiza un objeto"""
-        return Response({'http:method': 'PATCH'})
+        return Response({'http:method': 'PUT'})
