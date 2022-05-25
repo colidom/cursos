@@ -1,3 +1,4 @@
+from urllib import response
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status, viewsets
@@ -52,6 +53,8 @@ class HelloApiView(APIView):
 class HelloViewSet(viewsets.ViewSet):
     """ Test API ViewSet """
 
+    serializer_class = serializers.HelloSerializers
+
     def list(self, request):
         """ Retornar Mensaje de Hola Mundo """
         a_viewset = [
@@ -61,3 +64,17 @@ class HelloViewSet(viewsets.ViewSet):
         ]
 
         return Response({'message': '¡Hola!', 'a_ciewset': a_viewset})
+
+    def create(self, request):
+        """ Crear nuevo mensaje de Hola Mundo """
+        serializer = self.serializer_class(data=request.data)
+
+        if serializer.is_valid():
+            name = serializer.validated_data.get('name')
+            message = f"Hola {name}"
+            return Response({"message": message})
+        else:
+            return Response(
+                serializer.errors,
+                status=status.HTTP_400_BAD_REQUEST
+            )
