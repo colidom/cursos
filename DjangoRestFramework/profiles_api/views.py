@@ -63,7 +63,7 @@ class HelloViewSet(viewsets.ViewSet):
             'Provee más funcionalidad con menos código'
         ]
 
-        return Response({'message': '¡Hola!', 'a_ciewset': a_viewset})
+        return Response({'message': '¡Hola!', 'a_viewset': a_viewset})
 
     def create(self, request):
         """ Crear nuevo mensaje de Hola Mundo """
