@@ -90,3 +90,7 @@ class HelloViewSet(viewsets.ViewSet):
     def partial_uptade(self, response, pk=None):
         """ Actualiza parcialmente un objeto"""
         return Response({'http:method': 'PATCH'})
+
+    def destroy(self, response, pk=None):
+        """ Destruye un objeto"""
+        return Response({'http:method': 'DELETE'})
