@@ -72,9 +72,14 @@ class HelloViewSet(viewsets.ViewSet):
         if serializer.is_valid():
             name = serializer.validated_data.get('name')
             message = f"Hola {name}"
-            return Response({"message": message})
+            return Response({'message': message})
         else:
             return Response(
                 serializer.errors,
                 status=status.HTTP_400_BAD_REQUEST
             )
+
+    def retrieve(self, request, pk=None):
+        """ Handle getting an object by its ID"""
+
+        return Response({'http:method': 'GET'})
