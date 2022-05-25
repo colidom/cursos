@@ -83,14 +83,14 @@ class HelloViewSet(viewsets.ViewSet):
         """ Handle getting an object by its ID"""
         return Response({'http:method': 'GET'})
 
-    def uptade(self, response, pk=None):
+    def uptade(self, request, pk=None):
         """ Actualiza un objeto"""
         return Response({'http:method': 'PUT'})
 
-    def partial_uptade(self, response, pk=None):
+    def partial_uptade(self, request, pk=None):
         """ Actualiza parcialmente un objeto"""
         return Response({'http:method': 'PATCH'})
 
-    def destroy(self, response, pk=None):
+    def destroy(self, request, pk=None):
         """ Destruye un objeto"""
         return Response({'http:method': 'DELETE'})
