@@ -47,3 +47,17 @@ class HelloApiView(APIView):
     def delete(self, request, pk=None):
         """Borrar un objeto"""
         return Response({'method': 'DELETE'})
+
+
+class HelloViewSet(viewsets.ViewSet):
+    """ Test API ViewSet """
+
+    def list(self, request):
+        """ Retornar Mensaje de Hola Mundo """
+        a_viewset = [
+            'Usa acciones (list, create, retrieve, update, partial_update',
+            'Automaticamente mapea a los URÑs usando Routers',
+            'Provee más funcionalidad con menos código'
+        ]
+
+        return Response({'message': '¡Hola!', 'a_ciewset': a_viewset})
