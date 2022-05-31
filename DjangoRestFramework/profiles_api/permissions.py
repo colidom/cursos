@@ -8,3 +8,5 @@ class UpdateOwnProfile(permissions.BasePermission):
         """ Comprobar si el usuario está intentando editar su propio perfil"""
         if request.metod in permissions.SAFE_METHODS:
             return True
+
+        return obj.id == request.user.id
