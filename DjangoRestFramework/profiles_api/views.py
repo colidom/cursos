@@ -1,11 +1,10 @@
 from urllib import response
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.authentication import TokenAuthentication
 from rest_framework import status, viewsets
 
 from profiles_api import serializers, models
-
-# Create your views here.
 
 
 class HelloApiView(APIView):
