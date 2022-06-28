@@ -19,12 +19,16 @@ console.log(heading2);
 const newLink = document.createElement('A');
 
 // Agregar el href
-newLink.href = 'new-enlace.html';
+newLink.href = 'index.html';
 
 // Agregar el texto
 newLink.textContent = 'Un nuevo enlace';
 
 // Agregar la clase
 newLink.classList.add('navegacion__enlace');
+
+// Agregarlo al documento
+const navegation = document.querySelector('.navegacion');
+navegation.appendChild(newLink);
 
 console.log(newLink);
