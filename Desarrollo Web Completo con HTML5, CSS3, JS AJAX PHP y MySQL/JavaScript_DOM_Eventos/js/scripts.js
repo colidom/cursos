@@ -22,7 +22,7 @@ const newLink = document.createElement('A');
 newLink.href = 'index.html';
 
 // Agregar el texto
-newLink.textContent = 'Un nuevo enlace';
+newLink.textContent = 'Tienda';
 
 // Agregar la clase
 newLink.classList.add('navegacion__enlace');
