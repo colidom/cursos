@@ -57,3 +57,7 @@ console.log(5);
 function print() {
     console.log('function');
 }
+
+window.onscroll = function () {
+    console.log('Scrolling...');
+};
