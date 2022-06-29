@@ -35,10 +35,14 @@ console.log(newLink);
 
 // Eventos
 console.log(1);
+
 window.addEventListener('load', function () {
     // load espera a que el JS y los archivos que dependen del html estén listos
     console.log(2);
 });
+
+window.addEventListener('load', print);
+
 window.onload = function () {
     console.log(3);
 };
@@ -49,3 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 console.log(5);
+
+function print() {
+    console.log('function');
+}
