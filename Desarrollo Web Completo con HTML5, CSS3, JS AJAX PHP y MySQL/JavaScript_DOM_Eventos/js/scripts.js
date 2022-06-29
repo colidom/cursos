@@ -32,3 +32,20 @@ const navegation = document.querySelector('.navegacion');
 navegation.appendChild(newLink);
 
 console.log(newLink);
+
+// Eventos
+console.log(1);
+window.addEventListener('load', function () {
+    // load espera a que el JS y los archivos que dependen del html estén listos
+    console.log(2);
+});
+window.onload = function () {
+    console.log(3);
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Solo espera que se cargue el HTML, no espera por la carga de css o img
+    console.log(4);
+});
+
+console.log(5);
