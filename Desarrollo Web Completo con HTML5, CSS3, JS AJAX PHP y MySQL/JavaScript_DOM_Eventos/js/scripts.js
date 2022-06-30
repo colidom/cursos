@@ -75,14 +75,10 @@ const nameInput = document.querySelector('#nombre');
 const emailInput = document.querySelector('#email');
 const messageInput = document.querySelector('#mensaje');
 
-nameInput.addEventListener('input', function (event) {
-    console.log(event.target.value);
-});
+nameInput.addEventListener('input', readText);
+emailInput.addEventListener('input', readText);
+messageInput.addEventListener('input', readText);
 
-emailInput.addEventListener('input', function (event) {
+function readText(event) {
     console.log(event.target.value);
-});
-
-messageInput.addEventListener('input', function (event) {
-    console.log(event.target.value);
-});
+}
