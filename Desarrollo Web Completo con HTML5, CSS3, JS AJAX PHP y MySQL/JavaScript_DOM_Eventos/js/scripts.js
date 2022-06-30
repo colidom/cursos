@@ -71,6 +71,12 @@ btnEnviar.addEventListener('click', function (event) {
 });
 
 // Eventos de los Input y Textarea
+const data = {
+    nombre: '',
+    email: '',
+    mensaje: ''
+};
+
 const nameInput = document.querySelector('#nombre');
 const emailInput = document.querySelector('#email');
 const messageInput = document.querySelector('#mensaje');
@@ -80,5 +86,8 @@ emailInput.addEventListener('input', readText);
 messageInput.addEventListener('input', readText);
 
 function readText(event) {
-    console.log(event.target.value);
+    /* console.log(event.target.value); */
+    data[event.target.id] = event.target.value;
+
+    console.log(data);
 }
