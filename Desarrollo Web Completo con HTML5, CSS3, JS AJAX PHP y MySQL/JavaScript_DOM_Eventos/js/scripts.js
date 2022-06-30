@@ -69,3 +69,20 @@ btnEnviar.addEventListener('click', function (event) {
     event.preventDefault();
     console.log('Enviando formulario');
 });
+
+// Eventos de los Input y Textarea
+const nameInput = document.querySelector('#nombre');
+const emailInput = document.querySelector('#email');
+const messageInput = document.querySelector('#mensaje');
+
+nameInput.addEventListener('input', function (event) {
+    console.log(event.target.value);
+});
+
+emailInput.addEventListener('input', function (event) {
+    console.log(event.target.value);
+});
+
+messageInput.addEventListener('input', function (event) {
+    console.log(event.target.value);
+});
