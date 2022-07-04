@@ -109,5 +109,13 @@ function readText(event) {
 
 // Muestra un error en pantalla
 function showError(message) {
-    console.log(message);
+    const error = document.createElement('P'); // Crea un elemento párrafo
+    error.textContent = message;
+    error.classList.add('error'); // Añade una clase nueva al elemento anterior
+    form.appendChild(error); // Agregamos error al html
+
+    // Desaparece el mensaje después de 3 segundos
+    setTimeout(() => {
+        error.remove();
+    }, 5000);
 }
