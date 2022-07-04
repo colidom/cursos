@@ -95,9 +95,10 @@ form.addEventListener('submit', function (event) {
     if (nombre == '' || email == '' || mensaje == '') {
         showError('Complete los campos del formulario');
         return; // Corta la ejecución del código
+    } else {
+        // Enviar el formulario
+        showSuccess('Enviando el formulario');
     }
-    // Enviar el formulario
-    console.log('Enviando el formulario');
 });
 
 function readText(event) {
@@ -117,5 +118,17 @@ function showError(message) {
     // Desaparece el mensaje después de 3 segundos
     setTimeout(() => {
         error.remove();
+    }, 5000);
+}
+
+function showSuccess(message) {
+    const success = document.createElement('P');
+    success.textContent = message;
+    success.classList.add('correcto');
+    form.appendChild(success);
+
+    // Desaparece el mensaje después de 3 segundos
+    setTimeout(() => {
+        success.remove();
     }, 5000);
 }
