@@ -108,6 +108,19 @@ function readText(event) {
     /* console.log(data); */
 }
 
+// Muestra un mensaje de que se envió correctamente el mensaje
+function showSuccess(message) {
+    const success = document.createElement('P');
+    success.textContent = message;
+    success.classList.add('correcto');
+    form.appendChild(success);
+
+    // Desaparece el mensaje después de 3 segundos
+    setTimeout(() => {
+        success.remove();
+    }, 3000);
+}
+
 // Muestra un error en pantalla
 function showError(message) {
     const error = document.createElement('P'); // Crea un elemento párrafo
@@ -118,17 +131,5 @@ function showError(message) {
     // Desaparece el mensaje después de 3 segundos
     setTimeout(() => {
         error.remove();
-    }, 5000);
-}
-
-function showSuccess(message) {
-    const success = document.createElement('P');
-    success.textContent = message;
-    success.classList.add('correcto');
-    form.appendChild(success);
-
-    // Desaparece el mensaje después de 3 segundos
-    setTimeout(() => {
-        success.remove();
-    }, 5000);
+    }, 3000);
 }
