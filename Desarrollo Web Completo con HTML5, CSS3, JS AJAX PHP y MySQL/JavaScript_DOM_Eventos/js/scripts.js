@@ -93,11 +93,11 @@ form.addEventListener('submit', function (event) {
     const { nombre, email, mensaje } = data;
 
     if (nombre == '' || email == '' || mensaje == '') {
-        showError('Complete los campos del formulario');
+        showAlert('Complete los campos del formulario', true);
         return; // Corta la ejecución del código
     } else {
         // Enviar el formulario
-        showSuccess('Enviando el formulario');
+        showAlert('Enviando el formulario');
     }
 });
 
@@ -108,28 +108,19 @@ function readText(event) {
     /* console.log(data); */
 }
 
-// Muestra un mensaje de que se envió correctamente el mensaje
-function showSuccess(message) {
-    const success = document.createElement('P');
-    success.textContent = message;
-    success.classList.add('correcto');
-    form.appendChild(success);
+// Muestra un mensaje si hay error o no
+function showAlert(message, error = null) {
+    const alert = document.createElement('P');
+    alert.textContent = message;
 
+    if (error) {
+        alert.classList.add('error');
+    } else {
+        alert.classList.add('correcto');
+    }
+    form.appendChild(alert);
     // Desaparece el mensaje después de 3 segundos
     setTimeout(() => {
-        success.remove();
-    }, 3000);
-}
-
-// Muestra un error en pantalla
-function showError(message) {
-    const error = document.createElement('P'); // Crea un elemento párrafo
-    error.textContent = message;
-    error.classList.add('error'); // Añade una clase nueva al elemento anterior
-    form.appendChild(error); // Agregamos error al html
-
-    // Desaparece el mensaje después de 3 segundos
-    setTimeout(() => {
-        error.remove();
+        alert.remove();
     }, 3000);
 }
