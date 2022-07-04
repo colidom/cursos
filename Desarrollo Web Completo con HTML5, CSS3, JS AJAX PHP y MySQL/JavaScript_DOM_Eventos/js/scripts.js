@@ -63,12 +63,12 @@ window.onscroll = function () {
 };
 
 // Seleccionar elementos y asociarles un evento
-const btnEnviar = document.querySelector('.boton--primario');
+/* const btnEnviar = document.querySelector('.boton--primario');
 btnEnviar.addEventListener('click', function (event) {
     console.log(event);
     event.preventDefault();
     console.log('Enviando formulario');
-});
+}); */
 
 // Eventos de los Input y Textarea
 const data = {
@@ -87,8 +87,16 @@ emailInput.addEventListener('input', readText);
 messageInput.addEventListener('input', readText);
 
 // El evento de Submit
-formulario.addEventListener('submit', function (event) {
+form.addEventListener('submit', function (event) {
     event.preventDefault();
+    // Validar el formulario
+    const { nombre, email, mensaje } = data;
+
+    if (nombre == '' || email == '' || mensaje == '') {
+        showError('Complete los campos del formulario');
+        return; // Corta la ejecución del código
+    }
+    // Enviar el formulario
     console.log('Enviando el formulario');
 });
 
@@ -96,5 +104,10 @@ function readText(event) {
     /* console.log(event.target.value); */
     data[event.target.id] = event.target.value;
 
-    console.log(data);
+    /* console.log(data); */
+}
+
+// Muestra un error en pantalla
+function showError(message) {
+    console.log(message);
 }
