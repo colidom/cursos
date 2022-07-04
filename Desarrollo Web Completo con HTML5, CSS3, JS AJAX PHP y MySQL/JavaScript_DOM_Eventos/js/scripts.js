@@ -70,6 +70,13 @@ btnEnviar.addEventListener('click', function (event) {
     console.log('Enviando formulario');
 });
 
+// El evento de Submit
+const form = document.querySelector('.formulario');
+formulario.addEventListener('submit', function (event) {
+    event.preventDefault();
+    console.log('Enviando el formulario');
+});
+
 // Eventos de los Input y Textarea
 const data = {
     nombre: '',
