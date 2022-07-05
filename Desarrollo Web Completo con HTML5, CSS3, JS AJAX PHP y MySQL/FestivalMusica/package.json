@@ -12,7 +12,7 @@
   ],
   "author": "colidom",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "sass": "^1.53.0"
   }
 }
