@@ -11,5 +11,8 @@
     "Gulp"
   ],
   "author": "colidom",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.53.0"
+  }
 }
