@@ -5,4 +5,4 @@ function task(callback) {
 }
 
 // Así llamamos a una función en Node.js
-exports.firstTask = task;
+exports.task = task;
