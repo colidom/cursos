@@ -1,5 +1,5 @@
-@use 'base/variables';
+@use 'base/variables as v';
 
 h1 {
-    color: variables.$red;
+    color: v.$red;
 }
