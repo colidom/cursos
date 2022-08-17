@@ -1,6 +1,12 @@
-@mixin heading {
+@use 'variables' as v;
+
+@mixin heading($color: blue, $border-radius: false) { // parámetro por defecto color blue
     text-transform: uppercase;
     font-size: 2.4rem;
-    color: black;
+    color: $color;
     letter-spacing: 1px;
+
+    @if $border-radius {
+        border-radius: 1rem;
+    }
 }
