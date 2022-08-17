@@ -1,6 +1,6 @@
 @use 'variables' as v;
 
-@mixin heading($color: blue, $border-radius: false) { // parámetro por defecto color blue
+/* @mixin heading($color: blue, $border-radius: false) { // parámetro por defecto color blue
     text-transform: uppercase;
     font-size: 2.4rem;
     color: $color;
@@ -10,3 +10,4 @@
         border-radius: 1rem;
     }
 }
+ */
