@@ -10,6 +10,7 @@
 }
 
 .navegacion-principal {
+
     a {
         color: v.$blanco;
         font-size: 2.4rem;
@@ -19,12 +20,3 @@
         }
     }
 }
-
-/* .prueba {
-    @include m.heading(v.$amarillo, true);
-}
-
-.texto {
-    @include m.heading;
-}
- */
