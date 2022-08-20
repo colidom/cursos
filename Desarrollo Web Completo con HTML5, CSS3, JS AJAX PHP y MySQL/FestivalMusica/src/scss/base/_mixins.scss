@@ -27,5 +27,5 @@
 @mixin grid($columnas) {
     display: grid;
     grid-template-columns: repeat($columnas, 1fr);
-    column-gap: 5rem;
+    gap: 5rem;
 }
