@@ -1,4 +1,4 @@
-const { src, dest, watch } = require('gulp');
+const { src, dest, watch, parallel } = require('gulp');
 
 // Css
 const sass = require('gulp-sass')(require('sass'));
@@ -33,4 +33,4 @@ function dev(done) {
 
 exports.css = css;
 exports.versionWebp = versionWebp;
-exports.dev = dev;
+exports.dev = parallel(versionWebp, dev);
