@@ -10,11 +10,11 @@ const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 
 function css(done) {
+
     src('src/scss/**/*.scss') // Identificar el archivo SASS
         .pipe(plumber()) // Evita que si hay errores se detenga el workflow
         .pipe(sass()) // Compilarlo
         .pipe(dest('build/css')); // Almacenarlo en el disco duro
-
     done(); // Callback que avisa a Gulp que llegamos al final de la ejecución
 }
 
