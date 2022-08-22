@@ -34,8 +34,9 @@ function versionWebp(done) {
         qry: 50,
     };
 
-    src('src/img/**/*.{png, jpg}').pipe(webp(opciones)).pipe(dest('build/img'));
-
+    src('src/img/**/*.{png, jpg}')
+    .pipe(webp(opciones))
+    .pipe(dest('build/img'));
     done();
 }
 
