@@ -18,7 +18,7 @@ function css(done) {
     done(); // Callback que avisa a Gulp que llegamos al final de la ejecución
 }
 
-function imagenes () {
+function imagenes (done) {
     const opciones = {
         optimizationLevel: 3
     };
