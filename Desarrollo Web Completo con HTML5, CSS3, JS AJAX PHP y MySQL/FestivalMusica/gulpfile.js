@@ -31,7 +31,7 @@ function imagenes () {
 
 function versionWebp(done) {
     const opciones = {
-        qry: 50,
+        quality: 50,
     };
 
     src('src/img/**/*.{png, jpg}')
