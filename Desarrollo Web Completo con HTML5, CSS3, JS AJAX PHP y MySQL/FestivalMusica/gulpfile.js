@@ -32,7 +32,7 @@ function imagenes (done) {
 
 function versionWebp(done) {
     const opciones = {
-        quality: 50,
+        quality: 50
     };
 
     src('src/img/**/*.{png, jpg}')
@@ -43,7 +43,7 @@ function versionWebp(done) {
 
 function versionAvif(done) {
     const opciones = {
-        quality: 50,
+        quality: 50
     };
 
     src('src/img/**/*.{png, jpg}')
