@@ -28,7 +28,7 @@
 .escenario {
     padding-top: 2rem;
 
-    p {
+    .nombre-escenario {
         &:after {
             content: '';
             display: block;
