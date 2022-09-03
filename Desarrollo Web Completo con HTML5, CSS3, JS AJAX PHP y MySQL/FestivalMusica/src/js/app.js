@@ -42,6 +42,7 @@ function mostrarImagen(id) {
     cerrarModal.textContent = 'X';
     cerrarModal.classList.add('btn-cerrar');
     cerrarModal.onclick = function () {
+        const body = document.querySelector('body');
         body.classList.remove('fijar-body');
         overlay.remove();
     }
