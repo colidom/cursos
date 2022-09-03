@@ -71,6 +71,6 @@
 .bg-verde {
     background-color: v.$verde;
     li:nth-child(odd) {
-        background-color: darken(v.$verde, 15%);
+        background-color: darken(v.$verde, 10%);
     }
 }
