@@ -52,13 +52,22 @@ function versionAvif(done) {
     done();
 }
 
+function javaScript(done) {
+    src('src/js/**/*.js')
+    .pipe(dest('build/js'));
+
+    done();
+}
+
 function dev(done) {
     watch('src/scss/**/*.scss', css);
+    watch('src/js/**/*.js', javaScript);
     done();
 }
 
 exports.css = css;
+exports.js = javaScript;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel(imagenes, versionWebp, versionAvif, dev);
+exports.dev = parallel(imagenes, versionWebp, versionAvif, javaScript, dev);
