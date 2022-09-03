@@ -11,7 +11,6 @@ const webp = require('gulp-webp');
 const avif = require('gulp-avif');
 
 function css(done) {
-
     src('src/scss/**/*.scss') // Identificar el archivo SASS
         .pipe(plumber()) // Evita que si hay errores se detenga el workflow
         .pipe(sass()) // Compilarlo
@@ -19,7 +18,7 @@ function css(done) {
     done(); // Callback que avisa a Gulp que llegamos al final de la ejecución
 }
 
-function imagenes (done) {
+function imagenes(done) {
     const opciones = {
         optimizationLevel: 3
     };
@@ -27,7 +26,7 @@ function imagenes (done) {
     src('src/img/**/*.{png,jpg}')
     .pipe(cache(imagemin(opciones)))
     .pipe(dest('build/img'))
-    done()
+    done();
 }
 
 function versionWebp(done) {
