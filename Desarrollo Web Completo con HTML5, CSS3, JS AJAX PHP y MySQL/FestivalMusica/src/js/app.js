@@ -3,8 +3,22 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function iniciarApp() {
+    navegacionFija();
     crearGaleria();
     scrollNav();
+}
+
+function navegacionFija() {
+    const barra = document.querySelector('.header');
+    const sobreFestival = document.querySelector('.sobre-festival');
+
+    window.addEventListener('scroll', function() { 
+        if (sobreFestival.getBoundingClientRect().bottom < 0) {
+            barra.classList.add('fijo');
+        } else {
+            barra.classList.remove('fijo');
+        }
+    })
 }
 
 function scrollNav() {
