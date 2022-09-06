@@ -18,7 +18,7 @@ function navegacionFija() {
         } else {
             barra.classList.remove('fijo');
         }
-    })
+    });
 }
 
 function scrollNav() {
