@@ -3,6 +3,7 @@
 
 .boletos {
     padding: 5rem 0;
+
     h3 {
         text-align: center;
         color: v.$blanco;
@@ -50,6 +51,7 @@
 
         ul {
             @include m.resetear-lista;
+
             li,
             :nth-child(odd) {
                 background-color: v.$blanco;

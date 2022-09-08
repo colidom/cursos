@@ -3,6 +3,7 @@
 
 .galeria {
     padding: 5rem 0;
+
     h3 {
         text-align: center;
     }
@@ -10,14 +11,16 @@
 
 .galeria-imagenes {
     @include m.resetear-lista;
-    @include m.grid( 2, 2rem);
-    
+    @include m.grid(2, 2rem);
+
     @include m.telefono {
         @include m.grid(3, 2rem);
     }
+
     @include m.tablet {
         @include m.grid(4, 2rem);
     }
+
     @include m.desktop {
         @include m.grid(6, 2rem);
     }

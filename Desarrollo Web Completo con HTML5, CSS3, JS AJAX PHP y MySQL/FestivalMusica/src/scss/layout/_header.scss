@@ -3,25 +3,29 @@
 
 .header {
     background-color: v.$verde;
+
     @include m.tablet {
         &.fijo {
             left: 0;
-            top:0;
+            top: 0;
             position: fixed;
             width: 100%;
             box-shadow: .1rem .2rem .3rem #333;
         }
     }
-   
+
     h1 {
         color: v.$blanco;
         text-align: center;
+
         @include m.tablet {
             margin: 0;
         }
     }
+
     .contenido-header {
         padding: 2rem;
+
         @include m.tablet {
             display: flex;
             justify-content: space-between;
@@ -42,6 +46,7 @@
         color: v.$blanco;
         font-size: 2.4rem;
         margin-bottom: 1rem;
+
         @include m.tablet {
             margin: 0;
         }
