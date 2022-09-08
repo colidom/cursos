@@ -4,12 +4,13 @@
 .lineup {
     background-color: v.$rosa;
     padding: 5rem 0;
-    
+
     h2 {
         text-align: center;
     }
 
-    h3, p {
+    h3,
+    p {
         text-align: center;
         color: v.$blanco;
     }
@@ -24,6 +25,7 @@
     @include m.tablet {
         @include m.grid(2, 5rem);
     }
+
     p {
         color: v.$negro;
     }
@@ -56,9 +58,11 @@
 
 .calendario {
     @include m.resetear-lista;
+
     li {
         padding: 2.5rem;
         font-weight: 700;
+
         span {
             font-weight: 400;
         }
@@ -67,6 +71,7 @@
 
 .bg-amarillo {
     background-color: v.$amarillo;
+
     li:nth-child(odd) {
         background-color: darken(v.$amarillo, 15%);
     }
@@ -74,6 +79,7 @@
 
 .bg-verde {
     background-color: v.$verde;
+
     li:nth-child(odd) {
         background-color: darken(v.$verde, 10%);
     }
