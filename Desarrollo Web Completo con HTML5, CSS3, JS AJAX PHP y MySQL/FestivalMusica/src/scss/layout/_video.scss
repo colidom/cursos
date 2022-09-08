@@ -21,6 +21,7 @@
     video {
         width: auto;
         display: block;
+
         @include m.desktop {
             width: 100%;
         }
@@ -29,6 +30,7 @@
 
 .contenido-video {
     z-index: 10;
+
     h2 {
         color: v.$blanco;
         font-size: 7rem;
