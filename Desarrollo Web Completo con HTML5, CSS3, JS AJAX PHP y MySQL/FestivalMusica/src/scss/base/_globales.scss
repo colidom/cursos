@@ -18,6 +18,7 @@ body {
     &.fijar-body {
         overflow: hidden;
     }
+
     &.body-scroll {
         padding-top: 8.6rem;
     }
@@ -39,7 +40,9 @@ a {
     text-decoration: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     margin: 0 0 5rem 0;
 }
 
