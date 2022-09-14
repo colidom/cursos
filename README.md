@@ -186,7 +186,7 @@ Dar los primeros pasos con PHP
 
 ---
 # Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL
-[![Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL](./pictures/the-complete-web-developer-course.jpg)](https://www.udemy.com/course/aprende-programacion-basica-con-php/)
+[![Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL](./pictures/the-complete-web-developer-course.jpg)](https://www.udemy.com/course/desarrollo-web-completo-con-html5-css3-js-php-y-mysql/)
 
 
 #### En este curso aprenderemos:
