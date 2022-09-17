@@ -11,5 +11,4 @@ var_dump($numero1);
 $numero2--;
 var_dump($numero2);
 
-
 include 'includes/footer.php';
