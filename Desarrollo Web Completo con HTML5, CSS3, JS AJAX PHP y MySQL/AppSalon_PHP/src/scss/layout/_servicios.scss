@@ -1,0 +1,37 @@
+.listado-servicios {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 2rem;
+    @include tablet {
+
+        grid-template-columns: repeat(2, 1fr);
+     
+    }
+
+    .servicio {
+        background-color: $blanco;
+        border-radius: 1rem;
+        padding: 3rem;
+        p {
+            margin: 0 0 calc($separacion / 4) 0;
+            color: $negro;
+
+            &:last-of-type {
+                margin: 0;
+            }
+        }
+        .precio-servicio {
+            color: $azul;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        &.seleccionado {
+            background-color: $azul; 
+            p {
+                color: $blanco;
+            }
+        }
+    }
+
+}

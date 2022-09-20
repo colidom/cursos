@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Estética</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+
+    <div class="contenedor-estetica">
+        <div class="imagen"></div>
+        <div class="app">
+            <header class="header">
+                <h1>App Peluqueria</h1>
+            </header>
+
+            <nav class="tabs">
+                <button type="button" data-tab="1">Servicios</button>
+                <button type="button" data-tab="2">Información Cliente</button>
+                <button type="button" data-tab="3">Resumen</button>
+            </nav>
+
+            <div id="paso-1" class="servicios seccion">
+                <h2>Servicios</h2>
+                <p class="text-center">Elige tus servicios a continuación.</p>
+
+                <div id="servicios" class="listado-servicios"></div>
+            </div>
+            <div id="paso-2" class="informacion-cliente seccion">
+                <h2>Tus Datos y Cita</h2>
+                <p class="text-center">Coloca tus datos y fecha de tu cita.</p>
+
+                <form class="formulario">
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input 
+                            type="text" 
+                            id="nombre" 
+                            placeholder="Tu Nombre"
+                        >
+                    </div>
+                    <div class="campo">
+                        <label for="nombre">Fecha</label>
+                        <input 
+                            type="date" 
+                            id="fecha" 
+                            min="2020-11-20"
+                        >
+                    </div>
+                    <div class="campo">
+                        <label for="nombre">Hora</label>
+                        <input 
+                            type="time" 
+                            id="hora" 
+                            min="10:00:00"
+                            max="20:00:00"
+                        >
+                    </div>
+                </form>
+            </div>
+
+            <div id="paso-3" class="resumen seccion">
+                <h2>Resumen</h2>
+                <div class="contenido-resumen"></div>
+            </div>
+
+
+            <div class="paginacion">
+                <button 
+                    id="anterior"
+                    type="button"
+                    class="btn" 
+                >&laquo; Anterior </button>
+
+                <button
+                    id="siguiente"
+                    class="btn" 
+                    href="#"
+                >Siguiente &raquo; </button>
+            </div>
+ 
+        </div>
+    </div>
+    <script src="build/js/bundle.min.js"></script>
+</body>
+</html>

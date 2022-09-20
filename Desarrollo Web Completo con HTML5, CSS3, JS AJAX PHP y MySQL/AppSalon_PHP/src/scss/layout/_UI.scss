@@ -1,0 +1,68 @@
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $negro;
+    color: $blanco;
+}
+.contenedor-estetica {
+    @include tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 100vh;
+    }
+
+    .imagen {
+        background-image: url(../img/1.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 30rem;
+    
+        @include tablet {
+            height: auto;
+        }
+    }
+    .app {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+
+.seccion {
+    display: none;
+}
+.mostrar-seccion {
+    display: block;
+}
+.btn {
+    background-color: $azul;
+    margin-top: 2rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 5rem;
+    color: $blanco;
+    font-weight: $bold;
+    text-transform: uppercase;
+    border: none;
+
+    @include telefono {
+        width: auto;
+    }
+
+    &.btn-block {
+        width: 100%;
+        background-color:$blanco;
+        color: $azul;
+        font-size: 2rem;
+        padding: 2rem;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,28 @@
+.tabs {
+
+    display: grid;
+    column-gap: 2rem;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 3rem;
+
+    button {
+        background-color: $blanco;
+        font-size: 1.4rem;
+        font-weight: 700;
+        padding: 1rem;
+        text-align: center;
+        color: $negro;
+        text-transform: uppercase;
+        border: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &.actual {
+            background-color: $azul;
+            color: $blanco;
+        }
+    }
+}

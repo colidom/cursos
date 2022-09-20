@@ -1,0 +1,26 @@
+
+.contenido-resumen {
+    margin-bottom: calc($separacion / 2) 0;
+    p {
+        margin-bottom: .5rem;
+        span {
+            font-weight: 700;
+            color: $azul;
+            font-size: 2.4rem;
+        }
+    }
+    .resumen-servicios {
+        margin-bottom: calc($separacion / 2);
+
+        h3 {
+            margin: $separacion  0;
+        }
+    }
+}
+
+
+.invalidar-cita {
+    text-align: center;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}

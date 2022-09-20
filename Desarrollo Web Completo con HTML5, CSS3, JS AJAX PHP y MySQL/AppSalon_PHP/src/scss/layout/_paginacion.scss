@@ -1,0 +1,14 @@
+.paginacion {
+    padding: $separacion 0;
+    @include telefono {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+
+
+.ocultar {
+    visibility: hidden;
+}
