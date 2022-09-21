@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect('localhost', 'root', '', '');
+$db = mysqli_connect('localhost', 'colidom', 'Mysql2021', 'appsalon');
 
 
 if (!$db) {
