@@ -1,9 +1,9 @@
 .footer {
-    padding: $separacion / 2 0;
+    padding: calc($separacion / 2) 0;
     background-color: $grisOscuro;
 
     .contenido-footer {
-        padding: $separacion / 2;
+        padding: calc($separacion / 2);
     }
 
     .copyright {
