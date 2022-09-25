@@ -9,7 +9,7 @@
 .imagen-contacto {
     background-position: center center;
     background-size: cover;
-    padding: $separacion 0;
+    padding: calc($separacion * 2) 0;
     display: flex;
     flex-direction: column;
     align-items: center;
