@@ -1,4 +1,8 @@
 .boton-amarillo {
+    @include boton($amarillo, inline-block);
+}
+
+.boton-amarillo-block {
     @include boton($amarillo, block);
 }
 
