@@ -1,0 +1,28 @@
+.testimonial {
+    background-color: $verde;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: $blanco;
+    border-radius: 2rem;
+
+    blockquote {
+        padding-left: 5rem;
+        position: relative;
+
+        &::before {
+            content: '';
+            background-image: url("../img/comilla.svg");
+            background-repeat: no-repeat;
+            width: 6rem;
+            height: 8rem;
+            display: block;
+            position: absolute;
+            left: -2rem;
+        }
+    }
+
+    p {
+        text-align: right;
+        color: $blanco;
+    }
+}
