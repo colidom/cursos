@@ -1,6 +1,7 @@
 .barra {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding-top: 3rem;
     @include tablet {
         flex-direction: row;
@@ -9,6 +10,9 @@
 }
 
 .navegacion {
+
+    display: none;
+
     @include tablet {
         display: flex;
         align-items: center;
@@ -30,4 +34,19 @@
             }
         }
     }
+}
+
+/* Menú de hamburgueza */
+.mobile-menu {
+    @include tablet {
+        display: none;
+    }
+
+    img {
+        width: 5rem;
+    }
+}
+
+.mostrar {
+    display: block;
 }
