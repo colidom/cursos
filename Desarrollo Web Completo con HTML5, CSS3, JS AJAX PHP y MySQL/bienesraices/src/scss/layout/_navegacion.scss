@@ -36,6 +36,10 @@
     }
 }
 
+.navegacion a:hover {
+    color: $verde;
+}
+
 /* Menú de hamburgueza */
 .mobile-menu {
     @include tablet {
