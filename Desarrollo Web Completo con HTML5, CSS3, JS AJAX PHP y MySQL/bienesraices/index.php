@@ -1,6 +1,6 @@
 <?php 
 $inicio = true;
-include 'includes/templates/header.php'
+include 'includes/templates/header.php';
 
 ?>
 
