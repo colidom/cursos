@@ -8,7 +8,15 @@
 
 .header {
     background-color: $grisOscuro;
-    margin: 1rem 0 3rem 0;
+    padding: 1rem 0 3rem 0;
+
+    .barra {
+        a {
+            img {
+                min-width: 20rem;
+            }
+        }
+    }
 
     &.inicio {
         background-position: center center;

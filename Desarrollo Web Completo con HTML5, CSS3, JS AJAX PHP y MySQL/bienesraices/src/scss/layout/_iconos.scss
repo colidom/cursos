@@ -1,13 +1,17 @@
 @include tablet {
     .iconos-nosotros {
-        @include grid (3, 2rem)
+        @include grid(3, 2rem);
     }
 }
 
 .icono {
     text-align: center;
+
     img {
         height: 10rem;
+        width: 10rem;
+        display: block;
+        margin: 0 auto;
     }
     h3 {
         text-transform: uppercase;

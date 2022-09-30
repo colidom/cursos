@@ -65,14 +65,15 @@
                 margin-right: 0;
             }
         }
+
+        &:hover {
+            color: $verde;
+        }
     }
 }
 
-.navegacion a:hover {
-    color: $verde;
-}
 
-/* Menú de hamburgueza */
+/** Menu de hamburguesa **/
 .mobile-menu {
     @include tablet {
         display: none;
