@@ -39,13 +39,13 @@
                 <legend>Información Propiedad</legend>
 
                 <label for="habitaciones">Habitaciones:</label>
-                <input type="number" id="habitaciones" name="number" placeholder="Ej: 3" min=0 max=10>
+                <input type="number" id="habitaciones" name="number" placeholder="Ej: 3" min="0" max="10">
 
                 <label for="wc">Baños:</label>
-                <input type="number" id="wc" name="wc" placeholder="Ej: 3" min=0 max=10>
+                <input type="number" id="wc" name="wc" placeholder="Ej: 3" min="0" max="10">
 
                 <label for="estacionamiento">Estacionamiento:</label>
-                <input type="number" id="estacionamiento" name="estacionamiento" placeholder="Ej: 3" min=0 max=10>
+                <input type="number" id="estacionamiento" name="estacionamiento" placeholder="Ej: 3" min="0" max="10">
             </fieldset>
 
             <fieldset>
