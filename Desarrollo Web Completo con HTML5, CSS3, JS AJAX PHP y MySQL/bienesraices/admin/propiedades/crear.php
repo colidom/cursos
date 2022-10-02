@@ -51,7 +51,7 @@
             <fieldset>
                 <legend>Vendedor</legend>
 
-                <select>
+                <select name="vendedor">
                     <option value="1">Carlos</option>
                     <option value="2">Javier</option>
                 </select>
