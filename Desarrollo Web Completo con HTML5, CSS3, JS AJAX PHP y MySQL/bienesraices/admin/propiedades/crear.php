@@ -52,6 +52,7 @@
                 <legend>Vendedor</legend>
 
                 <select name="vendedor">
+                    <option selected disabled></option>
                     <option value="1">Carlos</option>
                     <option value="2">Javier</option>
                 </select>
