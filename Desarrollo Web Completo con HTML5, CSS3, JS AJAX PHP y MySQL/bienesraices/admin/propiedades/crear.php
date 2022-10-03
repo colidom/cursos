@@ -3,6 +3,10 @@
 
     $db = conectarDB();
 
+    // Array con mensajes de errores
+    $errores = [];
+
+    // Ejecutar el código después de que el usuario envíe el formulario
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $titulo = $_POST['titulo'];
@@ -13,16 +17,41 @@
         $estacionamiento = $_POST['estacionamiento'];
         $vendedorId = $_POST['vendedor'];
 
-        // Insertar en la base de datos
-        $query = "INSERT INTO propiedades ( titulo, precio, descripcion, habitaciones, wc, estacionamiento, vendedorId)
-                VALUES ('$titulo', '$precio', '$descripcion', '$habitaciones', '$wc', '$estacionamiento', '$vendedorId' ) ";
+        if (!$titulo) {
+            $errores[] = "Debes añadir un título";
+        }
+        if (!$precio) {
+            $errores[] = "Debes añadir un precio";
+        }
+        if (strlen($descripcion) < 50) {
+            $errores[] = "Debes añadir una descripción con al menos 50 caracteres";
+        }
+        if (!$wc) {
+            $errores[] = "Debes añadir un WC";
+        }
+        if (!$estacionamiento) {
+            $errores[] = "Debes añadir un estacionamiento";
+        }
+        if (!$vendedorId) {
+            $errores[] = "Debes elegir un vendedor";
+        }
 
-        // echo $query;
+        /* echo "<pre>";
+        var_dump($errores);
+        echo "</pre>"; */
 
-        $resultado = mysqli_query($db, $query);
-
-        if ($resultado) {
-            echo "Insertado registro correctamente en la DB";
+        if (empty($errores)) {
+            // Insertar en la base de datos
+            $query = "INSERT INTO propiedades ( titulo, precio, descripcion, habitaciones, wc, estacionamiento, vendedorId)
+                    VALUES ('$titulo', '$precio', '$descripcion', '$habitaciones', '$wc', '$estacionamiento', '$vendedorId' ) ";
+    
+            // echo $query;
+    
+            $resultado = mysqli_query($db, $query);
+    
+            if ($resultado) {
+                echo "Insertado registro correctamente en la DB";
+            }
         }
     }
 
@@ -33,6 +62,11 @@
     <main class="contenedor seccion">
         <h1>Crear</h1>
 
+        <?php foreach($errores as $error): ?>
+            <div class="alerta error">
+                <?php echo $error; ?>
+            </div>
+        <?php endforeach; ?> 
         <a href="/admin" class="boton boton-verde">Volver</a>
 
         <form class="formulario" method="POST" action="/admin/propiedades/crear.php">
