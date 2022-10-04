@@ -38,9 +38,9 @@
         }
         if (!$precio) {
             $errores[] = "Debes añadir un precio";
-            if (!$imagen['name']) {
-                $errores[] = "Debes añadir una imagen";
-            }
+        }
+        if (!$imagen['name']) {
+            $errores[] = "Debes añadir una imagen";
         }
         if (strlen($descripcion) < 50) {
             $errores[] = "Debes añadir una descripción con al menos 50 caracteres";
