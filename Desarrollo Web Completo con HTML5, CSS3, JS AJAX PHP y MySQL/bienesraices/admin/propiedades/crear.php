@@ -41,7 +41,7 @@
             $errores[] = "Debes añadir un precio";
         }
 
-        if (!$imagen['name']) {
+        if (!$imagen['name'] || $imagen['error']) {
             $errores[] = "Debes añadir una imagen";
         }
 
