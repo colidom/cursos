@@ -3,6 +3,10 @@
 
     $db = conectarDB();
 
+    // Consulta para obtener los vendedores
+    $consulta = "SELECT * FROM vendedores";
+    $resultado = mysqli_query($db, $consulta);
+
     // Array con mensajes de errores
     $errores = [];
 
@@ -24,6 +28,7 @@
         $wc = $_POST['wc'];
         $estacionamiento = $_POST['estacionamiento'];
         $vendedorId = $_POST['vendedor'];
+        $creado = date('Y/m/d');
 
         if (!$titulo) {
             $errores[] = "Debes añadir un título";
@@ -37,7 +42,7 @@
         if (!$wc) {
             $errores[] = "Debes añadir un WC";
         }
-        if (!$estacionamiento) {
+        if ($estacionamiento < 0) {
             $errores[] = "Debes añadir un estacionamiento";
         }
         if (!$vendedorId) {
@@ -50,15 +55,16 @@
 
         if (empty($errores)) {
             // Insertar en la base de datos
-            $query = "INSERT INTO propiedades ( titulo, precio, descripcion, habitaciones, wc, estacionamiento, vendedorId)
-                    VALUES ('$titulo', '$precio', '$descripcion', '$habitaciones', '$wc', '$estacionamiento', '$vendedorId' ) ";
+            $query = "INSERT INTO propiedades ( titulo, precio, descripcion, habitaciones, wc, estacionamiento, creado, vendedorId)
+                    VALUES ('$titulo', '$precio', '$descripcion', '$habitaciones', '$wc', '$estacionamiento', '$creado', '$vendedorId' ) ";
     
             // echo $query;
     
             $resultado = mysqli_query($db, $query);
     
             if ($resultado) {
-                echo "Insertado registro correctamente en la DB";
+                // Redireccionamos al usuario tras insertar el registro en DB
+                header("Location: /admin");
             }
         }
     }
@@ -112,8 +118,9 @@
 
                 <select name="vendedor">
                     <option selected disabled></option>
-                    <option value="1">Carlos</option>
-                    <option value="2">Javier</option>
+                    <?php while($vendedor = mysqli_fetch_assoc($resultado) ) : ?>
+                        <option <?php echo $vendedorId == $vendedor['id'] ? 'selected' : ''; ?> value="<?php echo $vendedor['id'] ?>"><?php echo $vendedor['nombre'] . ' ' . $vendedor['apellido']; ?></option>
+                    <?php endwhile; ?>
                 </select>
             </fieldset>
 
