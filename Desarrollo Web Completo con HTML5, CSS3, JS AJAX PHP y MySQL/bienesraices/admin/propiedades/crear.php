@@ -62,7 +62,7 @@
         }
 
         // Validar iagen por tamaño(100 kb máximo)
-        $medida = 1000 * 100;
+        $medida = 1000 * 1000;
         if ($imagen['size'] > $medida) {
             $errores[] = "La imagen es muy pesada";
         }
@@ -96,7 +96,7 @@
     
             if ($resultado) {
                 // Redireccionamos al usuario tras insertar el registro en DB
-                header("Location: /admin");
+                header("Location: /admin?resultado=1");
             }
         }
     }
