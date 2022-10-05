@@ -1,5 +1,5 @@
 <?php
-    $resultado = $_GET['resultado'];
+    $resultado = $_GET['resultado'] ?? null;
     require '../includes/funciones.php';
     incluirTemplate('header');
 ?>
