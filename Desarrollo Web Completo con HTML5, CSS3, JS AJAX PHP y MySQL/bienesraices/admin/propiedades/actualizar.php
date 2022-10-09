@@ -57,10 +57,6 @@
             $errores[] = "Debes añadir un precio";
         }
 
-        if (!$imagen['name'] || $imagen['error']) {
-            $errores[] = "Debes añadir una imagen";
-        }
-
         if (strlen($descripcion) < 50) {
             $errores[] = "Debes añadir una descripción con al menos 50 caracteres";
         }
@@ -90,7 +86,7 @@
         if (empty($errores)) {
 
             /* Subida de archivos */
-            // Crear carpeta
+            /* // Crear carpeta
             $carpetaImagenes = '../../imagenes/';
             if (!is_dir($carpetaImagenes)) {
                 mkdir($carpetaImagenes);
@@ -101,10 +97,9 @@
 
             // Subir imagen
             move_uploaded_file( $imagen['tmp_name'], $carpetaImagenes . $nombreImagen );
-
+ */
             // Insertar en la base de datos
-            $query = "INSERT INTO propiedades ( titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedorId)
-                    VALUES ('$titulo', '$precio', '$nombreImagen','$descripcion', '$habitaciones', '$wc', '$estacionamiento', '$creado', '$vendedorId' ) ";
+            $query = "UPDATE propiedades SET titulo = '${titulo}', precio = '${precio}', descripcion = '${descripcion}', habitaciones = ${habitaciones}, wc = ${wc}, estacionamiento = ${estacionamiento}, vendedorId = ${vendedorId} WHERE id = ${id}";
     
             // echo $query;
     
@@ -112,7 +107,7 @@
     
             if ($resultado) {
                 // Redireccionamos al usuario tras insertar el registro en DB
-                header("Location: /admin?resultado=1");
+                header("Location: /admin?resultado=2");
             }
         }
     }
@@ -131,7 +126,7 @@
         <?php endforeach; ?> 
         <a href="/admin" class="boton boton-verde">Volver</a>
 
-        <form class="formulario" method="POST" action="/admin/propiedades/actualizar.php" enctype="multipart/form-data">
+        <form class="formulario" method="POST" enctype="multipart/form-data">
             <fieldset>
                 <legend>Información General</legend>
 
