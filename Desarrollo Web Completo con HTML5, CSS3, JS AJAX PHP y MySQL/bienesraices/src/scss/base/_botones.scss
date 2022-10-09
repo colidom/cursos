@@ -16,6 +16,7 @@
 
 .boton-rojo-block {
     @include boton($rojo, block);
+    width: 100%
 }
 
 .boton-amarillo-block {
