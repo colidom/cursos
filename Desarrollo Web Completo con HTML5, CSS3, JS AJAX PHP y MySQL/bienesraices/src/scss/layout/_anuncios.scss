@@ -20,7 +20,7 @@
 
 .precio {
     color: $verde;
-    font-weight: bold;
+    font-weight: $bold;
     font-size: 3rem;
 }
 
@@ -35,7 +35,7 @@
         display: flex;
 
         img {
-            flex: 0 0 5rem;
+            flex: 0 0 3rem;
             margin-right: 1rem;
         }
 
