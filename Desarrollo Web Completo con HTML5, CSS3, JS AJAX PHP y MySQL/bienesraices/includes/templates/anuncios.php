@@ -35,7 +35,7 @@
                 </li>
             </ul>
 
-            <a href="anuncio.php" class="boton-amarillo-block">Ver propiedad</a>
+            <a href="anuncio.php?id=<?php echo $propiedad['id'] ?>" class="boton-amarillo-block">Ver propiedad</a>
         </div><!-- .contenido-anuncio -->
     </div><!-- .anuncio -->
     <?php endwhile; ?>
