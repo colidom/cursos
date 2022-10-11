@@ -30,5 +30,10 @@
                     </div>
                </div>
             </div> <!-- .barra -->
+            <?php 
+                if ($inicio) {
+                    echo "<h1>Yenta de Casas y Apartamentos Explusivos de Lujo</h1>";
+                } 
+            ?>
         </div>
     </header>
