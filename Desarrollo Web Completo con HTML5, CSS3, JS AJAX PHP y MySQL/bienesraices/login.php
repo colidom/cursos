@@ -31,7 +31,7 @@
                 $auth = password_verify($password, $usuario['password']);
 
                 if ($auth) {
-                    // El usuario está utenticado
+                    // El usuario está autenticado
                 } else {
                     $errores[] = "La contraseña introducida es incorrecta";
                 }
