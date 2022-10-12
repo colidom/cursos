@@ -25,6 +25,16 @@
             
             if ($resultado->num_rows) {
                 // Revisar si el password es correcto
+                $usuario = mysqli_fetch_assoc($resultado);
+
+                // Verifica si el password es correcto o no
+                $auth = password_verify($password, $usuario['password']);
+
+                if ($auth) {
+                    // El usuario está utenticado
+                } else {
+                    $errores[] = "La contraseña introducida es incorrecta";
+                }
             } else {
                 $errores[] = "No existe una cuenta con el email proporcionado";
             }
