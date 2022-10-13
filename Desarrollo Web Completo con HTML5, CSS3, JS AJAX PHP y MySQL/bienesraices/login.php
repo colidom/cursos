@@ -32,6 +32,12 @@
 
                 if ($auth) {
                     // El usuario está autenticado
+                    session_start();
+
+                    // Rellenar el array de la sesión
+                    $_SESSION['usuario'] = $usuario['email'];
+                    $_SESSION['login'] = true;
+
                 } else {
                     $errores[] = "La contraseña introducida es incorrecta";
                 }
