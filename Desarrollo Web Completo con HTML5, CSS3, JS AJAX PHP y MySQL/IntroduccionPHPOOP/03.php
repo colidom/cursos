@@ -42,11 +42,15 @@ class Producto {
 echo Producto::obtenerProducto();
 echo Producto::obtenerImagenProducto();
 
+// Instancia de la clase Producto
 $producto = new Producto("Tablet", 499, true, 'MonitorCurvo.png');
 echo "<pre>";
+// Getter
 echo $producto->getNombre();
 echo "</pre>";
+// Setter
 echo $producto->setNombre('Smartphone');
+// Sobreescribir método estático
 echo $producto->obtenerImagenProducto();
 
 echo "<pre>";
