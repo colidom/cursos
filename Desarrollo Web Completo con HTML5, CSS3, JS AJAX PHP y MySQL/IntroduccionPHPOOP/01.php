@@ -5,7 +5,14 @@ include 'includes/header.php';
 // Definir una clase
 class Producto {
 
-    public $nombre;
+
+    // PHP = V8
+    public function __construct(public string $nombre, public int $precio, public bool $disponible)
+    {
+
+    }
+    // PHP < V8
+    /* public $nombre;
     public $precio;
     public $disponible;
 
@@ -14,7 +21,7 @@ class Producto {
         $this->nombre = $nombre;
         $this->precio = $precio;
         $this->disponible = $disponible;
-    }
+    } */
 }
 
 $producto = new Producto("Tablet", 499, true);
