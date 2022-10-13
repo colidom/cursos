@@ -2,6 +2,8 @@
 declare( strict_types =  1);
 
 include 'includes/header.php';
+
+// Abstracción
 // Definir una clase
 class Producto {
 
