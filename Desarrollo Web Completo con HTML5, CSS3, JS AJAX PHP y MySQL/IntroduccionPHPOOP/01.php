@@ -22,15 +22,21 @@ class Producto {
         $this->precio = $precio;
         $this->disponible = $disponible;
     } */
+
+    public function mostrarProducto() {
+        echo "El producto es: " . $this->nombre . " y su precio es de: " . $this->precio . "€";
+    }
 }
 
 $producto = new Producto("Tablet", 499, true);
+$producto->mostrarProducto();
 
 echo "<pre>";
 var_dump($producto);
 echo "</pre>";
 
 $producto2 = new Producto("Monitor", 699, true);
+$producto2->mostrarProducto();
 
 echo "<pre>";
 var_dump($producto2);
