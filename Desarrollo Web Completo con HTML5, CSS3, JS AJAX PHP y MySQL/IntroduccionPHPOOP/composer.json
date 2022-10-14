@@ -1,0 +1,16 @@
+{
+    "name": "carlo/introduccion-phpoop",
+    "description": "Aprendiendo Namespaces y Autoload",
+    "authors": [
+        {
+            "name": "Colidom",
+            "email": "colidom@outlook.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "./clases"
+        }
+    }
+}
