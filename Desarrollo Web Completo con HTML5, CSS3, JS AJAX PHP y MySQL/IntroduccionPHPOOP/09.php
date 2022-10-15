@@ -16,10 +16,12 @@ $stmt->execute();
 $stmt->bind_result($titulo, $imagen);
 
 // Asignamos el resultado
-$stmt->fetch();
+
 
 // Imprimimos el resultado
-var_dump($titulo);
-var_dump($imagen);
+while ($stmt->fetch()):
+    var_dump($titulo);
+    var_dump($imagen);
+endwhile;
 
 include 'includes/footer.php';
