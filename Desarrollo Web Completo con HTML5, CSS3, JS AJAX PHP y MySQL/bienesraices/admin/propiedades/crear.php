@@ -1,6 +1,7 @@
 <?php
 
     require '../../includes/app.php';
+
     use App\Propiedad;
 
     estaAutenticado();
