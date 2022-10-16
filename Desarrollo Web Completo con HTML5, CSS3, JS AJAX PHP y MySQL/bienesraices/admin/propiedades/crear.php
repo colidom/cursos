@@ -1,13 +1,17 @@
 <?php
 
-    require '../../includes/funciones.php';
+    require '../../includes/app.php';
+    use App\Propiedad;
+
+    $propiedad = new Propiedad;
+
+    var_dump($propiedad);
+    exit;
     $auth = estaAutenticado();
 
     if (!$auth) {
         header('Location: /');
     }
-
-    require '../../includes/config/database.php';
 
     $db = conectarDB();
 
