@@ -1,15 +1,17 @@
 <?php include 'includes/header.php';
 
-$host = 'localhost';
-$db = "bienesraices_crud";
+$dsn = "mysql:host=localhost;dbname=bienesraices_crud";
 $user = 'colidom';
 $pass = 'Mysql2021';
 
 // Conectar a la DB con PDO
-$db = new PDO('mysql:host=$host;dbname=$db', $user, $pass);
+$db = new PDO($dsn, $user, $pass);
 
 // Creamos el query
-$query = "SELECT titulo FROM propiedades";
+$query = "SELECT titulo, imagen FROM propiedades";
+
+// Lo preparamos
+$stmt = $db->prepare($query);
 
 // Lo ejecutamos
 $stmt->execute();
