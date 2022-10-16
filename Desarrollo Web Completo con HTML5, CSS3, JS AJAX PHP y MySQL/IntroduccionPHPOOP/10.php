@@ -18,7 +18,7 @@ $stmt->execute();
 $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // Iterar los resultados
-foreach($resultado as $propiedad):
+foreach ($resultado as $propiedad) :
     echo $propiedad['titulo'];
     echo "</br>";
     echo $propiedad['imagen'];
