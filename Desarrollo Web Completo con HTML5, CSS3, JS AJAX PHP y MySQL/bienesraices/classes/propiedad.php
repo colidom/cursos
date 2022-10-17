@@ -6,6 +6,7 @@ class Propiedad {
 
     // Base de datos
     protected static $db;
+    // Mapeamos el objeto
     protected static $columnasDB = ['id', 'titulo', 'precio', 'imagen', 'descripcion', 'habitaciones', 'wc', 'estacionamiento', 'creado', 'vendedorId'];
 
     public $id;
@@ -42,7 +43,7 @@ class Propiedad {
 
         // Sanitizar los datos
         $atributos = $this->sanitizarAtributos();
-
+        debuguear($atributos);
         // Insertar en la base de datos
         $query = "INSERT INTO propiedades ( titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedorId)
         VALUES ('$this->titulo', '$this->precio', '$this->imagen','$this->descripcion', '$this->habitaciones', '$this->wc', '$this->estacionamiento', '$this->creado', '$this->vendedorId' ) ";
@@ -55,7 +56,9 @@ class Propiedad {
     // Identificar y unir los atributos de la DB
     public function atributos() {
         $atributos = [];
+
         foreach (self::$columnasDB as $columna) {
+            if ($columna === 'id') continue;
             $atributos[$columna] = $this->$columna;
         }
         return $atributos;
@@ -64,6 +67,12 @@ class Propiedad {
     // Sanitizar los datos
     public function sanitizarAtributos() {
         $atributos = $this->atributos();
-        debuguear($atributos);
+        $sanitizado = [];
+
+        foreach ($atributos as $key => $value) {
+            $sanitizado[$key] = self::$db->escape_string($value);
+        }
+
+        return $sanitizado;
     }
 }
