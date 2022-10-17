@@ -53,7 +53,7 @@ class Propiedad {
 
         $resultado = self::$db->query($query);
 
-        debuguear($resultado);
+        // debuguear($resultado);
     }
 
     // Identificar y unir los atributos de la DB
