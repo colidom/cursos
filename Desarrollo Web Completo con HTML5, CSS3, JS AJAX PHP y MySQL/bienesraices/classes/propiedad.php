@@ -55,7 +55,7 @@ class Propiedad {
     public function atributos() {
         $atributos = [];
         foreach (self::$columnasDB as $columna) {
-            $atributos[$columna] = $this->columna;
+            $atributos[$columna] = $this->$columna;
         }
         return $atributos;
     }
