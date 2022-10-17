@@ -28,7 +28,7 @@
 
         $propiedad = new Propiedad($_POST);
 
-        $propiedad ->guardar();
+        $propiedad->guardar();
         debuguear($propiedad);
 
         $titulo = mysqli_real_escape_string( $db, $_POST['titulo'] );
