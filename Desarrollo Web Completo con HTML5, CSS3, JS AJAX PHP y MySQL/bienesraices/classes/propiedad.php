@@ -52,6 +52,7 @@ class Propiedad {
         debuguear($resultado);
     }
 
+    // Identificar y unir los atributos de la DB
     public function atributos() {
         $atributos = [];
         foreach (self::$columnasDB as $columna) {
@@ -60,6 +61,7 @@ class Propiedad {
         return $atributos;
     }
 
+    // Sanitizar los datos
     public function sanitizarAtributos() {
         $atributos = $this->atributos();
         debuguear($atributos);
