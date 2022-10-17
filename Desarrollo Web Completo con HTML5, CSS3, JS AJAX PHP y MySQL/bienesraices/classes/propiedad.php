@@ -44,8 +44,6 @@ class Propiedad {
         // Sanitizar los datos
         $atributos = $this->sanitizarAtributos();
 
-        $string = join(', ', array_values($atributos));
-
         // Insertar en la base de datos
         $query = "INSERT INTO propiedades ( ";
         $query .= join(', ', array_keys($atributos));
