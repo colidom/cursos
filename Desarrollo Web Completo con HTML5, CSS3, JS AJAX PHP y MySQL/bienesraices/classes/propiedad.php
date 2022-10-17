@@ -9,6 +9,9 @@ class Propiedad {
     // Mapeamos el objeto
     protected static $columnasDB = ['id', 'titulo', 'precio', 'imagen', 'descripcion', 'habitaciones', 'wc', 'estacionamiento', 'creado', 'vendedorId'];
 
+    // Errores
+    protected static $errores = [];
+
     public $id;
     public $titulo;
     public $precio;
@@ -77,5 +80,54 @@ class Propiedad {
         }
 
         return $sanitizado;
+    }
+
+    // Validación
+    public static function getErrores()
+    {
+        return self::$errores;
+    }
+
+    public function validar() {
+        if (!$this->titulo) {
+            self::$errores[] = "Debes añadir un título";
+        }
+
+        if (!$this->precio) {
+            self::$errores[] = "Debes añadir un precio";
+        }
+
+        if (strlen($this->descripcion) < 50) {
+            self::$errores[] = "Debes añadir una descripción con al menos 50 caracteres";
+        }
+
+        if (!$this->habitaciones) {
+            self::$errores[] = "El número de habitación es obligatorio";
+        }
+
+        if (!$this->wc) {
+            self::$errores[] = "Debes añadir un WC";
+        }
+
+        if ($this->estacionamiento < 0) {
+            self::$errores[] = "Debes añadir un estacionamiento";
+        }
+
+        if (!$this->vendedorId) {
+            self::$errores[] = "Debes elegir un vendedor";
+        }
+
+        /* if (!$this->imagen['name'] || $this->imagen['error']) {
+            self::$errores[] = "Debes añadir una imagen";
+        }
+
+        // Validar iagen por tamaño(100 kb máximo)
+        $medida = 1000 * 1000;
+
+        if ($this->imagen['size'] > $this->medida) {
+            $errores[] = "La imagen es muy pesada";
+        } */
+
+        return self::$errores;
     }
 }
