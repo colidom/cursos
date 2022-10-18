@@ -25,3 +25,10 @@ function debuguear($variable)
     echo "</pre>";
     exit;
 }
+
+// Escapa / Salunitza el html
+function __s($html)
+{   
+    $s = htmlspecialchars($html);
+    return $s;
+}
