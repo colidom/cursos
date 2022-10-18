@@ -3,6 +3,7 @@
     require '../../includes/app.php';
 
     use App\Propiedad;
+    use Intervention\Image\ImageManagerStatic as Image;
 
     estaAutenticado();
 
@@ -25,33 +26,35 @@
 
     // Ejecutar el código después de que el usuario envíe el formulario
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
+        // Crea una nueva instancia
         $propiedad = new Propiedad($_POST);
 
+        // Generar un nombre único
+        $nombreImagen = md5(uniqid(rand(), true)) . ".jpg" ;
+
+        // Realiza un resize a la imagen con Intervention
+        // Setear la imagen
+        if ($_FILES['imagen']['tmp_name']) {
+            $image = Image::make($_FILES['imagen']['tmp_name'])->fit(800,600);
+            $propiedad->setImagen($nombreImagen);
+        }
+
+        // Validar
         $errores = $propiedad->validar();
-        
+
         if (empty($errores)) {
-            
-            $propiedad->guardar();
-
-            // Asignar files a una variable
-            $imagen = $_FILES['imagen'];
-
-            /* Subida de archivos */
-            // Crear carpeta
-            $carpetaImagenes = '../../imagenes/';
-            if (!is_dir($carpetaImagenes)) {
-                mkdir($carpetaImagenes);
+            // Crear la carpera para subir imágenes
+            if(is_dir(CARPETA_IMAGENES)) {
+                mkdir(CARPETA_IMAGENES);
             }
 
-            // Generar un nombre único
-            $nombreImagen = md5(uniqid(rand(), true)) . ".jpg" ;
+            // Guarda la imagen en el servidor
+            $image->save(CARPETA_IMAGENES . $nombreImagen);
 
-            // Subir imagen
-            move_uploaded_file( $imagen['tmp_name'], $carpetaImagenes . $nombreImagen );
-    
-            $resultado = mysqli_query($db, $query);
-    
+            // Guarda en la base de datos
+            $resultado = $propiedad->guardar();
+
+            // Mensaje de exito
             if ($resultado) {
                 // Redireccionamos al usuario tras insertar el registro en DB
                 header("Location: /admin?resultado=1");

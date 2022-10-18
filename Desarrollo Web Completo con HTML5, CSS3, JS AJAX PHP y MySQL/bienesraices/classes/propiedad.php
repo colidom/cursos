@@ -33,7 +33,7 @@ class Propiedad {
         $this->id = $args['id'] ?? '';
         $this->titulo = $args['titulo'] ?? '';
         $this->precio = $args['precio'] ?? '';
-        $this->imagen = $args['imagen'] ?? 'imagen.jpg';
+        $this->imagen = $args['imagen'] ?? '';
         $this->descripcion = $args['descripcion'] ?? '';
         $this->habitaciones = $args['habitaciones'] ?? '';
         $this->wc = $args['wc'] ?? '';
@@ -55,8 +55,8 @@ class Propiedad {
         $query .= " ') ";
 
         $resultado = self::$db->query($query);
-
         // debuguear($resultado);
+        return $resultado;
     }
 
     // Identificar y unir los atributos de la DB
@@ -80,6 +80,14 @@ class Propiedad {
         }
 
         return $sanitizado;
+    }
+
+    // Subida de archivos
+    public function setImagen($imagen) {
+        // Asignar al atributo de imagen el nombre de la imagen
+        if ($imagen) {
+            $this->imagen = $imagen;
+        }
     }
 
     // Validación
@@ -117,16 +125,9 @@ class Propiedad {
             self::$errores[] = "Debes elegir un vendedor";
         }
 
-        /* if (!$this->imagen['name'] || $this->imagen['error']) {
+        if (!$this->imagen) {
             self::$errores[] = "Debes añadir una imagen";
         }
-
-        // Validar iagen por tamaño(100 kb máximo)
-        $medida = 1000 * 1000;
-
-        if ($this->imagen['size'] > $this->medida) {
-            $errores[] = "La imagen es muy pesada";
-        } */
 
         return self::$errores;
     }
