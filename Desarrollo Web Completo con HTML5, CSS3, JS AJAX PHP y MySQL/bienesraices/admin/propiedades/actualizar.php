@@ -28,10 +28,11 @@ use App\Propiedad;
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Asignar los atributos
-        $args = [];
-        $args['titulo'] = $_POST['titulo'] ?? null;
+        $args = $_POST['propiedad'];
+    
+        $propiedad->sincronizar($args);
 
-        $propiedad->sincronizar();
+        debuguear($propiedad);
 
         // Asignar files a una variable
         $imagen = $_FILES['imagen'];
