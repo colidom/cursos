@@ -70,7 +70,7 @@
         <a href="/admin" class="boton boton-verde">Volver</a>
 
         <form class="formulario" method="POST" action="/admin/propiedades/crear.php" enctype="multipart/form-data">
-               <?php include '../../includes/templates/formulario_propiedades.php'; ?>
+            <?php include '../../includes/templates/formulario_propiedades.php'; ?>
             <input type="submit" value="Crear Propiedad" class="boton boton-verde">
         </form>
     </main>
