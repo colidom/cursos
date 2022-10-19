@@ -180,4 +180,9 @@ class Propiedad {
 
         return $objeto;
     }
+
+    // Sincronizar el objeto en memoria con los cambios realizados por el usuario
+    public function sincronizar($args = []) {
+debuguear($args);
+    }
 }
