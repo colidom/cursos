@@ -22,7 +22,7 @@ use App\Propiedad;
     $resultado = mysqli_query($db, $consulta);
 
     // Array con mensajes de errores
-    $errores = [];
+    $errores = Propiedad::getErrores();
 
     // Ejecutar el código después de que el usuario envíe el formulario
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -32,44 +32,7 @@ use App\Propiedad;
     
         $propiedad->sincronizar($args);
 
-        debuguear($propiedad);
-
-        // Asignar files a una variable
-        $imagen = $_FILES['imagen'];
-        
-        if (!$titulo) {
-            $errores[] = "Debes añadir un título";
-        }
-
-        if (!$precio) {
-            $errores[] = "Debes añadir un precio";
-        }
-
-        if (strlen($descripcion) < 50) {
-            $errores[] = "Debes añadir una descripción con al menos 50 caracteres";
-        }
-
-        if (!$wc) {
-            $errores[] = "Debes añadir un WC";
-        }
-
-        if ($estacionamiento < 0) {
-            $errores[] = "Debes añadir un estacionamiento";
-        }
-
-        if (!$vendedorId) {
-            $errores[] = "Debes elegir un vendedor";
-        }
-
-        // Validar iagen por tamaño(100 kb máximo)
-        $medida = 1000 * 1000;
-        if ($imagen['size'] > $medida) {
-            $errores[] = "La imagen es muy pesada";
-        }
-
-        /* echo "<pre>";
-        var_dump($errores);
-        echo "</pre>"; */
+        $errores = $propiedad->validar();
 
         if (empty($errores)) {
             // Crear carpeta
