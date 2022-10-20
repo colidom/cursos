@@ -1,8 +1,9 @@
-<?php 
+<?php
 
 namespace App;
 
-class Propiedad {
+class Propiedad
+{
 
     // Base de datos
     protected static $db;
@@ -24,7 +25,8 @@ class Propiedad {
     public $vendedorId;
 
     // Definir la conexión a la db
-    public static function setDB($database) {
+    public static function setDB($database)
+    {
         self::$db = $database;
     }
 
@@ -42,7 +44,8 @@ class Propiedad {
         $this->vendedorId = $args['vendedorId'] ?? 1;
     }
 
-    public function guardar() {
+    public function guardar()
+    {
 
         // Sanitizar los datos
         $atributos = $this->sanitizarAtributos();
@@ -60,7 +63,8 @@ class Propiedad {
     }
 
     // Identificar y unir los atributos de la DB
-    public function atributos() {
+    public function atributos()
+    {
         $atributos = [];
 
         foreach (self::$columnasDB as $columna) {
@@ -71,7 +75,8 @@ class Propiedad {
     }
 
     // Sanitizar los datos
-    public function sanitizarAtributos() {
+    public function sanitizarAtributos()
+    {
         $atributos = $this->atributos();
         $sanitizado = [];
 
@@ -83,7 +88,8 @@ class Propiedad {
     }
 
     // Subida de archivos
-    public function setImagen($imagen) {
+    public function setImagen($imagen)
+    {
         // Asignar al atributo de imagen el nombre de la imagen
         if ($imagen) {
             $this->imagen = $imagen;
@@ -96,7 +102,8 @@ class Propiedad {
         return self::$errores;
     }
 
-    public function validar() {
+    public function validar()
+    {
         if (!$this->titulo) {
             self::$errores[] = "Debes añadir un título";
         }
@@ -133,24 +140,26 @@ class Propiedad {
     }
 
     // Lista todos los registros
-    public static function all() {
+    public static function all()
+    {
         $query = "SELECT * FROM propiedades";
         $resultado = self::consultarSQL(($query));
 
         return $resultado;
-
     }
 
     // Busca un registro por su id
-    public static function find($id) {
-    
+    public static function find($id)
+    {
+
         $query = "SELECT * FROM propiedades WHERE id = ${id}";
         $resultado = self::consultarSQL($query);
 
         return array_shift($resultado);
     }
 
-    public static function consultarSQL($query) {
+    public static function consultarSQL($query)
+    {
         // Consultar la DB
         $resultado = self::$db->query($query);
 
@@ -168,7 +177,8 @@ class Propiedad {
     }
 
     // Método para mapear array a objeto
-    protected static function crearObjeto($registro) {
+    protected static function crearObjeto($registro)
+    {
         // new self = clase padre, es decir, Propiedad
         $objeto = new self;
 
@@ -182,7 +192,8 @@ class Propiedad {
     }
 
     // Sincronizar el objeto en memoria con los cambios realizados por el usuario
-    public function sincronizar($args = []) {
+    public function sincronizar($args = [])
+    {
         foreach ($args as $key => $value) {
             if (property_exists($this, $key) && !is_null($value)) {
                 $this->$key = $value;
