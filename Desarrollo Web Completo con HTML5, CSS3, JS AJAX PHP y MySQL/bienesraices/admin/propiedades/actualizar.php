@@ -46,6 +46,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (empty($errores)) {
+        // Almacenar imagen
+        $image->save(CARPETA_IMAGENES . $nombreImagen);
         $propiedad->guardar();
     }
 }
