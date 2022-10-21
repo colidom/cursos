@@ -91,7 +91,7 @@ class Propiedad
     public function setImagen($imagen)
     {
         // Elimina la imagen previa
-        if ($this->id) {
+        if (isset($this->id)) {
             // Comprobar si existe el archivo
             $existeArchivo = file_exists(CARPETA_IMAGENES . $this->imagen);
             if ($existeArchivo) {
