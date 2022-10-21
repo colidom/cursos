@@ -44,7 +44,17 @@ class Propiedad
         $this->vendedorId = $args['vendedorId'] ?? 1;
     }
 
-    public function guardar()
+    public function guardar() {
+        if (isset($this->id)) {
+            // Actualizar
+            $this->actualizar();
+        } else {
+            // Crear un nuevo registro
+            $this->crear();
+        }
+    }
+
+    public function crear()
     {
 
         // Sanitizar los datos
@@ -60,6 +70,26 @@ class Propiedad
         $resultado = self::$db->query($query);
         // debuguear($resultado);
         return $resultado;
+    }
+
+    public function actualizar() {
+        // Sanitizar los datos
+        $atributos = $this->sanitizarAtributos();
+
+        $valores = [];
+        foreach ($atributos as $key => $value) {
+            $valores[] = "{$key} = '{$value}'";
+        }
+        $query = "UPDATE propiedades SET ";
+        $query .= join(', ', $valores);
+        $query .= " WHERE id = '" . self::$db->escape_string($this->id) . "' ";
+        $query .= " LIMIT 1 ";
+        $resultado = self::$db->query($query);
+
+        if ($resultado) {
+            // Redireccionamos al usuario tras insertar el registro en DB
+            header("Location: /admin?resultado=2");
+        }
     }
 
     // Identificar y unir los atributos de la DB

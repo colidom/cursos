@@ -45,23 +45,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $propiedad->setImagen($nombreImagen);
     }
 
-    debuguear($propiedad);
-
     if (empty($errores)) {
-        
-        exit;
-
-        // Insertar en la base de datos
-        $query = "UPDATE propiedades SET titulo = '${titulo}', imagen = '${nombreImagen}', precio = '${precio}', descripcion = '${descripcion}', habitaciones = ${habitaciones}, wc = ${wc}, estacionamiento = ${estacionamiento}, vendedorId = ${vendedorId} WHERE id = ${id}";
-
-        // echo $query;
-
-        $resultado = mysqli_query($db, $query);
-
-        if ($resultado) {
-            // Redireccionamos al usuario tras insertar el registro en DB
-            header("Location: /admin?resultado=2");
-        }
+        $propiedad->guardar();
     }
 }
 
