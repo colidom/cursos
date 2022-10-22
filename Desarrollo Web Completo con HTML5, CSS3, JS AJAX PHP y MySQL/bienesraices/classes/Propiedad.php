@@ -32,7 +32,7 @@ class Propiedad
 
     public function __construct($args = [])
     {
-        $this->id = $args['id'] ?? '';
+        $this->id = $args['id'] ?? null;
         $this->titulo = $args['titulo'] ?? '';
         $this->precio = $args['precio'] ?? '';
         $this->imagen = $args['imagen'] ?? '';
@@ -45,7 +45,7 @@ class Propiedad
     }
 
     public function guardar() {
-        if (isset($this->id)) {
+        if (!is_null($this->id)) {
             // Actualizar
             $this->actualizar();
         } else {
@@ -56,9 +56,9 @@ class Propiedad
 
     public function crear()
     {
-
         // Sanitizar los datos
         $atributos = $this->sanitizarAtributos();
+
 
         // Insertar en la base de datos
         $query = "INSERT INTO propiedades ( ";
@@ -68,7 +68,12 @@ class Propiedad
         $query .= " ') ";
 
         $resultado = self::$db->query($query);
-        // debuguear($resultado);
+
+        // Mensaje de exito
+        if ($resultado) {
+            // Redireccionamos al usuario tras insertar el registro en DB
+            header("Location: /admin?resultado=1");
+        }
         return $resultado;
     }
 
@@ -134,7 +139,7 @@ class Propiedad
     public function setImagen($imagen)
     {
         // Elimina la imagen previa
-        if (isset($this->id)) {
+        if (!is_null($this->id)) {
             $this->borrarImagen();
         }
         // Asignar al atributo de imagen el nombre de la imagen
