@@ -44,7 +44,8 @@ class Propiedad
         $this->vendedorId = $args['vendedorId'] ?? 1;
     }
 
-    public function guardar() {
+    public function guardar()
+    {
         if (!is_null($this->id)) {
             // Actualizar
             $this->actualizar();
@@ -77,7 +78,8 @@ class Propiedad
         return $resultado;
     }
 
-    public function actualizar() {
+    public function actualizar()
+    {
         // Sanitizar los datos
         $atributos = $this->sanitizarAtributos();
 
@@ -98,7 +100,8 @@ class Propiedad
     }
 
     // Eliminar un registro
-    public function eliminar() {
+    public function eliminar()
+    {
         // Eliminar la propiedad en la DB
         $query = "DELETE FROM propiedades WHERE id = " . self::$db->escape_string($this->id) . " LIMIT 1";
         $resultado = self::$db->query($query);
@@ -149,7 +152,8 @@ class Propiedad
     }
 
     // Borrado de archivos
-    public function borrarImagen() {
+    public function borrarImagen()
+    {
         // Comprobar si existe el archivo
         $existeArchivo = file_exists(CARPETA_IMAGENES . $this->imagen);
         if ($existeArchivo) {

@@ -1,4 +1,4 @@
-<?php 
-    session_start();
-    $_SESSION = [];
-    header('Location: /');
+<?php
+session_start();
+$_SESSION = [];
+header('Location: /');

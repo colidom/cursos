@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 require 'includes/app.php';
 
