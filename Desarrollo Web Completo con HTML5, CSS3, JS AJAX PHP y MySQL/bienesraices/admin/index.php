@@ -18,8 +18,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = filter_var($id, FILTER_VALIDATE_INT);
 
     if ($id) {
-        $propiedad = Propiedad::find($id);
-        $propiedad->eliminar();
+        $tipo = $_POST['tipo'];
+
+        if (validarTipoContenido($tipo)) {
+            
+            // Compara lo que vamos a eliminar
+            if ($tipo == 'vendedor') {
+                $vendedor = Vendedor::find($id);
+                $vendedor->eliminar();
+            } elseif ($tipo == 'propiedad') {
+                $propiedad = Propiedad::find($id);
+                $propiedad->eliminar();
+            }
+        }
     }
 }
 
@@ -60,6 +71,7 @@ incluirTemplate('header');
                     <td>
                         <form method="POST" class="w-100">
                             <input type="hidden" name="id" value="<?php echo $propiedad->id ?>">
+                            <input type="hidden" name="tipo" value="propiedad">
                             <input type="submit" class="boton-rojo-block" value="Eliminar">
                         </form>
                         <a href="admin/propiedades/actualizar.php?id=<?php echo $propiedad->id; ?>" class="boton-amarillo-block">Actualizar</a>
@@ -88,10 +100,11 @@ incluirTemplate('header');
                     <td><?php echo $vendedor->telefono; ?></td>
                     <td>
                         <form method="POST" class="w-100">
-                            <input type="hidden" name="id" value="<?php echo $propiedad->id ?>">
+                            <input type="hidden" name="id" value="<?php echo $vendedor->id ?>">
+                            <input type="hidden" name="tipo" value="vendedor">
                             <input type="submit" class="boton-rojo-block" value="Eliminar">
                         </form>
-                        <a href="admin/vendedores/actualizar.php?id=<?php echo $propiedad->id; ?>" class="boton-amarillo-block">Actualizar</a>
+                        <a href="admin/vendedores/actualizar.php?id=<?php echo $vendedor->id; ?>" class="boton-amarillo-block">Actualizar</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
