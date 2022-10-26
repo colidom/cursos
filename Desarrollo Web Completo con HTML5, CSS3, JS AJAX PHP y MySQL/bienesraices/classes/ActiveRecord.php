@@ -82,11 +82,19 @@ class ActiveRecord
         $resultado = self::$db->query($query);
 
         if ($resultado) {
-            $this->borrarImagen();
-            header('location: /admin?resultado=3');
+            $tipo = $_POST['tipo'];
+
+            if (validarTipoContenido($tipo)) {
+                // Compara lo que vamos a eliminar
+                if ($tipo == 'propiedad') {
+                    $this->borrarImagen();
+                    header('location: /admin?resultado=3');
+                } else {
+                    header('location: /admin?resultado=4');
+                }
+            }
         }
     }
-
 
     // Identificar y unir los atributos de la DB
     public function atributos()

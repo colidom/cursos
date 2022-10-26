@@ -46,6 +46,8 @@ incluirTemplate('header');
         <p class="alerta exito">Anuncio actualizado correctamente</p>
     <?php elseif (intval($resultado) === 3) : ?>
         <p class="alerta exito">Anuncio eliminado correctamente</p>
+    <?php elseif (intval($resultado) === 4) : ?>
+        <p class="alerta exito">Vendedor eliminado correctamente</p>
     <?php endif; ?>
     <a href="/admin/propiedades/crear.php" class="boton boton-verde">Nueva propiedad</a>
     
