@@ -3,6 +3,7 @@
 require '../includes/app.php';
 estaAutenticado();
 
+// Importar clases
 use App\Propiedad;
 use App\Vendedor;
 
@@ -14,6 +15,7 @@ $vendedores = Vendedor::all();
 $resultado = $_GET['resultado'] ?? null;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Validar ID
     $id = $_POST['id'];
     $id = filter_var($id, FILTER_VALIDATE_INT);
 
@@ -40,15 +42,11 @@ incluirTemplate('header');
 
 <main class="contenedor seccion">
     <h1>Administrador de bienes Raíces</h1>
-    <?php if (intval($resultado) === 1) : ?>
-        <p class="alerta exito">Creado correctamente</p>
-    <?php elseif (intval($resultado) === 2) : ?>
-        <p class="alerta exito">Actualizado correctamente</p>
-    <?php elseif (intval($resultado) === 3) : ?>
-        <p class="alerta exito">Eliminado correctamente</p>
-    <?php elseif (intval($resultado) === 4) : ?>
-        <p class="alerta exito">Vendedor eliminado correctamente</p>
-    <?php endif; ?>
+    <?php
+        $mensaje = mostrarNotificacion(intval($resultado));
+        if ($mensaje) { ?>
+            <p class="alerta exito"><?php echo __s($mensaje) ?></p>
+    <?php } ?>
     <a href="/admin/propiedades/crear.php" class="boton boton-verde">Nueva propiedad</a>
     <a href="/admin/vendedores/crear.php" class="boton boton-amarillo">Nuevo vendedor</a>
     
