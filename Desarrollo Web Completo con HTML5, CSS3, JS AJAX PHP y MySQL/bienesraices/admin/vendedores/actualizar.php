@@ -4,13 +4,33 @@ require '../../includes/app.php';
 use App\Vendedor;
 estaAutenticado();
 
-$vendedor = new Vendedor;
+// Validar que sea un ID válido
+$id = $_GET['id'];
+$id = filter_var($id, FILTER_VALIDATE_INT);
+
+if (!$id) {
+    header('Location: /admin');
+}
+
+// Obtener el array del vendedor desde la db
+$vendedor = Vendedor::find($id);
 
 // Array con mensajes de errores
 $errores = Vendedor::getErrores();
 
 // Ejecutar el código después de que el usuario envíe el formulario
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    
+    // Asignar los valores
+    $args = $_POST['vendedor'];
+    // Sincronizar objeto en memoria con lo introducido por el usuario
+    $vendedor->sincronizar($args);
+    // Validación
+    $errores = $vendedor->validar();
+    
+    if (!$errores) {
+        $vendedor->guardar();
+    }
 
 }
 
