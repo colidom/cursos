@@ -1,9 +1,7 @@
 <?php
 
 require '../../includes/app.php';
-
 use App\Vendedor;
-
 estaAutenticado();
 
 $vendedor = new Vendedor;
