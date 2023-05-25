@@ -1,4 +1,45 @@
 # 💾 Cursos:
+
+---
+# Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL
+[![Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL](./pictures/wordpress-header.jpg)](https://www.udemy.com/course/experto-de-photoshop-a-wordpress-creando-2-themes-plantillas/)
+
+
+#### En este curso aprenderemos:
+<details>
+  <summary>Seguir leyendo...</summary>
+
+
+¿Alguna vez has intentado convertir un diseño en Photoshop, Figma o HTML5 a WordPress y encontrarte con problemas para hacerlo? 
+
+¿Estás cansado de utilizar plantillas que no se adaptan al diseño que tienes en mente?
+
+ENTONCES ESTE CURSO ES PARA TI!
+
+¿Quieres saber que aprenderás en este curso?
+
+En este curso desarrollarás 5 proyectos completos!
+
+**Primer Sitio**: Desarrollaremos un sitio web para un gimnasio, con custom post types, crearemos 2 plugins, aprenderás Widgets API, Plugin API y Shortcode API, además de ser responsive y mobile first con Flexbox y CSS Grid!
+
+**Segundo Sitio**: Sitio Web para un restaurant, con sistema de reservas, opciones del theme, Advanced Custom Fields, Custom Post Types, en este proyecto aprenderás desde temas básicos hasta avanzados! Además será responsive y mobile first.
+
+**Tercer Sitio**: Un sitio web básico que te enseñará lo básico para crear plantillas en WordPress.
+
+**Cuarto Sitio**: Crearemos un segundo sitio web con opciones más avanzadas, responsivo y que integrará opciones más avanzadas como Advanced Custom Fields, Custom Post Types y un Login personalizado.
+
+**Quinto Sitio**: Desarrollarás un sitio web con el Framework más popular del mundo: Twitter Bootstrap.
+##### Lo que aprenderás
+
+- Convertir sus propios diseños de Photoshop a WordPress.
+- Poder leer la Jerarquia de Temas de WordPress (Theme Hierarchy) para realizar cualquier diseño en especifico.
+- Conocer archivos más avanzados de WordPress
+- Sacar el máximo provecho a WordPress sin tener tantos problemas
+- Crear sitios web 100% dinámicos para el trabajo que ya tienes o el que deseas tener
+
+</details>
+
+
 ---
 # Curso Maestro de Python 3: Aprende Desde Cero
 [<img src="https://www.python.org/static/community_logos/python-logo-inkscape.svg">](https://www.udemy.com/course/python-3-al-completo-desde-cero/)
