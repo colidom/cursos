@@ -15,7 +15,6 @@ $estudiante = array(
 );
 
 echo "***for convencional*** </br>";
-
 for ($i = 0; $i < count($frutas); $i++) {
   echo $frutas[$i] . "</br>";
 }
