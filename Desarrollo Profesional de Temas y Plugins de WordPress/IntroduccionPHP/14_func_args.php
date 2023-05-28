@@ -20,4 +20,3 @@ echo saludar("laura");
 echo sumar(1, 20);
 echo "</br>";
 echo sumar(100);
-0
