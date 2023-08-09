@@ -1,3 +1,4 @@
+import copy
 import unittest
 import database as db
 
@@ -22,3 +23,9 @@ class TestDatabase(unittest.TestCase):
         self.assertEqual(new_customer.dni, "444444444T")
         self.assertEqual(new_customer.name, "Carlos")
         self.assertEqual(new_customer.surname, "Oliva")
+
+    def test_update_customer(self):
+        customer = copy.copy(db.Customers.find("00000000T"))
+        modified_customer = db.Customers.update("00000000T", "Steve", "Jobs")
+        self.assertEqual(customer.name, "Martha")
+        self.assertEqual(modified_customer.name, "Steve")
