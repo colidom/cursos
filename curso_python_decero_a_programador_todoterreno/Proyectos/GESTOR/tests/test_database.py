@@ -29,3 +29,9 @@ class TestDatabase(unittest.TestCase):
         modified_customer = db.Customers.update("00000000T", "Steve", "Jobs")
         self.assertEqual(customer.name, "Martha")
         self.assertEqual(modified_customer.name, "Steve")
+
+    def test_delete_customer(self):
+        deleted_customer = db.Customers.delete("444444444T")
+        find_customer = db.Customers.find("444444444T")
+        self.assertEqual(deleted_customer.dni, "444444444T")
+        self.assertIsNone(find_customer)
