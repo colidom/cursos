@@ -21,6 +21,7 @@ class Customers:
     def create(dni, name, surname):
         customer = Customer(dni, name, surname)
         Customers.customers_list.append(customer)
+        return customer
 
     @staticmethod
     def update(dni, name, surname):
