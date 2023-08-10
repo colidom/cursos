@@ -35,4 +35,4 @@ class Customers:
     def delete(dni):
         for index, customer in enumerate(Customers.customers_list):
             if customer.dni == dni:
-                return Customers.customers_list.pop[index]
+                return Customers.customers_list.pop(index)
