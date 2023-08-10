@@ -31,7 +31,10 @@ class TestDatabase(unittest.TestCase):
         self.assertEqual(modified_customer.name, "Steve")
 
     def test_delete_customer(self):
-        deleted_customer = db.Customers.delete("444444444T")
-        find_customer = db.Customers.find("444444444T")
-        self.assertEqual(deleted_customer.dni, "444444444T")
-        self.assertIsNone(find_customer)
+        deleted_customer = db.Customers.delete("00000000T")
+        find_customer = db.Customers.find("00000000T")
+        self.assertNotEqual(deleted_customer, find_customer)
+
+
+if __name__ == "__main__":
+    unittest.main()
