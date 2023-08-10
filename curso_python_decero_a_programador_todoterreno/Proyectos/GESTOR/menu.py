@@ -19,18 +19,20 @@ def launch():
         opcion = input("> ")
         os.system("clear")  # cls en Windows
 
-        if opcion == "1":
-            print("Listing customers...\n")
-        if opcion == "2":
-            print("Looking for a customer...\n")
-        if opcion == "3":
-            print("Adding a customer...\n")
-        if opcion == "4":
-            print("Modifying a customer...\n")
-        if opcion == "5":
-            print("Deleting a customer...\n")
-        if opcion == "6":
-            print("Leaving...\n")
-            break
+        match opcion:
+            case "1":
+                print("Listing customers...\n")
+            case "2":
+                print("Looking for a customer...\n")
+            case "3":
+                print("Adding a customer...\n")
+            case "4":
+                print("Modifying a customer...\n")
+            case "5":
+                print("Deleting a customer...\n")
+            case "6":
+                print("Leaving...\n")
+            case _:
+                print("Please choose one of the options above...\n")
 
         input("\nPress ENTER to continue...")
