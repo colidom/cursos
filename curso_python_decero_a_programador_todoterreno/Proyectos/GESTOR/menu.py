@@ -1,9 +1,10 @@
 import os
+import helpers
 
 
 def launch():
     while True:
-        os.system("clear")  # cls in Windows
+        helpers.clean_screen()
 
         print("========================")
         print("  Welcome to Manager ")
@@ -17,7 +18,7 @@ def launch():
         print("========================")
 
         opcion = input("> ")
-        os.system("clear")  # cls en Windows
+        helpers.clean_screen()
 
         match opcion:
             case "1":
