@@ -31,7 +31,6 @@ def launch():
                 dni = helpers.read_text(3, 3, "DNI (2 int 1 char)").upper()
                 customer = db.Customers.find(dni)
                 print(customer) if customer else print("Customer not found")
-                break
             case "3":
                 print("Adding a customer...\n")
                 dni = helpers.read_text(3, 3, "DNI (2 int 1 char)").upper()
@@ -41,7 +40,6 @@ def launch():
                 ).capitalize()
                 db.Customers.create(dni, name, surname)
                 print("Customer successfully added")
-                break
             case "4":
                 print("Modifying a customer...\n")
                 dni = helpers.read_text(3, 3, "DNI (2 int 1 char)").upper()
@@ -56,17 +54,14 @@ def launch():
                     db.Customers.update(dni, name, surname)
                     print("Customer successfully modified")
                 print("Customer not found")
-                break
             case "5":
                 print("Deleting a customer...\n")
                 dni = helpers.read_text(3, 3, "DNI (2 int 1 char)").upper()
                 print("Customer successfully deleted") if db.Customers.delete(
                     dni
                 ) else print("Customer not found")
-                break
             case "6":
                 print("Leaving...\n")
-                break
             case _:
                 print("Please choose one of the options above...\n")
 
