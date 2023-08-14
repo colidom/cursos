@@ -40,7 +40,7 @@ def launch():
                     2, 30, "Surname (2 int 30 char)"
                 ).capitalize()
                 db.Customers.create(dni, name, surname)
-                print("Customer successfully added ✔")
+                print("Customer successfully added ✅")
             case "4":
                 print("Modifying a customer...\n")
                 dni = helpers.read_text(3, 3, "DNI (2 int 1 char)").upper()
@@ -53,12 +53,12 @@ def launch():
                         2, 30, f"Surname (2 int 30 char)[{customer.surname}]"
                     ).capitalize()
                     db.Customers.update(dni, name, surname)
-                    print("Customer successfully modified ✔")
+                    print("Customer successfully modified ✅")
                 print(CUSTOMER_NOT_FOUND)
             case "5":
                 print("Deleting a customer...\n")
                 dni = helpers.read_text(3, 3, "DNI (2 int 1 char)").upper()
-                print("Customer successfully deleted ✔") if db.Customers.delete(
+                print("Customer successfully deleted ✅") if db.Customers.delete(
                     dni
                 ) else print(CUSTOMER_NOT_FOUND)
             case "6":
