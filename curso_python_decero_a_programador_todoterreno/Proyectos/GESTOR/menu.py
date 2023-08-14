@@ -14,7 +14,7 @@ def launch():
         print("[2] Find Customer       ")
         print("[3] Add Customer        ")
         print("[4] Modify Customer     ")
-        print("[5] delete Customer     ")
+        print("[5] Delete Customer     ")
         print("[6] Close the Manager   ")
         print("========================")
 
