@@ -4,6 +4,7 @@ import database as db
 
 
 def launch():
+    CUSTOMER_NOT_FOUND = "Customer not found❌"
     while True:
         helpers.clean_screen()
 
@@ -30,7 +31,7 @@ def launch():
                 print("Looking for a customer...\n")
                 dni = helpers.read_text(3, 3, "DNI (2 int 1 char)").upper()
                 customer = db.Customers.find(dni)
-                print(customer) if customer else print("Customer not found")
+                print(customer) if customer else print(CUSTOMER_NOT_FOUND)
             case "3":
                 print("Adding a customer...\n")
                 dni = helpers.read_text(3, 3, "DNI (2 int 1 char)").upper()
@@ -39,7 +40,7 @@ def launch():
                     2, 30, "Surname (2 int 30 char)"
                 ).capitalize()
                 db.Customers.create(dni, name, surname)
-                print("Customer successfully added")
+                print("Customer successfully added ✔")
             case "4":
                 print("Modifying a customer...\n")
                 dni = helpers.read_text(3, 3, "DNI (2 int 1 char)").upper()
@@ -52,14 +53,14 @@ def launch():
                         2, 30, f"Surname (2 int 30 char)[{customer.surname}]"
                     ).capitalize()
                     db.Customers.update(dni, name, surname)
-                    print("Customer successfully modified")
-                print("Customer not found")
+                    print("Customer successfully modified ✔")
+                print(CUSTOMER_NOT_FOUND)
             case "5":
                 print("Deleting a customer...\n")
                 dni = helpers.read_text(3, 3, "DNI (2 int 1 char)").upper()
-                print("Customer successfully deleted") if db.Customers.delete(
+                print("Customer successfully deleted ✔") if db.Customers.delete(
                     dni
-                ) else print("Customer not found")
+                ) else print(CUSTOMER_NOT_FOUND)
             case "6":
                 print("Leaving...\n")
             case _:
