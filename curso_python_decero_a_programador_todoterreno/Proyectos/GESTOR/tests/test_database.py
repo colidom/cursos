@@ -1,5 +1,6 @@
 import copy
 import unittest
+import helpers
 import database as db
 
 
@@ -34,6 +35,12 @@ class TestDatabase(unittest.TestCase):
         deleted_customer = db.Customers.delete("00000000T")
         find_customer = db.Customers.find("00000000T")
         self.assertNotEqual(deleted_customer, find_customer)
+
+    def test_validate_dni(self):
+        self.assertTrue(helpers.validate_dni("88888888T", db.Customers.customers_list))
+        self.assertFalse(helpers.validate_dni("33333333T", db.Customers.customers_list))
+        self.assertFalse(helpers.validate_dni("0000000T", db.Customers.customers_list))
+        self.assertFalse(helpers.validate_dni("T0000000", db.Customers.customers_list))
 
 
 if __name__ == "__main__":
