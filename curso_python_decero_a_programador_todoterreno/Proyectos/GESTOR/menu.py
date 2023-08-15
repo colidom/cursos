@@ -41,14 +41,14 @@ def launch():
                 dni = None
                 while True:
                     dni = helpers.read_text(9, 9, DNI_LENGTH).upper()
-                    if not helpers.validate_dni(dni, customers_list):
+                    if helpers.validate_dni(dni, customers_list):
                         break
-                    name = helpers.read_text(2, 30, "Name (2 int 30 char)").capitalize()
-                    surname = helpers.read_text(
-                        2, 30, "Surname (2 int 30 char)"
-                    ).capitalize()
-                    db.Customers.create(dni, name, surname)
-                    print("Customer successfully added ✅")
+                name = helpers.read_text(2, 30, "Name (2 int 30 char)").capitalize()
+                surname = helpers.read_text(
+                    2, 30, "Surname (2 int 30 char)"
+                ).capitalize()
+                db.Customers.create(dni, name, surname)
+                print("Customer successfully added ✅")
             case "4":
                 print("Modifying a customer...\n")
                 dni = helpers.read_text(9, 9, DNI_LENGTH).upper()
@@ -65,7 +65,7 @@ def launch():
                 print(CUSTOMER_NOT_FOUND)
             case "5":
                 print("Deleting a customer...\n")
-                dni = helpers.read_text(3, 3, "DNI (2 int 1 char)").upper()
+                dni = helpers.read_text(9, 9, DNI_LENGTH).upper()
                 print("Customer successfully deleted ✅") if db.Customers.delete(
                     dni
                 ) else print(CUSTOMER_NOT_FOUND)
