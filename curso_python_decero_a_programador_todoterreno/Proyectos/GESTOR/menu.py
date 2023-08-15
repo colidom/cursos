@@ -71,6 +71,7 @@ def launch():
                 ) else print(CUSTOMER_NOT_FOUND)
             case "6":
                 print("Leaving...\n")
+                break
             case _:
                 print("Please choose one of the options above...\n")
 
