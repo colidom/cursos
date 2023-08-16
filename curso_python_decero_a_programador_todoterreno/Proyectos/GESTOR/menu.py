@@ -9,17 +9,7 @@ def launch():
 
     while True:
         helpers.clean_screen()
-
-        print("========================")
-        print("  Welcome to Manager ")
-        print("========================")
-        print("[1] Customers List      ")
-        print("[2] Find Customer       ")
-        print("[3] Add Customer        ")
-        print("[4] Modify Customer     ")
-        print("[5] Delete Customer     ")
-        print("[6] Close the Manager   ")
-        print("========================")
+        helpers.show_menu()
 
         opcion = input("> ")
         helpers.clean_screen()

@@ -7,6 +7,19 @@ def clean_screen():
     os.system("cls") if platform.system() == "Windows" else os.system("clear")
 
 
+def show_menu():
+    print("========================")
+    print("  Welcome to Manager ")
+    print("========================")
+    print("[1] Customers List      ")
+    print("[2] Find Customer       ")
+    print("[3] Add Customer        ")
+    print("[4] Modify Customer     ")
+    print("[5] Delete Customer     ")
+    print("[6] Close the Manager   ")
+    print("========================")
+
+
 def read_text(min_length=0, max_length=100, msg=None):
     print(msg) if msg else None
     while True:
