@@ -4,7 +4,7 @@ CUSTOMER_NOT_FOUND = "Customer not found❌"
 DNI_LENGTH = "DNI (8 int 1 char)"
 
 
-def launch():
+def launch() -> None:
     while True:
         helpers.clean_screen()
         helpers.show_menu()
@@ -31,14 +31,14 @@ def launch():
         input("\nPress ENTER to continue...")
 
 
-def find_customer():
+def find_customer() -> None:
     print("Looking for a customer...\n")
     dni = helpers.read_text(9, 9, DNI_LENGTH).upper()
     customer = db.Customers.find(dni)
     print(customer) if customer else print(CUSTOMER_NOT_FOUND)
 
 
-def add_customer():
+def add_customer() -> None:
     print("Adding a customer...\n")
     dni = helpers.read_text(9, 9, DNI_LENGTH).upper()
     if helpers.validate_dni(dni, db.Customers.customers_list):
@@ -48,7 +48,7 @@ def add_customer():
         print("Customer added ✅")
 
 
-def modify_customer():
+def modify_customer() -> None:
     print("Modifying a customer...\n")
     dni = helpers.read_text(9, 9, DNI_LENGTH).upper()
     customer = db.Customers.find(dni)
@@ -58,7 +58,7 @@ def modify_customer():
         print(CUSTOMER_NOT_FOUND)
 
 
-def modify_existing_customer(customer):
+def modify_existing_customer(customer: db.Customer) -> None:
     name = helpers.read_text(2, 30, f"New name for {customer.name}: ").capitalize()
     surname = helpers.read_text(
         2, 30, f"New surname for {customer.surname}: "
@@ -67,7 +67,7 @@ def modify_existing_customer(customer):
     print("Customer modified ✅")
 
 
-def delete_customer():
+def delete_customer() -> None:
     print("Deleting a customer...\n")
     dni = helpers.read_text(9, 9, DNI_LENGTH).upper()
     print("Customer successfully deleted ✅") if db.Customers.delete(dni) else print(

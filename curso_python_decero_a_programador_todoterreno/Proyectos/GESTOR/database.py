@@ -1,4 +1,5 @@
 import csv
+from typing import List
 
 
 class Customer:
@@ -20,37 +21,40 @@ class Customers:
             customers_list.append(customer)
 
     @staticmethod
-    def find(dni):
+    def find(dni: str) -> Customer | None:
         for customer in Customers.customers_list:
             if customer.dni == dni:
                 return customer
+        return None
 
     @staticmethod
-    def create(dni, name, surname):
+    def create(dni: str, name: str, surname: str) -> Customer:
         customer = Customer(dni, name, surname)
         Customers.customers_list.append(customer)
         Customers.save()
         return customer
 
     @staticmethod
-    def update(dni, name, surname):
+    def update(dni: str, name: str, surname: str) -> List[Customer] | None:
         for index, customer in enumerate(Customers.customers_list):
             if customer.dni == dni:
                 Customers.customers_list[index].name = name
                 Customers.customers_list[index].surname = surname
                 Customers.save()
                 return Customers.customers_list[index]
+        return None
 
     @staticmethod
-    def delete(dni):
+    def delete(dni: str) -> List[Customer] | None:
         for index, customer in enumerate(Customers.customers_list):
             if customer.dni == dni:
                 customer = Customers.customers_list.pop(index)
                 Customers.save()
                 return customer
+        return None
 
     @staticmethod
-    def save():
+    def save() -> None:
         with open("customers.csv", "w", newline="\n") as file:
             writer = csv.writer(file, delimiter=";")
             for customer in Customers.customers_list:

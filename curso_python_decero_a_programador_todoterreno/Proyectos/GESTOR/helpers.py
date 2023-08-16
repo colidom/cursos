@@ -3,11 +3,11 @@ import os
 import platform
 
 
-def clean_screen():
+def clean_screen() -> None:
     os.system("cls") if platform.system() == "Windows" else os.system("clear")
 
 
-def show_menu():
+def show_menu() -> None:
     print("========================")
     print("  Welcome to Manager ")
     print("========================")
@@ -20,7 +20,7 @@ def show_menu():
     print("========================")
 
 
-def read_text(min_length=0, max_length=100, msg=None):
+def read_text(min_length: int = 0, max_length: int = 100, msg=None) -> str:
     print(msg) if msg else None
     while True:
         text = input("> ")
@@ -31,7 +31,7 @@ def read_text(min_length=0, max_length=100, msg=None):
         )
 
 
-def validate_dni(dni, customers_list):
+def validate_dni(dni: str, customers_list: list) -> bool:
     if not re.match("\d{8}[A-Z]$", dni):
         print("Incorrect DNI, must comply with the format.")
         return False
