@@ -7,7 +7,7 @@ def clean_screen() -> None:
     os.system("cls") if platform.system() == "Windows" else os.system("clear")
 
 
-def welcome() -> None:
+def show_options() -> None:
     print("========================")
     print("  Welcome to Manager ")
     print("========================")
