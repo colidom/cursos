@@ -62,7 +62,8 @@ def launch():
                     ).capitalize()
                     db.Customers.update(dni, name, surname)
                     print("Customer successfully modified ✅")
-                print(CUSTOMER_NOT_FOUND)
+                else:
+                    print(CUSTOMER_NOT_FOUND)
             case "5":
                 print("Deleting a customer...\n")
                 dni = helpers.read_text(9, 9, DNI_LENGTH).upper()
