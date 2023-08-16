@@ -7,7 +7,7 @@ DNI_LENGTH = "DNI (8 int 1 char)"
 def launch() -> None:
     while True:
         helpers.clean_screen()
-        helpers.show_menu()
+        helpers.welcome()
 
         opcion = input("> ")
         helpers.clean_screen()
