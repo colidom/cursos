@@ -43,17 +43,16 @@ def launch():
                 print("Modifying a customer...\n")
                 dni = helpers.read_text(9, 9, DNI_LENGTH).upper()
                 customer = db.Customers.find(dni)
-                if customer:
-                    name = helpers.read_text(
-                        2, 30, f"Name (2 int 30 char) [{customer.name}]"
-                    ).capitalize()
-                    surname = helpers.read_text(
-                        2, 30, f"Surname (2 int 30 char)[{customer.surname}]"
-                    ).capitalize()
-                    db.Customers.update(dni, name, surname)
-                    print("Customer successfully modified ✅")
-                else:
+
+                if not customer:
                     print(CUSTOMER_NOT_FOUND)
+                    return
+
+                name = helpers.read_text(2, 30, f"New name for {customer.name}: ").capitalize()
+                surname = helpers.read_text( 2, 30, f"New surname for {customer.surname}: ").capitalize()
+                db.Customers.update(dni, name, surname)
+                print("Customer modified ✅")
+
             case "5":
                 print("Deleting a customer...\n")
                 dni = helpers.read_text(9, 9, DNI_LENGTH).upper()
