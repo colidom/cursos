@@ -73,6 +73,3 @@ def delete_customer():
     print("Customer successfully deleted ✅") if db.Customers.delete(dni) else print(
         CUSTOMER_NOT_FOUND
     )
-
-
-launch()
