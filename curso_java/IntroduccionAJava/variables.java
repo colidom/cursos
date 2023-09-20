@@ -1,6 +1,6 @@
 package IntroduccionAJava;
 
-public class variables {
+public class Variables {
     public static void main(String args[]) {
         int cantidad = 5 + 2; // guardamos un cantidad un 7
         int precio = 10; // guardamos en precio 10
