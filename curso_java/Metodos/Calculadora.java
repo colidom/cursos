@@ -6,7 +6,7 @@ public class Calculadora {
 
         int num1 = 2, num2 = 4;
         int suma = suma(num1, num2);
-        int cuadrado = areaCuadrado(num2);
+        double cuadrado = areaCuadrado(num2);
         System.out.println(suma);
         System.out.println(cuadrado);
     }
@@ -15,7 +15,7 @@ public class Calculadora {
         return a + b;
     }
 
-    static int areaCuadrado(int lado) {
+    static double areaCuadrado(double lado) {
         return lado * lado;
     }
 }
