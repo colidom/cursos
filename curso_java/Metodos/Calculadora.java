@@ -2,12 +2,20 @@ package Metodos;
 
 public class Calculadora {
 
-    static int suma(int a, int b) {
-        int resultado = a + b;
-        return resultado;
+    public static void main(String[] args) {
+
+        int num1 = 2, num2 = 4;
+        int suma = suma(num1, num2);
+        int cuadrado = areaCuadrado(num2);
+        System.out.println(suma);
+        System.out.println(cuadrado);
     }
 
-    int valor1 = 1;
-    int valor2 = 2;
-    int c = suma(valor1, valor2);
+    static int suma(int a, int b) {
+        return a + b;
+    }
+
+    static int areaCuadrado(int lado) {
+        return lado * lado;
+    }
 }
