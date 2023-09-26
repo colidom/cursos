@@ -25,5 +25,15 @@ public class Ternario {
 
         a = a != 0 ? 2 : 3; // a vale 2
         b = a == c ? 2 : 1; // b vale 1
+
+        String frase = "Hola Mundo!!!";
+        int cantidad = 0;
+        for (int i = 0; i < frase.length(); i++) {
+            if (frase.charAt(i) == 'a' || frase.charAt(i) == 'A')
+                cantidad++;
+        }
+
+        System.out.println("La letra A ha aparecido " + cantidad + " " + (cantidad == 1 ? "vez" : "veces"));
+
     }
 }
