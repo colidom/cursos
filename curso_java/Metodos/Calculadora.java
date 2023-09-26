@@ -9,6 +9,12 @@ public class Calculadora {
         double cuadrado = areaCuadrado(num2);
         System.out.println(suma);
         System.out.println(cuadrado);
+        prueba();
+    }
+
+    static void prueba() {
+        System.out.println("Prueba VOID");
+        return;
     }
 
     static int suma(int a, int b) {
