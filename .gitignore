@@ -131,3 +131,4 @@ vendor/
 composer.lock
 composer/
 .metadata/
+.DS_Store
