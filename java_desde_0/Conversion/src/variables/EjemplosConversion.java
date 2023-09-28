@@ -31,6 +31,19 @@ public class EjemplosConversion {
 		System.out.println(big);
 		System.out.println(approx);
 		System.out.println(big - (int) approx);
+		
+		// Conversiones explícitas
+		int i3 = 1234;
+		short s3 = (short) i3;
+		System.out.println("Conversión de int -> short");
+		System.out.println(i3);
+		System.out.println(s3);
+		
+		double d3 = 123456.789;
+		float f3 = (float) d3;
+		System.out.println("Conversión de double -> float");
+		System.out.println(d3);
+		System.out.println(f3);
 	}
 
 }
