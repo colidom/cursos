@@ -23,6 +23,7 @@ public class EjemploEntradaSalidaDatos {
 		double altura = sc.nextDouble();
 
 		System.out.println("El area del rectángulo es: " + (base * altura));
+		System.out.printf("%.1f", base * altura);
 
 		sc.close();
 
