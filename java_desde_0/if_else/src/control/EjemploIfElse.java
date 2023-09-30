@@ -31,6 +31,10 @@ public class EjemploIfElse {
 		} else {
 			System.out.println("No puede trabajar!");
 		}
+
+		// Sin llaves
+		if (nota >= 9)
+			System.out.println("Enhorabuena, tienes un sobresaliente!");
 	}
 
 }
