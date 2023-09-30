@@ -35,6 +35,20 @@ public class EjemploIfElse {
 		// Sin llaves
 		if (nota >= 9)
 			System.out.println("Enhorabuena, tienes un sobresaliente!");
+
+		// Estructura if-else-if
+		int num = 7;
+
+		if (num < 0) {
+			System.out.println("El número es negativo");
+		} else if (num == 0) {
+			System.out.println("El número es 0");
+		} else if (num > 0 && num < 10) {
+			System.out.println("El número es positivo");
+		} else {
+			System.out.println("El número es mayor o igual a 10");
+
+		}
 	}
 
 }
