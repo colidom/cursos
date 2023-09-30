@@ -1,6 +1,6 @@
 package operadores;
 
-public class EjemploOperadoresLogicos {
+public class EjemploOtrosOperadoresLogicos {
 
 	public static void main(String[] args) {
 
