@@ -20,6 +20,17 @@ public class EjemploIfElse {
 		}
 
 		System.out.println("El precio del producto es " + precio);
+
+		// Las condiciones pueden ser más complejas
+		int edad = 27;
+		final int EDAD_MINIMA_TRABAJO = 16;
+		final int EDAD_JUBILACION = 67;
+
+		if (edad >= EDAD_MINIMA_TRABAJO && edad <= EDAD_JUBILACION) {
+			System.out.println("Puede trabajar!");
+		} else {
+			System.out.println("No puede trabajar!");
+		}
 	}
 
 }
