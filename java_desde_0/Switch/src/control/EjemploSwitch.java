@@ -1,6 +1,6 @@
 package control;
 
-public class EjermploSwitch {
+public class EjemploSwitch {
 
 	public static void main(String[] args) {
 		int nota = 9;
