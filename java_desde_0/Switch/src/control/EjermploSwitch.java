@@ -32,6 +32,17 @@ public class EjermploSwitch {
 				break;
 		}
 
+		// Método más copacto
+		String mensaje = switch (nota) {
+			case 10, 9 -> "Sobresaliente";
+			case 8, 7 -> "Notable";
+			case 6 -> "Bien";
+			case 5 -> "Suficiente";
+			case 4, 3, 2, 1, 0 -> "Insuficiente";
+			default -> "Calificación inválida";
+		};
+		System.out.println(mensaje);
+
 	}
 
 }
