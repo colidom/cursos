@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ejercicio02 {
 
 	public static void main(String[] args) {
-		var sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		System.out.print("Introduce la nota del primer trimestre: ");
 		double nota1 = sc.nextDouble();
 		System.out.print("Introduce la nota del segundo trimestre: ");
@@ -19,6 +19,8 @@ public class Ejercicio02 {
 		System.out.println("La nota media es: " + notaRedondeada);
 		String estado = (notaRedondeada >= 5) ? "APROBADO" : "SUSPENSO";
 		System.out.println("El alumno está " + estado);
+
+		sc.close();
 	}
 
 }
