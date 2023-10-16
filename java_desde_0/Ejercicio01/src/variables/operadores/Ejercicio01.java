@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ejercicio01 {
 
 	public static void main(String[] args) {
-		var sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 
 		System.out.print("Introduce el costo de fabricación del portátil: ");
 		double costoFabricacion = sc.nextDouble();
