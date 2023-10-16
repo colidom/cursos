@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Constantes/src"/>
+	<classpathentry kind="src" path="Conversion/src"/>
+	<classpathentry kind="src" path="Ejercicio01/src"/>
+	<classpathentry kind="src" path="Ejercicio02/src"/>
+	<classpathentry kind="src" path="Ejercicio03/src"/>
+	<classpathentry kind="src" path="Ejercicio04/src"/>
+	<classpathentry kind="src" path="Ejercicio05/src"/>
+	<classpathentry kind="src" path="Ejercicio06/src"/>
+	<classpathentry kind="src" path="Ejercicio07/src"/>
+	<classpathentry kind="src" path="Ejercicio08/src"/>
+	<classpathentry kind="src" path="Ejercicio09/src"/>
+	<classpathentry kind="src" path="Ejercicio1/src"/>
+	<classpathentry kind="src" path="Ejercicio10/src"/>
+	<classpathentry kind="src" path="EntradaDatos/src"/>
+	<classpathentry kind="src" path="HolaMundo/src"/>
+	<classpathentry kind="src" path="Inferencia/src"/>
+	<classpathentry kind="src" path="OperadoresAritméticos/src"/>
+	<classpathentry kind="src" path="OperadoresLogicos/src"/>
+	<classpathentry kind="src" path="OtrosOperadores/src"/>
+	<classpathentry kind="src" path="Switch/src"/>
+	<classpathentry kind="src" path="TiposDatos/src"/>
+	<classpathentry kind="src" path="Variables/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.4"/>
+	<classpathentry kind="src" path="if_else/src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
