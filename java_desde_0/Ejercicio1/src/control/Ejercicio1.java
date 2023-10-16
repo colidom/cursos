@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ejercicio1 {
 
 	public static void main(String[] args) {
-		var scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		System.out.print("Introduce el día (1-31): ");
 		int dia = scanner.nextInt();
