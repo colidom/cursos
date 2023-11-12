@@ -19,10 +19,16 @@ public class App {
 		System.out.println("Objeto después de modificar nombre: " + alumna);
 
 		// Alumno 2 creado pasando datos directamente al constructor
-		Alumno carlos = new Alumno("Carlos", "Oliva", "colidom@outlook.com", 33, "666666666");
-		System.out.println(carlos);
+		Alumno alumno = new Alumno("Carlos", "Oliva", "colidom@outlook.com", 33, "666666666");
+		System.out.println(alumno);
 		System.out.println("El alumno %s %s es %s"
-			.formatted(carlos.getName(), carlos.getSurname(), carlos.esMayorEdad()));
+			.formatted(alumno.getName(), alumno.getSurname(), alumno.esMayorEdad()));
+		
+		if (alumna.equals(alumno)) {
+			System.out.println("Son el mismo objeto");
+		} else {
+			System.out.println("Son objetos distintos");
+		}
 
 	}
 
