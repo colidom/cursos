@@ -12,7 +12,8 @@ public class App {
 		toyotaCorolla.repostar(45);
 		toyotaCorolla.arrancar();
 		toyotaCorolla.viajar(100);
-		
+
+		System.out.println(toyotaCorolla);
 
 
 	}

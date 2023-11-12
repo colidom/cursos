@@ -1,5 +1,7 @@
 package orientacionobjetos;
 
+import java.util.Objects;
+
 public class Coche {
 
 	private String marca;
@@ -75,4 +77,32 @@ public class Coche {
 			return 0;
 		}
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(anio, litrosEnDeposito, marca, modelo, velocidadActual);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Coche other = (Coche) obj;
+		return anio == other.anio
+				&& Double.doubleToLongBits(litrosEnDeposito) == Double.doubleToLongBits(other.litrosEnDeposito)
+				&& Objects.equals(marca, other.marca) && Objects.equals(modelo, other.modelo)
+				&& Double.doubleToLongBits(velocidadActual) == Double.doubleToLongBits(other.velocidadActual);
+	}
+
+	@Override
+	public String toString() {
+		return "Coche [marca=" + marca + ", modelo=" + modelo + ", anio=" + anio + ", velocidadActual="
+				+ velocidadActual + ", litrosEnDeposito=" + litrosEnDeposito + "]";
+	}
+	
+	
 }
