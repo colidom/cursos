@@ -4,14 +4,16 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		Coche coche = new Coche("Ford", "Focus", 2023);
-		coche.arrancar();
+		Coche fordFocus = new Coche("Ford", "Focus", 2023, 0, 0);
+		// fordFocus.arrancar();
 		
-		Coche coche2 = new Coche("Toyota", "Corrolla");
-		coche2.arrancar();
+		Coche toyotaCorolla = new Coche("Toyota", "Corrolla");
+		toyotaCorolla.arrancar();
+		toyotaCorolla.repostar(45);
+		toyotaCorolla.arrancar();
+		toyotaCorolla.viajar(100);
 		
-		Coche coche3 = new Coche();
-		coche3.arrancar();
+
 
 	}
 
