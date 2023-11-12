@@ -12,6 +12,13 @@ public class Coche {
 		this.anio = anio;
 	}
 
+	public Coche(String marca, String modelo) {
+		this(marca, modelo, 2022);// Seteamos un valor por defecto en el constructor
+	}
+
+	public Coche() { // Constructor vacío
+	}
+
 	public void arrancar() {
 		System.out.println("El coche de marca %s y modelo %s del año %d ha arrancado!".formatted(marca, modelo, anio));
 	}
