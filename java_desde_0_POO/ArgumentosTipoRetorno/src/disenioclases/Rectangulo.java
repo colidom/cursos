@@ -85,6 +85,13 @@ public class Rectangulo {
 		System.out.println(pintura.repeat(base));
 	}
 	
+	public void dibujarVarios(Rectangulo...rectangulos) {
+		for (var r : rectangulos) {
+			System.out.println(r);
+			r.dibujar('x');
+			System.out.println();
+		}
+	}
 	
 
 }
