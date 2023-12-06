@@ -56,7 +56,34 @@ public class Rectangulo {
 	}
 	
 	
+	public double base() {
+		return Math.abs(c3[COORD_X] - c4[COORD_X]);
+	}
 	
+	public double altura() {
+		return Math.abs(c3[COORD_Y] - c2[COORD_Y]);
+	}
+	
+	public void dibujar(char c) {
+		int base = (int) Math.round(base());
+		int altura = (int) Math.round(altura());
+		
+		String pintura = "" + c;
+		
+		System.out.println(pintura.repeat(base));
+		
+		if (altura > 2) {
+			for (int i = 0; i < altura - 2; i++) {
+				System.out.print(pintura);
+				if (base > 2) {
+					System.out.print(" ".repeat(base - 2));
+				}
+				System.out.println(pintura);
+			}
+		}
+		
+		System.out.println(pintura.repeat(base));
+	}
 	
 	
 
