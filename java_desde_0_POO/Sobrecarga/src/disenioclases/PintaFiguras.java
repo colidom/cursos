@@ -7,12 +7,16 @@ public class PintaFiguras {
 	}
 
 	public void pintar(Triangulo t) {
-
-		for(int i = 0; i < t.getLado(); i++) {
+		// Iterar sobre las filas del tri�ngulo
+		for (int i = 0; i < t.getLado(); i++) {
+			// Imprimir espacios en blanco antes de los asteriscos
 			System.out.print(" ".repeat(t.getLado() - i));
+			// Imprimir asteriscos para formar el tri�ngulo
 			System.out.print("* ".repeat(i));
+			// Ir a la siguiente l�nea despu�s de cada fila
 			System.out.println();
 		}
+		System.out.println();
 	}
 
 	public void pintar(Rectangulo r) {
@@ -27,11 +31,13 @@ public class PintaFiguras {
 			for (int i = 0; i < altura -2; i++) {
 				System.out.print(pintura);
 				if (base > 2) {
-					System.out.println(" ".repeat(base - 2));
+					System.out.print(" ".repeat(base - 2));
 				}
 				System.out.println(pintura);
 			}
 		}
+
 		System.out.println(pintura.repeat(base));
+
 	}
 }
