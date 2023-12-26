@@ -8,9 +8,9 @@ public class Coche extends Vehiculo {
 		super(marca, modelo);
 		this.velocidadMaxima = velocidadMaxima;
 	}
-	
+
 	public void mostrarVelocidadMaxima() {
-		System.out.println("Velocidad m·xima: " + velocidadMaxima + " km/h");
+		System.out.println("Velocidad m√°xima: " + velocidadMaxima + " km/h");
 	}
 
 	@Override
