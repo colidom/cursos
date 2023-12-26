@@ -1,7 +1,7 @@
 package abstractas;
 
 public abstract class VehiculoAereo extends Vehiculo {
-	
+
 	private int alturaMaxima;
 
 	public VehiculoAereo(String marca, String modelo, int alturaMaxima) {
@@ -12,18 +12,17 @@ public abstract class VehiculoAereo extends Vehiculo {
 	@Override
 	public void conducir() {
 		System.out.println("Realmente se llama pilotar...");
-		
+
 	}
-	
+
 	@Override
 	public void mostrarInformacion() {
 		super.mostrarInformacion();
-		System.out.println("La altura máxima: " + this.alturaMaxima);
+		System.out.println("La altura mï¿½xima: " + this.alturaMaxima);
 	}
 
 	public abstract void despegar();
-	
+
 	public abstract void aterrizar();
 
-	
 }
