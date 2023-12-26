@@ -11,10 +11,10 @@ public abstract class Vehiculo {
 		this.modelo = modelo;
 	}
 
-	public void mostrarInformacion () {
+	public void mostrarInformacion() {
 		System.out.println("Marca: " + marca);
 		System.out.println("Modelo: " + modelo);
 	}
-	
+
 	public abstract void conducir();
 }
