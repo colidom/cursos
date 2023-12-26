@@ -1,7 +1,7 @@
 package herencia;
 
 public class Animal {
-	
+
 	protected int estatura;
 	protected double peso;
 	protected String raza;
@@ -43,7 +43,7 @@ public class Animal {
 	}
 
 	public void saludar() {
-		System.out.println("Hola soy un animal de raza %s y peso %.2f kilos" .formatted(this.raza, this.peso));
+		System.out.println("Hola soy un animal de raza %s y peso %.2f kilos".formatted(this.raza, this.peso));
 	}
-	
+
 }
