@@ -8,12 +8,12 @@ public class Helicoptero extends VehiculoAereo {
 
 	@Override
 	public void despegar() {
-		System.out.println("Un helicóptero que despega en vertical");
+		System.out.println("Un helicÃ³ptero que despega en vertical");
 	}
 
 	@Override
 	public void aterrizar() {
-		System.out.println("Un helicóptero que aterriza en vertical");
+		System.out.println("Un helicÃ³ptero que aterriza en vertical");
 	}
 
 }
