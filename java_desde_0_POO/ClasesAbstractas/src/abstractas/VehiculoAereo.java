@@ -18,7 +18,7 @@ public abstract class VehiculoAereo extends Vehiculo {
 	@Override
 	public void mostrarInformacion() {
 		super.mostrarInformacion();
-		System.out.println("La altura m�xima: " + this.alturaMaxima);
+		System.out.println("La altura máxima: " + this.alturaMaxima);
 	}
 
 	public abstract void despegar();
