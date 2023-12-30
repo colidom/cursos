@@ -3,38 +3,38 @@ package hotel.personas;
 import java.util.Objects;
 
 public abstract class Persona {
-
+	
 	protected String nombre, dni;
 	protected int edad;
 
-	public Persona(String nombre, String dni, int edad) {
+	public Persona(String nombre, int edad, String dni) {
 		this.nombre = nombre;
-		this.dni = dni;
 		this.edad = edad;
+		this.dni = dni;
 	}
 
 	public String getNombre() {
 		return nombre;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public int getEdad() {
+		return edad;
 	}
 
 	public String getDni() {
 		return dni;
 	}
 
-	public void setDni(String dni) {
-		this.dni = dni;
-	}
-
-	public int getEdad() {
-		return edad;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
 	public void setEdad(int edad) {
 		this.edad = edad;
+	}
+
+	public void setDni(String dni) {
+		this.dni = dni;
 	}
 
 	@Override
@@ -51,12 +51,15 @@ public abstract class Persona {
 		if (getClass() != obj.getClass())
 			return false;
 		Persona other = (Persona) obj;
-		return Objects.equals(dni, other.dni) && edad == other.edad && Objects.equals(nombre, other.nombre);
+		return Objects.equals(dni, other.dni) && Objects.equals(edad, other.edad)
+				&& Objects.equals(nombre, other.nombre);
 	}
 
 	@Override
 	public String toString() {
-		return "Persona [nombre=" + nombre + ", dni=" + dni + ", edad=" + edad + "]";
+		return "Persona [nombre=" + nombre + ", edad=" + edad + ", dni=" + dni + "]";
 	}
+	
+	
 
 }

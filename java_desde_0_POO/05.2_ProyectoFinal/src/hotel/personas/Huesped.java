@@ -2,9 +2,8 @@ package hotel.personas;
 
 public class Huesped extends Persona {
 
-	public Huesped(String nombre, String dni, int edad) {
-		super(nombre, dni, edad);
-		
+	public Huesped(String nombre, int edad, String dni) {
+		super(nombre, edad, dni);
 	}
 
 }

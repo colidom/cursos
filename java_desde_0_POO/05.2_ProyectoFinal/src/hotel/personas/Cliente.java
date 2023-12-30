@@ -4,8 +4,8 @@ public class Cliente extends Huesped {
 
 	private String tarjetaBancaria;
 
-	public Cliente(String nombre, String dni, int edad, String tarjetaBancaria) {
-		super(nombre, dni, edad);
+	public Cliente(String nombre, int edad, String dni, String tarjetaBancaria) {
+		super(nombre, edad, dni);
 		this.tarjetaBancaria = tarjetaBancaria;
 	}
 
