@@ -1,6 +1,6 @@
-package hotel.economia;
+package hotel.habitaciones;
 
-import hotel.habitaciones.Habitacion;
+import hotel.economia.Precios;
 
 public class HabitacionDoble extends Habitacion {
 

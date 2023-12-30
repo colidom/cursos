@@ -1,8 +1,8 @@
-package hotel.economia;
+package hotel.habitaciones;
 
 import java.util.Objects;
 
-import hotel.habitaciones.Habitacion;
+import hotel.economia.Precios;
 
 public class Suite extends Habitacion {
 
