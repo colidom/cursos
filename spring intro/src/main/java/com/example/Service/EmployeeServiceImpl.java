@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 public class EmployeeServiceImpl implements EmployeeService{
     @Override
     public String hello() {
-        return null;
+        return "¡Hello World!";
     }
 }
