@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.Controller.EmployeeController;
+import com.example.controller.EmployeeController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
