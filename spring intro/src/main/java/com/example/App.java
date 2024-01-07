@@ -13,7 +13,8 @@ public class App {
 		ApplicationContext context = SpringApplication.run(App.class, args);
 
 		var EmployeeController = context.getBean(EmployeeController.class);
-		System.out.println(EmployeeController.hello());
+		System.out.println(EmployeeController.helloFromEmployeeService());
+		System.out.println(EmployeeController.helloFromCustomerService());
 	}
 
 }
