@@ -17,21 +17,26 @@ class Empleado
     {
         return $this->nombre;
     }
-    public function getApellido()
-    {
-        return $this->apellido;
-    }
 
     public function setNombre($nombre)
     {
         return $this->nombre = $nombre;
     }
 
+    public function getApellido()
+    {
+        return $this->apellido;
+    }
+
+    public function setApellido($apellido)
+    {
+        return $this->apellido = $apellido;
+    }
+
     public function getCodigo()
     {
         return $this->codigo;
     }
-
 }
 
 $empleado1 = new Empleado("Carlos", "Oliva", "IT", "colidom@outlook.com", 006);
