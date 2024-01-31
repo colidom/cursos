@@ -11,12 +11,12 @@ class Persona
         protected string $email
     ) {}
 
-    public function mostrarInformacion()
+    public function mostrarInformacion(): void
     {
-        echo "Nombre: {$this->nombre} {$this->apellido} Email: {$this->email}";
+        echo "Nombre: $this->nombre $this->apellido Email: $this->email";
     }
 
-    public function getTelefono()
+    public function getTelefono(): string
     {
         return $this->telefono;
     }
@@ -49,9 +49,9 @@ class Proveedor extends Persona
         parent::__construct($nombre, $apellido, $telefono, $email);
     }
 
-    public function mostrarInformacion()
+    public function mostrarInformacion(): void
     {
-        echo "Nombre: {$this->nombre} {$this->apellido} Email: {$this->email} Empresa: {$this->empresa}";
+        echo "Nombre: $this->nombre $this->apellido Email: $this->email Empresa: $this->empresa";
     }
 
 }
