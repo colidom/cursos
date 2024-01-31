@@ -2,15 +2,13 @@
 include 'includes/header.php';
 
 // Herencia
-class Empleado
+class Persona
 {
     public function __construct(
-        protected $nombre,
-        protected $apellido,
-        protected $email,
-        protected $telefono,
-        protected $codigo,
-        protected $departamento
+        protected string $nombre,
+        protected string $apellido,
+        protected string $telefono,
+        protected string $email
     ) {}
 
     public function mostrarInformacion()
@@ -18,35 +16,61 @@ class Empleado
         echo "Nombre: {$this->nombre} {$this->apellido} Email: {$this->email}";
     }
 
-}
-
-class Proveedor
-{
-    public function __construct(
-        protected $nombre,
-        protected $apellido,
-        protected $email,
-        protected $telefono,
-        protected $empresa
-    ) {}
-
-    public function mostrarInformacion()
+    public function getTelefono()
     {
-        echo "Nombre: {$this->nombre} {$this->apellido} Email: {$this->email}";
+        return $this->telefono;
     }
 }
 
-$empleado = new Empleado("Carlos", "Oliva", "colidom@outlook.com", 666666666, "001", "IT");
-$empresa = new Empleado("Jhon", "Doe", "jhondoe@outlook.com", 777777777, "002", "IT");
+class Empleado extends Persona
+{
+    public function __construct(
+        string $nombre,
+        string $apellido,
+        string $telefono,
+        string $email,
+        protected string $codigo,
+        protected string $departamento
+    ) {
+        parent::__construct($nombre, $apellido, $telefono, $email);
+    }
+
+}
+
+class Proveedor extends Persona
+{
+    public function __construct(
+        string $nombre,
+        string $apellido,
+        string $telefono,
+        string $email,
+        protected string $empresa
+    ) {
+        parent::__construct($nombre, $apellido, $telefono, $email);
+    }
+
+    public function mostrarInformacion()
+    {
+        echo "Nombre: {$this->nombre} {$this->apellido} Email: {$this->email} Empresa: {$this->empresa}";
+    }
+
+}
+
+$empleado = new Empleado("Carlos", "Oliva", "666666666", "colidom@outlook.com", "001", "IT");
+$proveedor = new Proveedor("Jhon", "Doe", "777777777", "jhondoe@outlook.com", "WWW");
 
 echo "<pre>";
 var_dump($empleado);
 echo "</pre>";
 
 $empleado->mostrarInformacion();
+echo "</br>";
+echo "Teléfono: " . $empleado->getTelefono();
 
 echo "<pre>";
-var_dump($empresa);
+var_dump($proveedor);
 echo "</pre>";
 
-$empresa->mostrarInformacion();
+$proveedor->mostrarInformacion();
+echo "</br>";
+echo "Teléfono: " . $proveedor->getTelefono();
