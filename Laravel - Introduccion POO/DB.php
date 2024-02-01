@@ -9,7 +9,8 @@ class DB {
         $this->nombre = $nombre;
     }
 
-    public function guardar() {
+    public function guardar(): void
+    {
         echo "Almacenando... $this->nombre";
     }
 }
