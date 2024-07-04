@@ -12,7 +12,7 @@
         <?php foreach ($filteredMovies as $movie) : ?>
             <li>
                 <a href="<?= $movie['url'] ?> ">
-                    <?= $movie['title']; ?> (<?= $movie['release_year']; ?>) - By <? $movie['director']; ?>
+                    <?= $movie['title']; ?> (<?= $movie['release_year']; ?>) - By <?= $movie['director']; ?>
                 </a>
             </li>
         <?php endforeach ?>
