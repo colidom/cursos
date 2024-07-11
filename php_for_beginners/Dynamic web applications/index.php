@@ -2,6 +2,12 @@
 
 require 'functions.php';
 
-$heading = "Home";
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
-require 'views/index.view.php';
+$routes = [
+    '/' => 'controllers/index.php',
+    '/about' => 'controllers/about.php',
+    '/contact' => 'controllers/contact.php'
+];
+
+routeToController($uri, $routes);
