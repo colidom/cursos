@@ -25,7 +25,7 @@ function routeToController($uri, $routes)
 function abort($error_code = 404)
 {
     http_response_code($error_code);
-    if ($error_code === 404) {
+    if ($error_code === $error_code) {
         require "views/{$error_code}.php";
     } else {
         require 'views/generic_error.php';
