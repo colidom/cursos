@@ -6,16 +6,10 @@ $config = require 'config.php';
 $db = new Database($config['database'], $config['credentials']['username'], $config['credentials']['password']);
 
 $query = "select * from notes where id = ?";
-$note = $db->query($query, [$_GET['id']])->fetch();
-
-if (!$note) {
-    abort();
-}
+$note = $db->query($query, [$_GET['id']])->findOrFail();
 
 $currentCuserId = 1;
 
-if ($note['user_id'] != $currentCuserId) {
-    abort(Response::FORBIDEN);
-}
+$db->authorize($note['user_id'] === $currentCuserId);
 
 require 'views/note.view.php';
