@@ -19,7 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ':user_id' => $user_id
         ]);
 
+        // Redirecciona a la página de notas
         header('Location: /notes');
+        die(); // Detiene la ejecución del script después de la redirección
     } else {
         echo "Title, body, and user ID are required!";
     }
