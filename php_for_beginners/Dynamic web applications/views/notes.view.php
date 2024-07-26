@@ -7,7 +7,7 @@
     <ul>
         <?php foreach ($notes as $note) : ?>
             <li>
-                <a href="/note?id=<?= $note['id'] ?>" class="text-blue-500 hover:underline"><?= $note['title']; ?></a>
+                <a href="/note?id=<?= $note['id'] ?>" class="text-blue-500 hover:underline"><?= htmlspecialchars($note['title']); ?></a>
             </li>
         <?php endforeach; ?>
     </ul>

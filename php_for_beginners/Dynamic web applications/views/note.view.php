@@ -14,7 +14,7 @@
         </a>
     </p>
     <h1 class="text-blue-600 text-2xl mt-5"><?= $note['title']; ?></h1>
-    <p class="text-1xl"><?= $note['body']; ?></p>
+    <p class="text-1xl"><?= htmlspecialchars($note['body']); ?></p>
 </div>
 
 <?php require('partials/footer.php'); ?>

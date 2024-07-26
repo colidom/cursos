@@ -7,9 +7,10 @@ $db = new Database($config['database'], $config['credentials']['username'], $con
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $title = $_POST['title'] ?? null;
-    $body = $_POST['body'] ?? null;
-    $user_id = $_SESSION['user_id'] ?? 1;
+    // Sanitiza las entradas del usuario
+    $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $body = filter_input(INPUT_POST, 'body', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $user_id = filter_var($_SESSION['user_id'] ?? 1, FILTER_VALIDATE_INT);
 
     if ($title && $body && $user_id) {
         // Prepara y ejecuta la consulta de inserción
