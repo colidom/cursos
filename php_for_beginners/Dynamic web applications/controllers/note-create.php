@@ -8,8 +8,8 @@ $db = new Database($config['database'], $config['credentials']['username'], $con
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Sanitiza las entradas del usuario
-    $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $body = filter_input(INPUT_POST, 'body', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $title = filter_string_polyfill($_POST['title']);
+    $body = filter_string_polyfill($_POST['body']);
     $user_id = filter_var($_SESSION['user_id'] ?? 1, FILTER_VALIDATE_INT);
 
     if ($title && $body && $user_id) {
