@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ':user_id' => $user_id
         ]);
 
-        echo "Note created successfully!";
+        header('Location: /notes');
     } else {
         echo "Title, body, and user ID are required!";
     }
