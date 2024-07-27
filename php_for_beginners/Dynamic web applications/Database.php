@@ -2,8 +2,8 @@
 
 class Database
 {
-    public $connection;
-    public $statement;
+    public PDO $connection;
+    public ?PDOStatement $statement = null;
 
     public function __construct($config, $username = 'root', $password = '')
     {
@@ -14,7 +14,7 @@ class Database
         ]);
     }
 
-    public function query($query, $params = [])
+    public function query($query, $params = []): Database
     {
         $this->statement = $this->connection->prepare($query);
         $this->statement->execute($params);
@@ -36,12 +36,12 @@ class Database
         return $result;
     }
 
-    public function findAll()
+    public function findAll(): false|array
     {
         return $this->statement->fetchAll();
     }
 
-    public function authorize($condition, $status = Response::FORBIDEN)
+    public function authorize($condition, $status = Response::FORBIDEN): void
     {
         if (!$condition) abort($status);
     }
