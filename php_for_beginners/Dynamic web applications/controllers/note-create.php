@@ -16,6 +16,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($title)) {
         $errors['title'] = 'A title is required';
     }
+    if (strlen($title) > 64 ) {
+        $errors['title'] = 'The title can not be longer than 64 characters';
+    }
+
+    if (strlen($body) > 255 ){
+        $errors['body'] = 'The body can not be longer than 255 characters';
+    }
 
     if (empty($body)) {
         $errors['body'] = 'A body is required';
