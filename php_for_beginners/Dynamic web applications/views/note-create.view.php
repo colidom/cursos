@@ -13,7 +13,7 @@
                         <input type="text" name="title" id="title" autocomplete="title" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="" value="<?= htmlspecialchars($_POST['title'] ?? '', ENT_QUOTES); ?>">
                     </div>
                     <?php if (isset($errors['title'])) : ?>
-                        <p class="text-red-600 text-sm"><?= $errors['title']; ?></p>
+                        <p class="text-red-600 text-xs mt-2"><?= $errors['title']; ?></p>
                     <?php endif; ?>
                 </div>
             </div>
