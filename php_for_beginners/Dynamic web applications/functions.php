@@ -1,6 +1,8 @@
 <?php
 
-function dd($value)
+use JetBrains\PhpStorm\NoReturn;
+
+#[NoReturn] function dd($value): void
 {
     echo "<pre>";
     var_dump($value);
@@ -9,7 +11,7 @@ function dd($value)
     die();
 }
 
-function urlIs($value)
+function urlIs($value): bool
 {
     return $_SERVER['REQUEST_URI'] === $value;
 }
