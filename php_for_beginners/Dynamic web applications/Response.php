@@ -2,6 +2,6 @@
 
 class Response
 {
-    const NOT_FOUND = 404;
-    const FORBIDEN = 403;
+    const int NOT_FOUND = 404;
+    const int FORBIDDEN = 403;
 }

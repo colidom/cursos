@@ -41,7 +41,7 @@ class Database
         return $this->statement->fetchAll();
     }
 
-    public function authorize($condition, $status = Response::FORBIDEN): void
+    public function authorize($condition, $status = Response::FORBIDDEN): void
     {
         if (!$condition) abort($status);
     }
