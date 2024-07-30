@@ -14,7 +14,12 @@ class Database
         ]);
     }
 
-    public function query($query, $params = []): Database
+    /**
+     * @param $query
+     * @param array $params
+     * @return $this
+     */
+    public function query($query, array $params = []): static
     {
         $this->statement = $this->connection->prepare($query);
         $this->statement->execute($params);
@@ -22,12 +27,18 @@ class Database
         return $this;
     }
 
-    public function find()
+    /**
+     * @return mixed
+     */
+    public function find(): mixed
     {
         return $this->statement->fetch();
     }
 
-    public function findOrFail()
+    /**
+     * @return mixed
+     */
+    public function findOrFail(): mixed
     {
         $result = $this->find();
 
@@ -36,12 +47,20 @@ class Database
         return $result;
     }
 
+    /**
+     * @return array|false
+     */
     public function findAll(): false|array
     {
         return $this->statement->fetchAll();
     }
 
-    public function authorize($condition, $status = Response::FORBIDDEN): void
+    /**
+     * @param $condition
+     * @param int $status
+     * @return void
+     */
+    public function authorize($condition, int $status = Response::FORBIDDEN): void
     {
         if (!$condition) abort($status);
     }

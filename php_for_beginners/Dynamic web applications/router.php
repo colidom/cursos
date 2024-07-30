@@ -2,7 +2,12 @@
 
 $routes = require('routes.php');
 
-function routeToController($uri, $routes)
+/**
+ * @param $uri
+ * @param $routes
+ * @return void
+ */
+function routeToController($uri, $routes): void
 {
     if (array_key_exists($uri, $routes)) {
         require $routes[$uri];
@@ -11,7 +16,11 @@ function routeToController($uri, $routes)
     }
 }
 
-function abort($error_code = 404)
+/**
+ * @param int $error_code
+ * @return void
+ */
+function abort(int $error_code = Response::NOT_FOUND): void
 {
     http_response_code($error_code);
     if ($error_code === $error_code) {
