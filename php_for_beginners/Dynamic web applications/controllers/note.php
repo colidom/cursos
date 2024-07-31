@@ -15,7 +15,7 @@ $note = $db->query("SELECT * FROM notes WHERE id = :id", [
     ':id' => $id
 ])->findOrFail();
 
-$currentUserId = 1;
+$currentUserId = 2;
 
 $db->authorize($note['user_id'] === $currentUserId);
 
