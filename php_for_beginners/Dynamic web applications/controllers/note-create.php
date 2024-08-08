@@ -1,5 +1,7 @@
 <?php
 
+$validator = require 'Validator.php';
+
 $heading = "Create Note";
 
 $config = require 'config.php';
@@ -8,6 +10,7 @@ $db = new Database($config['database'], $config['credentials']['username'], $con
 $errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
     // Sanitiza las entradas del usuario
     $title = filter_string_polyfill($_POST['title']);
     $body = filter_string_polyfill($_POST['body']);
@@ -16,11 +19,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($title)) {
         $errors['title'] = 'A title is required';
     }
-    if (strlen($title) > 64 ) {
+
+    if (!Validator::string($_POST['title'], 1, 64)) {
         $errors['title'] = 'The title can not be longer than 64 characters';
     }
 
-    if (strlen($body) > 255 ){
+    if (!Validator::string($_POST['body'], 1, 255)) {
         $errors['body'] = 'The body can not be longer than 255 characters';
     }
 
