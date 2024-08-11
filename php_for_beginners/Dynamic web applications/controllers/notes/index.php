@@ -12,4 +12,4 @@ if (!$notes) {
     die('No notes found');
 }
 
-require 'views/notes.view.php';
+require 'views/notes/index.view.php';
