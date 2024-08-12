@@ -1,13 +1,26 @@
 <?php
 
 class Validator {
-    public static function string($value, $min = 1, $max = INF): bool
+
+    /**
+     * @param $value
+     * @param int $min
+     * @param int $max
+     * @return bool
+     */
+    public static function string($value, int $min = 1, int $max = INF): bool
     {
         $value = trim($value);
         return strlen($value) >= $min && strlen($value) <= $max;
     }
 
-    public static function email($value, $min = 1, $max = INF): bool
+    /**
+     * @param $value
+     * @param int $min
+     * @param float $max
+     * @return bool
+     */
+    public static function email($value, int $min = 1, float $max = INF): bool
     {
         return filter_var($value, FILTER_VALIDATE_EMAIL);
     }
