@@ -1,8 +1,8 @@
-<?php require('views/partials/head.php'); ?>
-<?php require('views/partials/nav.php'); ?>
+<?php require base_path('views/partials/head.php'); ?>
+<?php require base_path('views/partials/nav.php'); ?>
 
-<?php require('views/partials/banner.php'); ?>
-<?php require('views/partials/main.php'); ?>
+<?php require base_path('views/partials/banner.php'); ?>
+<?php require base_path('views/partials/main.php'); ?>
 
 <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
     <p>
@@ -17,4 +17,4 @@
     <p class="text-1xl"><?= htmlspecialchars($note['body']); ?></p>
 </div>
 
-<?php require('views/partials/footer.php'); ?>
+<?php require base_path('views/partials/footer.php'); ?>
