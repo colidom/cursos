@@ -10,13 +10,23 @@ if (!$id) {
     view('404.php');
 }
 
+$currentUserId = 1;
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $db->query('delete from notes where id = ?', [$id]);
-    // Redirecciona a la página de notas
+    $note = $db->query("SELECT * FROM notes WHERE id = :id", [
+        ':id' => $id
+    ])->findOrFail();
+
+    $db->authorize($note['user_id'] === $currentUserId);
+
+    $db->query('delete from notes where id = :id', [
+        ':id' => $id
+    ]);
+
     header('Location: /notes');
-    die(); // Detiene la ejecución del script después de la redirección
+    die();
+
 } else {
-    $currentUserId = 1;
     $note = $db->query("SELECT * FROM notes WHERE id = :id", [
         ':id' => $id
     ])->findOrFail();
