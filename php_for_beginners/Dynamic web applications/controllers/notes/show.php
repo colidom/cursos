@@ -7,7 +7,7 @@ $db = new Database($config['database'], $config['credentials']['username'], $con
 
 $id = $_GET['id'] ?? null;
 if (!$id) {
-    require 'views/404.php';
+    view('404.php');
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
