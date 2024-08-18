@@ -15,6 +15,9 @@
     </p>
     <h1 class="text-blue-600 text-2xl mt-5"><?= $note['title']; ?></h1>
     <p class="text-1xl"><?= htmlspecialchars($note['body']); ?></p>
+    <form class="mt-6" method="POST">
+        <button class="text-sm text-red-500 hover:text-red-900 hover:bg-red-100">Delete</button>
+    </form>
 </div>
 
 <?php require base_path('views/partials/footer.php'); ?>
