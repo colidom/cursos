@@ -50,11 +50,15 @@ class Router
     function abort(int $error_code = Response::NOT_FOUND): void
     {
         http_response_code($error_code);
-        if ($error_code === $error_code) {
-            require base_path("views/{$error_code}.php");
+
+        $error_view = base_path("views/{$error_code}.php");
+
+        if (file_exists($error_view)) {
+            require $error_view;
         } else {
             require base_path('views/generic_error.php');
         }
+
         die();
     }
 
