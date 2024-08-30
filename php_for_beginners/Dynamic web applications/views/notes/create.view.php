@@ -4,7 +4,7 @@
 <?php require base_path('views/partials/main.php'); ?>
 
 <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-    <form method="POST">
+    <form method="POST" action="/notes">
         <div class="space-y-12">
             <div class="sm:col-span-4">
                 <label for="title" class="block text-sm font-medium leading-6 text-gray-900">Title</label>
