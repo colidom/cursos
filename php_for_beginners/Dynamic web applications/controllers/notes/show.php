@@ -1,9 +1,8 @@
 <?php
 
-use Core\Database;
+use Core\App;
 
-$config = require base_path('config.php');
-$db = new Database($config['database'], $config['credentials']['username'], $config['credentials']['password']);
+$db =App::resolve(Core\Database::class);
 
 $id = $_GET['id'] ?? null;
 if (!$id) {
