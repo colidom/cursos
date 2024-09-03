@@ -18,7 +18,10 @@
     <form class="mt-6" method="POST">
         <input type="hidden" name="_method" value="DELETE">
         <button class="text-sm text-red-500 hover:text-red-900 hover:bg-red-100">Delete</button>
+        <input type="hidden" name="_method" value="PATCH">
+        <button class="text-sm text-blue-500 hover:text-blue-900 hover:bg-blue-100">Update</button>
     </form>
+
 </div>
 
 <?php require base_path('views/partials/footer.php'); ?>
