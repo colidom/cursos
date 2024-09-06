@@ -15,13 +15,15 @@
     </p>
     <h1 class="text-blue-600 text-2xl mt-5"><?= $note['title']; ?></h1>
     <p class="text-1xl"><?= htmlspecialchars($note['body']); ?></p>
-    <form class="mt-6" method="POST">
-        <input type="hidden" name="_method" value="DELETE">
-        <button class="text-sm text-red-500 hover:text-red-900 hover:bg-red-100">Delete</button>
-        <input type="hidden" name="_method" value="PATCH">
-        <button class="text-sm text-blue-500 hover:text-blue-900 hover:bg-blue-100">Update</button>
-    </form>
 
+    <div class="mt-6">
+        <a href="/note/edit?id=<?= $note['id'] ?>" class="text-sm text-blue-500 hover:text-blue-900 hover:bg-blue-100">Edit</a>
+
+        <form method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <button class="text-sm text-red-500 hover:text-red-900 hover:bg-red-100">Delete</button>
+        </form>
+    </div>
 </div>
 
 <?php require base_path('views/partials/footer.php'); ?>
