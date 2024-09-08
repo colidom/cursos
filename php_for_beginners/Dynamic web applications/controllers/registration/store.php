@@ -4,6 +4,7 @@ use \Core\Validator;
 use \Core\Database;
 use \Core\App;
 
+$name = $_POST["name"];
 $email = $_POST["email"];
 $password = $_POST["password"];
 
@@ -11,6 +12,11 @@ $password = $_POST["password"];
 $errors = [];
 if (!Validator::email($email)) {
     $errors['email'] = "Please provide a valid email address";
+}
+
+$errors = [];
+if (!Validator::string($name, 3, 15)) {
+    $errors['name'] = "Please provide a name";
 }
 
 if (!Validator::string($password, 8, 32)) {
@@ -36,15 +42,18 @@ if ($user) {
     exit();
 } else {
     // if not, save on the database, and then log the user in, and redirect
-    $db->query('INSERT INTO users (email, password) VALUES (:email, :password)',[
+    $db->query('INSERT INTO users (name, email, password) VALUES (:name, :email, :password)',[
+        'name' => $name,
         'email' => $email,
         'password' => $password
     ]);
 
     // Mark the user has logged in
     $_SESSION['user'] = [
-        'email' => $email
+        'name' => $name,
+        'email' => $email,
     ];
+
     header('location: /');
     exit();
 }
