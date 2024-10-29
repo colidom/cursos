@@ -39,7 +39,12 @@ function base_path($path): string
     return BASE_PATH . $path;
 }
 
-function view($path, $attributes = [])
+/**
+ * @param string $path        Ruta del archive de vista.
+ * @param array  $attributes  Atributos que se extraerán para la vista.
+ * @return void
+ */
+function view(string $path, array $attributes = []): void
 {
     extract($attributes);
     require base_path('views/' . $path);
@@ -54,4 +59,12 @@ function abort(int $error_code = Response::NOT_FOUND): void
         require base_path('views/generic_error.php');
     }
     die();
+}
+
+function login($user)
+{
+    $_SESSION['user'] = [
+        'name' => $user['name'],
+        'email' => $user['email']
+    ];
 }
