@@ -2,12 +2,13 @@
 
 use Core\Response;
 use Core\Validator;
+use JetBrains\PhpStorm\NoReturn;
 
 /**
  * @param $value
  * @return void
  */
-function dd($value): void
+#[NoReturn] function dd($value): void
 {
     echo "<pre>";
     var_dump($value);
@@ -51,18 +52,27 @@ function view(string $path, array $attributes = []): void
     require base_path('views/' . $path);
 }
 
-function abort(int $error_code = Response::NOT_FOUND): void
+#[NoReturn] function abort(int $error_code = Response::NOT_FOUND): void
 {
+    // Establece el código de respuesta HTTP
     http_response_code($error_code);
-    if ($error_code === $error_code) {
-        require base_path("views/{$error_code}.php");
+
+    // Ruta del archivo de la vista del error
+    $error_view = base_path("views/$error_code.php");
+
+    // Si la vista específica del error existe, la mostramos; de lo contrario, cargamos una vista genérica
+    if (file_exists($error_view)) {
+        require $error_view;
     } else {
         require base_path('views/generic_error.php');
     }
+
+    // Finaliza la ejecución del script
     die();
 }
 
-function login($user)
+
+function login($user): void
 {
     $_SESSION['user'] = [
         'name' => $user['name'],
