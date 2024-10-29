@@ -1,6 +1,7 @@
 <?php
 
 use Core\Response;
+use Core\Validator;
 
 /**
  * @param $value
@@ -68,3 +69,29 @@ function login($user)
         'email' => $user['email']
     ];
 }
+
+function validate_post_data($data, $maxTitleLength = 64, $maxBodyLength = 255): array
+{
+    $errors = [];
+
+    // Validar y filtrar los campos
+    $title = filter_string_polyfill($data['title']);
+    $body = filter_string_polyfill($data['body']);
+    $user_id = filter_var($_SESSION['user_id'] ?? 1, FILTER_VALIDATE_INT);
+
+    // Validaciones
+    if (empty($title)) {
+        $errors['title'] = 'A title is required';
+    } elseif (!Validator::string($title, 1, $maxTitleLength)) {
+        $errors['title'] = 'The title can not be longer than ' . $maxTitleLength . ' characters';
+    }
+
+    if (empty($body)) {
+        $errors['body'] = 'A body is required';
+    } elseif (!Validator::string($body, 1, $maxBodyLength)) {
+        $errors['body'] = 'The body can not be longer than ' . $maxBodyLength . ' characters';
+    }
+
+    return [$errors, $title, $body, $user_id];
+}
+
