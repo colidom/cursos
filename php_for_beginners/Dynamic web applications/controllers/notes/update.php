@@ -41,7 +41,7 @@ if (empty($body)) {
 }
 
 if (count($errors)) {
-    return view('notes/edit.view.php', [
+    view('notes/edit.view.php', [
         'header' => 'Edit Note',
         'note' => $note,
         'errors' => $errors

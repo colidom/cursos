@@ -24,7 +24,7 @@ if (!Validator::string($password, 8, 32)) {
 }
 
 if (!empty($errors)){
-    return view('registration/create.view.php', [
+    view('registration/create.view.php', [
         "errors" => $errors
     ]);
 }

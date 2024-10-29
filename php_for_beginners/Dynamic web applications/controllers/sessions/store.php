@@ -15,7 +15,7 @@ if (!Validator::email($email)) {
 }
 
 if (!empty($errors)){
-    return view('sessions/create.view.php', [
+    view('sessions/create.view.php', [
         "errors" => $errors
     ]);
 }
