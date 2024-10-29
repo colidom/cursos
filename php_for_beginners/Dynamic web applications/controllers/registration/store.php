@@ -1,8 +1,8 @@
 <?php
 
-use \Core\Validator;
-use \Core\Database;
-use \Core\App;
+use Core\Validator;
+use Core\Database;
+use Core\App;
 
 $name = $_POST["name"];
 $email = $_POST["email"];
@@ -37,12 +37,9 @@ $user = $db->query('SELECT * FROM users WHERE email = :email',[
 ])->find();
 
 // If yes, redirect to login page
-if ($user) {
-    header('location: /');
-    exit();
-} else {
+if (!$user) {
     // if not, save on the database, and then log the user in, and redirect
-    $db->query('INSERT INTO users (name, email, password) VALUES (:name, :email, :password)',[
+    $db->query('INSERT INTO users (name, email, password) VALUES (:name, :email, :password)', [
         'name' => $name,
         'email' => $email,
         'password' => password_hash($password, PASSWORD_BCRYPT)
@@ -51,6 +48,7 @@ if ($user) {
     // Mark the user has logged in
     login($user);
 
-    header('location: /');
-    exit();
 }
+
+header('location: /');
+exit();
