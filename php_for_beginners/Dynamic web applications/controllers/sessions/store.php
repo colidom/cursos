@@ -31,7 +31,7 @@ if (!$user) {
             'email' => 'No matching account found for that email address!'
         ]
     ]);
-};
+}
 
 login([
     'email'=> $email
