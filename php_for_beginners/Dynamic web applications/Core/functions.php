@@ -78,7 +78,19 @@ function login($user): void
         'name' => $user['name'],
         'email' => $user['email']
     ];
+
+    session_regenerate_id(true);
 }
+
+function logout(): void
+{
+    $_SESSION = [];
+    session_destroy();
+
+    $params = session_get_cookie_params();
+    setcookie('PHPSESSID', '', time() - 3600, $params['path'], $params['domain'], $params['secure'], $params['httponly']);
+}
+
 
 function validate_post_data($data, $maxTitleLength = 64, $maxBodyLength = 255): array
 {
@@ -104,4 +116,3 @@ function validate_post_data($data, $maxTitleLength = 64, $maxBodyLength = 255): 
 
     return [$errors, $title, $body, $user_id];
 }
-
