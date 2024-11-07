@@ -33,6 +33,16 @@ if (!$user) {
     ]);
 }
 
-login([
-    'email'=> $email
+if (password_verify($password, $user['password'])) {
+    login([
+        'email'=> $email
+    ]);
+    header('location: /');
+    exit();
+}
+
+view('sessions/create.view.php', [
+    "errors" => [
+        'email' => 'No matching account found for that email address and password!'
+    ]
 ]);
