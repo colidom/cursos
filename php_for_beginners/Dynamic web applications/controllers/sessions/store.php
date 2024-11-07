@@ -37,5 +37,6 @@ if ($user) {
 view('sessions/create.view.php', [
     "errors" => [
         'email' => 'No matching account found for that email address and password!'
-    ]
+    ],
+    "heading" => "Log In"
 ]);
