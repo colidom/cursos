@@ -5,6 +5,7 @@ use Core\Database;
 use Core\App;
 
 $name = $_POST["name"];
+$surname = $_POST["surname"];
 $email = $_POST["email"];
 $password = $_POST["password"];
 
@@ -14,9 +15,12 @@ if (!Validator::email($email)) {
     $errors['email'] = "Please provide a valid email address";
 }
 
-$errors = [];
 if (!Validator::string($name, 3, 15)) {
     $errors['name'] = "Please provide a name";
+}
+
+if (!Validator::string($surname, 3, 15)) {
+    $errors['surname'] = "Please provide a surname";
 }
 
 if (!Validator::string($password, 8, 32)) {
@@ -40,8 +44,9 @@ $user = $db->query('SELECT * FROM users WHERE email = :email',[
 // If yes, redirect to login page
 if (!$user) {
     // if not, save on the database, and then log the user in, and redirect
-    $db->query('INSERT INTO users (name, email, password) VALUES (:name, :email, :password)', [
+    $db->query('INSERT INTO users (name, surname, email, password) VALUES (:name, :surname, :email, :password)', [
         'name' => $name,
+        'surname' => $surname,
         'email' => $email,
         'password' => password_hash($password, PASSWORD_BCRYPT)
     ]);
