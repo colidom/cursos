@@ -91,7 +91,6 @@ function logout(): void
     setcookie('PHPSESSID', '', time() - 3600, $params['path'], $params['domain'], $params['secure'], $params['httponly']);
 }
 
-
 function validate_post_data($data, $maxTitleLength = 64, $maxBodyLength = 255): array
 {
     $errors = [];
