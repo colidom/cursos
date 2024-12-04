@@ -12,7 +12,8 @@ $form = new LoginForm();
 
 if (!$form->validate($email, $password)) {
     view('session/create.view.php', [
-        "errors" => $form->getErrors()
+        "errors" => $form->getErrors(),
+        "heading" => "Log In"
     ]);
 }
 $user = $db->query('select * from users where email = :email', [
