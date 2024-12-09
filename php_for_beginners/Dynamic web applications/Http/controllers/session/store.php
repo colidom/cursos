@@ -13,6 +13,7 @@ $form = new LoginForm();
 if (!$form->validate($email, $password)) {
     view('session/create.view.php', [
         "errors" => $form->getErrors(),
+        "email" => $email,
         "heading" => "Log In"
     ]);
 }
@@ -27,10 +28,3 @@ if ($user) {
         exit();
     }
 }
-
-view('session/create.view.php', [
-    "errors" => [
-        'email' => 'No matching account found for that email address and password!'
-    ],
-    "heading" => "Log In"
-]);
