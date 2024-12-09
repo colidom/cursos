@@ -8,7 +8,7 @@ class LoginForm
 {
     protected array $errors = [];
 
-    public function validate($email, $password)
+    public function validate($email, $password): bool
     {
 
         if (!Validator::email($email)) {
@@ -22,7 +22,7 @@ class LoginForm
        return empty($this->errors);
     }
 
-    public function getErrors()
+    public function getErrors(): array
     {
         return $this->errors;
     }
