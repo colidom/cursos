@@ -71,26 +71,6 @@ function view(string $path, array $attributes = []): void
     die();
 }
 
-
-function login($user): void
-{
-    $_SESSION['user'] = [
-        'name' => $user['name'],
-        'email' => $user['email']
-    ];
-
-    session_regenerate_id(true);
-}
-
-function logout(): void
-{
-    $_SESSION = [];
-    session_destroy();
-
-    $params = session_get_cookie_params();
-    setcookie('PHPSESSID', '', time() - 3600, $params['path'], $params['domain'], $params['secure'], $params['httponly']);
-}
-
 function validate_post_data($data, $maxTitleLength = 64, $maxBodyLength = 255): array
 {
     $errors = [];
@@ -114,4 +94,10 @@ function validate_post_data($data, $maxTitleLength = 64, $maxBodyLength = 255): 
     }
 
     return [$errors, $title, $body, $user_id];
+}
+
+#[NoReturn] function redirect($path): void
+{
+    header("location: {$path}");
+    exit();
 }
