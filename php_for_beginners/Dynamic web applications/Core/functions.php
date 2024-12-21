@@ -101,3 +101,8 @@ function validate_post_data($data, $maxTitleLength = 64, $maxBodyLength = 255): 
     header("location: {$path}");
     exit();
 }
+
+function old($key, $default = '')
+{
+    return Core\Session::get('old')[$key] ?? $default;
+}
