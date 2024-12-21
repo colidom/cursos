@@ -26,4 +26,10 @@ class Validator {
     {
         return filter_var($value, FILTER_VALIDATE_EMAIL);
     }
+
+    public static function loginPassword($value): bool
+    {
+        return !empty(trim($value));
+    }
+
 }
