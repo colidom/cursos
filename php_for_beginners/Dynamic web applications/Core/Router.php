@@ -61,6 +61,11 @@ class Router
         $this->abort();
     }
 
+    public function previousUrl()
+    {
+        return $_SERVER['HTTP_REFERER'];
+    }
+
     /**
      * @param int $error_code
      * @return void
