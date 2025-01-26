@@ -51,6 +51,9 @@ Route::get('/jobs/{id}', function ($id) {
         ]
     ];
     $job = Arr::first($jobs, fn($job) => $job['id'] == $id);
+    if (!$job) {
+        abort(404, 'Job not found.');
+    }
 
     return view('job', ['job'=> $job]);
 });
