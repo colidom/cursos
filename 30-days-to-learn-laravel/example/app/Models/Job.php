@@ -26,6 +26,12 @@ class Job {
         ];
     }
 
+    /**
+     * Find a job by its ID.
+     *
+     * @param int $id The ID of the job to find
+     * @return array The job found matching the provided ID
+     */
     public static function find(int $id): array
     {
         $job = Arr::first(static::all(), fn($job) => $job['id'] == $id);
