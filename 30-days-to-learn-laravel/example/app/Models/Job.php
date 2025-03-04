@@ -11,12 +11,12 @@ class Job extends Model {
     protected $table = 'job_listings';
     protected $fillable = ['title', 'salary'];
 
-    public function employer()
+    public function employer(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->hasMany(Employer::class);
+        return $this->belongsTo(Employer::class);
     }
 
-    public function tags()
+    public function tags(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
     {
         return $this->belongsToMany(Tag::class, foreignPivotKey: "job_listing_id");
     }
