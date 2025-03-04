@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Job;
+use function Pest\Laravel\get;
 
 Route::get('/', function () {
    return view('home', [
@@ -11,8 +12,10 @@ Route::get('/', function () {
 });
 
 Route::get('/jobs', function () {
+    // Carga de datos anticipada (Limitado en Providers)
+    $jobs = Job::with('employer')->get();
     return view('jobs', [
-        'jobs' => Job::all()
+        'jobs' => $jobs
     ]);
 });
 
