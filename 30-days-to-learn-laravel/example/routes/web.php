@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Job;
-use function Pest\Laravel\get;
 
 Route::get('/', function () {
    return view('home', [
@@ -13,16 +12,33 @@ Route::get('/', function () {
 
 Route::get('/jobs', function () {
     // Carga de datos anticipada (Limitado en Providers)
-    $jobs = Job::with('employer')->simplePaginate(5);
-    return view('jobs', [
+    $jobs = Job::with('employer')->latest()->simplePaginate(5);
+    return view('/jobs/index', [
         'jobs' => $jobs
     ]);
+});
+
+Route::get('/jobs/create', function () {
+    return view('jobs.create');
+});
+
+Route::post('/jobs', function () {
+
+    // Validation...
+    Job::create([
+        'title' => request('title'),
+        'salary' => request('salary'),
+        'employer_id' => 1
+    ]);
+
+    return redirect('jobs');
+
 });
 
 Route::get('/jobs/{id}', function ($id) {
 
     $job = Job::find($id);
-    return view('job', ['job'=> $job]);
+    return view('jobs.show', ['job'=> $job]);
 });
 
 Route::get('/contact', function () {

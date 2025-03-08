@@ -4,19 +4,21 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Job extends Model {
     use HasFactory;
 
     protected $table = 'job_listings';
-    protected $fillable = ['title', 'salary'];
+    protected $guarded = [];
 
-    public function employer(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function employer(): BelongsTo
     {
         return $this->belongsTo(Employer::class);
     }
 
-    public function tags(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    public function tags(): BelongsToMany
     {
         return $this->belongsToMany(Tag::class, foreignPivotKey: "job_listing_id");
     }
