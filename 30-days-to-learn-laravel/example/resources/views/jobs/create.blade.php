@@ -1,4 +1,4 @@
-<x-layout title="Job">
+<x-layout title="Create Job">
     <x-slot name="heading">
         Create Job
     </x-slot>

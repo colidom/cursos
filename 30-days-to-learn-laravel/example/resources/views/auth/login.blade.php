@@ -1,4 +1,4 @@
-<x-layout title="Job">
+<x-layout title="Login">
     <x-slot name="heading">
         Log In
     </x-slot>

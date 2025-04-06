@@ -1,4 +1,4 @@
-<x-layout title="Job">
+<x-layout title="Job: {{ $job->title }}">
     <x-slot name="heading">
         Job Page
     </x-slot>
