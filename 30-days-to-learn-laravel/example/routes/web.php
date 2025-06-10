@@ -6,9 +6,16 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\RegisterUserController;
 use App\Http\Controllers\SessionController;
-use App\Mail\JobPosted;
-use Illuminate\Support\Facades\Mail;
+use App\Jobs\TranslateJob;
+use App\Models\Job;
 use Illuminate\Support\Facades\Route;
+
+Route::get('mail', function () {
+
+    $job = Job::first();
+    TranslateJob::dispatch($job);
+    return 'Done!';
+});
 
 Route::get('/', [HomeController::class, 'index']);
 
