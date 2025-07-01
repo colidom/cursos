@@ -16,17 +16,17 @@ app = FastAPI()
 
 
 @app.get("/", tags=["Home"])
-async def root():
+def root():
     return {"message": "Hello World!"}
 
 
 @app.get("/movies/", tags=["Movies"])
-async def get_all_movies():
+def get_all_movies():
     return movies
 
 
 @app.get("/movies/{id}", tags=["Movies"])
-async def get_movie_by_id(id: int):
+def get_movie_by_id(id: int):
     for movie in movies:
         if movie["id"] == id:
             return movie
@@ -34,7 +34,7 @@ async def get_movie_by_id(id: int):
 
 
 @app.get("/movies/title/{title}", tags=["Movies"])
-async def get_movie_by_title(title: str):
+def get_movie_by_title(title: str):
     for movie in movies:
         if movie["title"].lower() == title.lower():
             return movie
@@ -42,7 +42,7 @@ async def get_movie_by_title(title: str):
 
 
 @app.post("/movies/", tags=["Movies"])
-async def add_movie(id: int, title: str, director: str, year: int, genre: str):
+def add_movie(id: int, title: str, director: str, year: int, genre: str):
     new_movie = {
         "id": id,
         "title": title,
@@ -56,7 +56,7 @@ async def add_movie(id: int, title: str, director: str, year: int, genre: str):
 
 
 @app.put("/movies/{id}", tags=["Movies"])
-async def update_movie(
+def update_movie(
     id: int,
     title: str = None,
     director: str = None,
@@ -79,7 +79,7 @@ async def update_movie(
 
 
 @app.delete("/movies/{id}", tags=["Movies"])
-async def delete_movie(id: int):
+def delete_movie(id: int):
     global movies
     movies = [movie for movie in movies if movie["id"] != id]
     manipulate_json_file(MOVIES_FILE, movies)
