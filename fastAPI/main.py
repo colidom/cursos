@@ -1,7 +1,8 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 import json
 from pathlib import Path
 from utils.filesystem import manipulate_json_file
+import aiofiles
 
 # fastapi dev main.py            # development server
 # uvicorn main:app --reload      # development server with auto-reload
@@ -9,8 +10,15 @@ from utils.filesystem import manipulate_json_file
 
 MOVIES_FILE = Path(__file__).resolve().parent / "movies.json"
 
-with open(MOVIES_FILE, encoding="utf-8") as f:
-    movies = json.load(f)
+
+async def load_movies():
+    try:
+        async with aiofiles.open(MOVIES_FILE, "r", encoding="utf-8") as f:
+            content = await f.read()
+            return json.loads(content) if content else []
+    except FileNotFoundError:
+        return []
+
 
 app = FastAPI()
 
@@ -21,48 +29,54 @@ def root():
 
 
 @app.get("/movies/", tags=["Movies"])
-def get_all_movies():
+async def get_all_movies():
+    movies = await load_movies()
     return movies
 
 
 @app.get("/movies/{id}", tags=["Movies"])
-def get_movie_by_id(id: int):
+async def get_movie_by_id(id: int):
+    movies = await load_movies()
     for movie in movies:
         if movie["id"] == id:
             return movie
-    return {"error": "Movie not found"}
+    raise HTTPException(status_code=404, detail="Movie not found")
 
 
 @app.get("/movies/title/{title}", tags=["Movies"])
-def get_movie_by_title(title: str):
+async def get_movie_by_title(title: str):
+    movies = await load_movies()
     for movie in movies:
         if movie["title"].lower() == title.lower():
             return movie
-    return {"error": "Movie not found"}
+    raise HTTPException(status_code=404, detail="Movie not found")
 
 
 @app.post("/movies/", tags=["Movies"])
-def add_movie(id: int, title: str, director: str, year: int, genre: str):
+async def add_movie(title: str, director: str, year: int, genre: str):
+    movies = await load_movies()
+    next_id = max((movie["id"] for movie in movies), default=0) + 1
     new_movie = {
-        "id": id,
+        "id": next_id,
         "title": title,
         "director": director,
         "year": year,
         "genre": genre,
     }
     movies.append(new_movie)
-    manipulate_json_file(MOVIES_FILE, movies)
+    await manipulate_json_file(MOVIES_FILE, movies)
     return new_movie
 
 
 @app.put("/movies/{id}", tags=["Movies"])
-def update_movie(
+async def update_movie(
     id: int,
     title: str = None,
     director: str = None,
     year: int = None,
     genre: str = None,
 ):
+    movies = await load_movies()
     for movie in movies:
         if movie["id"] == id:
             if title is not None:
@@ -73,14 +87,16 @@ def update_movie(
                 movie["year"] = year
             if genre is not None:
                 movie["genre"] = genre
-            manipulate_json_file(MOVIES_FILE, movies)
+            await manipulate_json_file(MOVIES_FILE, movies)
             return movie
-    return {"error": "Movie not found"}
+    raise HTTPException(status_code=404, detail="Movie not found")
 
 
 @app.delete("/movies/{id}", tags=["Movies"])
-def delete_movie(id: int):
-    global movies
-    movies = [movie for movie in movies if movie["id"] != id]
-    manipulate_json_file(MOVIES_FILE, movies)
-    return {"message": "Movie deleted successfully"}
+async def delete_movie(id: int):
+    movies = await load_movies()
+    filtered = [movie for movie in movies if movie["id"] != id]
+    if len(filtered) == len(movies):
+        raise HTTPException(status_code=404, detail="Movie not found")
+    await manipulate_json_file(MOVIES_FILE, filtered)
+    return {"message": "Movie deleted successfully"}, {"movies": filtered}
