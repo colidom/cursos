@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 import json
 from pathlib import Path
+from pydantic import BaseModel
 from utils.filesystem import manipulate_json_file
 import aiofiles
 
@@ -18,6 +19,14 @@ async def load_movies():
             return json.loads(content) if content else []
     except FileNotFoundError:
         return []
+
+
+class Movie(BaseModel):
+    id: int
+    title: str
+    director: str
+    year: int
+    genre: str
 
 
 app = FastAPI()
@@ -53,19 +62,14 @@ async def get_movie_by_title(title: str):
 
 
 @app.post("/movies/", tags=["Movies"])
-async def add_movie(title: str, director: str, year: int, genre: str):
+async def add_movie(movie: Movie):
     movies = await load_movies()
-    next_id = max((movie["id"] for movie in movies), default=0) + 1
-    new_movie = {
-        "id": next_id,
-        "title": title,
-        "director": director,
-        "year": year,
-        "genre": genre,
-    }
-    movies.append(new_movie)
+    if any(m["id"] == movie.id for m in movies):
+        raise HTTPException(status_code=400, detail="Movie with this ID already exists")
+
+    movies.append(movie.model_dump())
     await manipulate_json_file(MOVIES_FILE, movies)
-    return new_movie
+    return movie
 
 
 @app.put("/movies/{id}", tags=["Movies"])
