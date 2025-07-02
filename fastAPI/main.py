@@ -72,25 +72,12 @@ async def add_movie(movie: Movie):
     return movie
 
 
-@app.put("/movies/{id}", tags=["Movies"])
-async def update_movie(
-    id: int,
-    title: str = None,
-    director: str = None,
-    year: int = None,
-    genre: str = None,
-):
+@app.put("/movies/", tags=["Movies"])
+async def update_movie(movie: Movie):
     movies = await load_movies()
-    for movie in movies:
-        if movie["id"] == id:
-            if title is not None:
-                movie["title"] = title
-            if director is not None:
-                movie["director"] = director
-            if year is not None:
-                movie["year"] = year
-            if genre is not None:
-                movie["genre"] = genre
+    for i, m in enumerate(movies):
+        if m["id"] == movie.id:
+            movies[i] = movie.model_dump()
             await manipulate_json_file(MOVIES_FILE, movies)
             return movie
     raise HTTPException(status_code=404, detail="Movie not found")
