@@ -32,6 +32,27 @@ send_discount(3, 5)  # Should print No discount.
 send_discount(7, 5)  # Should print Discount applied!
 
 
+""" Task 2: Add Logical Branching for Multiple Discount Levels
+The store offers an additional promotion: If a customer purchases more than a certain number of books, they’ll receive an even bigger discount. Update your function to include this second level of discounts.
+
+Add an additional argument, bonus_threshold, which represents the number of books needed to receive the better discount.
+
+The function must print one of three possible messages, as shown below. Be careful not to miss the punctuation in your print statement.
+
+Big discount applied! if the customer qualifies for the higher discount.
+Discount applied! if the customer qualifies for the regular discount.
+No discount. if they do not qualify for any discount.
+Example:
+send_discount(books_purchased=3, discount_threshold=5, bonus_threshold=10)
+# Output: No discount.
+
+send_discount(books_purchased=7, discount_threshold=5, bonus_threshold=10)
+# Output: Discount applied!
+
+send_discount(books_purchased=12, discount_threshold=5, bonus_threshold=10)
+# Output: Big discount applied! """
+
+
 def send_discount(books_purchased, discount_threshold, bonus_threshold):
     if books_purchased >= bonus_threshold:
         print("Big discount applied!")
