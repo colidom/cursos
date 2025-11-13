@@ -1,0 +1,51 @@
+customer_id,first_name,last_name,email,gender,age,city,state,country,purchase_count,total_spend,avg_order_value,last_purchase_date
+1001,Sophia,Smith,sophia.smith@example.com,M,54,San Antonio,TX,USA,5,965,193.0,2023-09-12 15:28:32.140488
+1002,Joseph,Smith,joseph.smith@example.com,M,66,Los Angeles,CA,USA,7,1246,178.0,2023-08-25 15:28:32.140488
+1003,John,Anderson,john.anderson@example.com,F,56,Phoenix,AZ,USA,1,199,199.0,2024-04-28 15:28:32.140488
+1004,Emma,Hernandez,emma.hernandez@example.com,M,44,Los Angeles,CA,USA,14,3752,268.0,2024-01-01 15:28:32.140488
+1005,Emily,Garcia,emily.garcia@example.com,F,25,Dallas,TX,USA,12,1620,135.0,2023-12-09 15:28:32.140488
+1006,Ava,Taylor,ava.taylor@example.com,F,69,San Jose,CA,USA,14,1792,128.0,2024-03-13 15:28:32.140488
+1007,Jane,Martinez,jane.martinez@example.com,F,63,New York,NY,USA,3,804,268.0,2024-03-27 15:28:32.140488
+1008,Daniel,Jackson,daniel.jackson@example.com,F,24,Phoenix,AZ,USA,8,864,108.0,2023-10-26 15:28:32.140488
+1009,David,Davis,david.davis@example.com,F,59,Phoenix,AZ,USA,14,3304,236.0,2024-08-17 15:28:32.140488
+1010,Emily,Rodriguez,emily.rodriguez@example.com,M,31,San Diego,CA,USA,4,396,99.0,2023-10-11 15:28:32.140488
+1011,Mia,Taylor,mia.taylor@example.com,F,24,Houston,TX,USA,15,1020,68.0,2024-06-17 15:28:32.140488
+1012,Michael,Martinez,michael.martinez@example.com,M,54,San Diego,CA,USA,4,1196,299.0,2024-03-28 15:28:32.140488
+1013,Sophia,Thomas,sophia.thomas@example.com,F,29,New York,NY,USA,15,4440,296.0,2024-05-28 15:28:32.140488
+1014,Emma,Martinez,emma.martinez@example.com,F,45,Phoenix,AZ,USA,15,2190,146.0,2024-06-16 15:28:32.140488
+1015,James,Rodriguez,james.rodriguez@example.com,F,53,San Jose,CA,USA,14,1498,107.0,2024-08-01 15:28:32.140488
+1016,Emily,Lopez,emily.lopez@example.com,M,64,San Jose,CA,USA,12,1152,96.0,2023-11-09 15:28:32.140488
+1017,Joseph,Johnson,joseph.johnson@example.com,M,63,San Jose,CA,USA,5,490,98.0,2024-03-12 15:28:32.140488
+1018,David,Hernandez,david.hernandez@example.com,M,33,Dallas,TX,USA,3,405,135.0,2024-03-09 15:28:32.140488
+1019,Jane,Moore,jane.moore@example.com,M,43,San Diego,CA,USA,10,1710,171.0,2023-12-06 15:28:32.140488
+1020,Abigail,Jones,abigail.jones@example.com,F,19,Houston,TX,USA,1,262,262.0,2023-11-15 15:28:32.140488
+1021,Michael,Martin,michael.martin@example.com,F,38,New York,NY,USA,4,584,146.0,2023-12-19 15:28:32.140488
+1022,Sophia,Martin,sophia.martin@example.com,F,69,Houston,TX,USA,6,942,157.0,2024-03-15 15:28:32.140488
+1023,Isabella,Brown,isabella.brown@example.com,M,48,Philadelphia,PA,USA,2,380,190.0,2023-09-14 15:28:32.140488
+1024,Charlotte,Rodriguez,charlotte.rodriguez@example.com,M,43,Chicago,IL,USA,6,1716,286.0,2024-07-19 15:28:32.140488
+1025,Matthew,Taylor,matthew.taylor@example.com,M,51,New York,NY,USA,9,1746,194.0,2023-10-14 15:28:32.140488
+1026,Jane,Hernandez,jane.hernandez@example.com,M,55,San Jose,CA,USA,6,1350,225.0,2024-06-06 15:28:32.140488
+1027,Daniel,Martinez,daniel.martinez@example.com,M,43,Los Angeles,CA,USA,10,1830,183.0,2023-11-07 15:28:32.140488
+1028,Mia,Smith,mia.smith@example.com,M,38,Houston,TX,USA,8,872,109.0,2024-08-03 15:28:32.140488
+1029,Ava,Jackson,ava.jackson@example.com,M,51,Los Angeles,CA,USA,5,910,182.0,2023-12-20 15:28:32.140488
+1030,Daniel,Miller,daniel.miller@example.com,F,30,San Diego,CA,USA,15,1350,90.0,2023-09-15 15:28:32.140488
+1031,Mia,Moore,mia.moore@example.com,F,53,Phoenix,AZ,USA,12,2304,192.0,2023-12-30 15:28:32.140488
+1032,Olivia,Williams,olivia.williams@example.com,M,57,San Jose,CA,USA,11,1925,175.0,2024-08-19 15:28:32.140488
+1033,Charlotte,Taylor,charlotte.taylor@example.com,M,20,San Diego,CA,USA,2,562,281.0,2023-11-15 15:28:32.140488
+1034,Ava,Moore,ava.moore@example.com,F,28,Los Angeles,CA,USA,8,1904,238.0,2024-03-22 15:28:32.140488
+1035,David,Garcia,david.garcia@example.com,M,64,Phoenix,AZ,USA,8,1416,177.0,2024-07-26 15:28:32.140488
+1036,Ava,Martin,ava.martin@example.com,F,47,Los Angeles,CA,USA,4,304,76.0,2024-07-25 15:28:32.140488
+1037,Daniel,Johnson,daniel.johnson@example.com,M,45,San Diego,CA,USA,6,1380,230.0,2023-09-05 15:28:32.140488
+1038,Ethan,Johnson,ethan.johnson@example.com,F,41,Phoenix,AZ,USA,10,1390,139.0,2023-10-12 15:28:32.140488
+1039,Mia,Davis,mia.davis@example.com,M,51,San Jose,CA,USA,12,2604,217.0,2023-11-16 15:28:32.140488
+1040,Matthew,Garcia,matthew.garcia@example.com,F,23,Philadelphia,PA,USA,7,1939,277.0,2024-03-09 15:28:32.140488
+1041,Mia,Davis,mia.davis@example.com,F,29,Houston,TX,USA,10,530,53.0,2024-06-17 15:28:32.140488
+1042,Ava,Moore,ava.moore@example.com,M,20,San Diego,CA,USA,15,3345,223.0,2023-12-01 15:28:32.140488
+1043,Michael,Jackson,michael.jackson@example.com,F,31,San Diego,CA,USA,13,3159,243.0,2024-03-24 15:28:32.140488
+1044,Isabella,Lopez,isabella.lopez@example.com,M,52,San Jose,CA,USA,10,2470,247.0,2024-02-18 15:28:32.140488
+1045,Emily,Williams,emily.williams@example.com,F,63,San Antonio,TX,USA,15,1920,128.0,2023-08-25 15:28:32.140488
+1046,Olivia,Miller,olivia.miller@example.com,M,30,San Jose,CA,USA,7,581,83.0,2024-01-07 15:28:32.140488
+1047,Abigail,Jones,abigail.jones@example.com,M,38,Dallas,TX,USA,11,2904,264.0,2024-05-08 15:28:32.140488
+1048,Abigail,Williams,abigail.williams@example.com,M,49,Phoenix,AZ,USA,4,1192,298.0,2024-03-11 15:28:32.140488
+1049,Emma,Jones,emma.jones@example.com,F,23,Chicago,IL,USA,10,780,78.0,2024-02-18 15:28:32.140488
+1050,David,Smith,david.smith@example.com,M,24,Los Angeles,CA,USA,8,1000,125.0,2024-03-01 15:28:32.140488
