@@ -1,0 +1,312 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "55601b3d-cd9f-4c13-9eda-8cd27f54202c",
+   "metadata": {},
+   "source": [
+    "## How to Interact with this Jupyter Notebook\n",
+    "\n",
+    "In this activity, you will use a Jupyter Notebook, which integrates both text and code. The gray boxes contain executable code, which you will run in order to view its output. The text in between the code provides instructions."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f1af126b-b291-4ae1-8cf8-f3883f7195aa",
+   "metadata": {},
+   "source": [
+    "## Scenario: Charting the Customer Journey with Pandas\n",
+    "\n",
+    "Imagine you're a Python developer at a rapidly growing e-commerce company. The marketing team is eager to understand customer behavior and preferences to tailor their campaigns and improve the overall shopping experience. They've provided you with a valuable dataset containing information about customers, their purchases, and demographics. \n",
+    "\n",
+    "Your task is to leverage your Python skills and the power of the Pandas library to load this dataset, explore its structure, and uncover preliminary insights that will guide further analysis. This initial exploration is crucial for understanding the data you're working with and making informed decisions about how to proceed with more in-depth analysis and visualization."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d0cc3f26",
+   "metadata": {},
+   "source": [
+    "In the cell below, begin by importing the `pandas` library with the alias `pd`. Then, use `.read_csv()` to load the `customer_data_50.csv` file into a DataFrame named `customer_data`. \n",
+    "\n",
+    "Lastly, run the cell."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "cf7c8f01",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Import the pandas library with the alias 'pd'\n",
+    "\n",
+    "# insert code here \n",
+    "import \n",
+    "\n",
+    "# Load the CSV file 'customer_data_50.csv' into a DataFrame\n",
+    "\n",
+    "# insert code here \n",
+    "customer_data = pd.('')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9c2f7a73-2b4e-4d4d-8018-c6ee38acab95",
+   "metadata": {},
+   "source": [
+    "Run the following cell, which will check the dimensions of your DataFrame using the `.shape` attribute. This tells you how many rows and columns your data has – kind of like figuring out the size of a spreadsheet!"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "df0249d4-c0dd-4cba-8f4b-070130e8f12d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Shape of the DataFrame (rows, columns): (50, 13)\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Display the shape of the DataFrame (rows, columns)\n",
+    "print(\"\\nShape of the DataFrame (rows, columns):\", customer_data.shape)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a7982d00-92d7-4db5-b529-37aa53d03b0b",
+   "metadata": {},
+   "source": [
+    "Next, you'll inspect the data using the `df.head()` function, which allows you to view the first few rows of the DataFrame. This gives you a quick look at the data's structure and content.\n",
+    "\n",
+    "In the cell below, use `df.head()`to display the first 5 rows of the `customer_data` DataFrame.  Then, run the cell and take a moment to observe the output. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "0e941605",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "First 5 rows:\n",
+      "\n",
+      "   customer_id first_name  last_name                       email gender  age  \\\n",
+      "0         1001     Sophia      Smith    sophia.smith@example.com      M   54   \n",
+      "1         1002     Joseph      Smith    joseph.smith@example.com      M   66   \n",
+      "2         1003       John   Anderson   john.anderson@example.com      F   56   \n",
+      "3         1004       Emma  Hernandez  emma.hernandez@example.com      M   44   \n",
+      "4         1005      Emily     Garcia    emily.garcia@example.com      F   25   \n",
+      "\n",
+      "          city state country  purchase_count  total_spend  avg_order_value  \\\n",
+      "0  San Antonio    TX     USA               5          965            193.0   \n",
+      "1  Los Angeles    CA     USA               7         1246            178.0   \n",
+      "2      Phoenix    AZ     USA               1          199            199.0   \n",
+      "3  Los Angeles    CA     USA              14         3752            268.0   \n",
+      "4       Dallas    TX     USA              12         1620            135.0   \n",
+      "\n",
+      "           last_purchase_date  \n",
+      "0  2023-09-12 15:28:32.140488  \n",
+      "1  2023-08-25 15:28:32.140488  \n",
+      "2  2024-04-28 15:28:32.140488  \n",
+      "3  2024-01-01 15:28:32.140488  \n",
+      "4  2023-12-09 15:28:32.140488  \n"
+     ]
+    }
+   ],
+   "source": [
+    "# Display the first 5 rows\n",
+    "print(\"First 5 rows:\\n\")\n",
+    "\n",
+    "# insert code here \n",
+    "print(customer_data.head()) #delete this adeeb"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6b6d50c2-5e1e-46ee-b2f0-d43f2d631d8d",
+   "metadata": {},
+   "source": [
+    "Now, you'll use the `df.info()` function, which provides a concise summary of the DataFrame, including the column names, their data types, and the number of non-null values.\n",
+    "\n",
+    "In the cell below, use `df.info()` to print information about the `customer_data` DataFrame  Then, run the cell and take a moment to observe the output. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "933fbc95",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Column names and their data types:\n",
+      "\n",
+      "<class 'pandas.core.frame.DataFrame'>\n",
+      "RangeIndex: 50 entries, 0 to 49\n",
+      "Data columns (total 13 columns):\n",
+      " #   Column              Non-Null Count  Dtype  \n",
+      "---  ------              --------------  -----  \n",
+      " 0   customer_id         50 non-null     int64  \n",
+      " 1   first_name          50 non-null     object \n",
+      " 2   last_name           50 non-null     object \n",
+      " 3   email               50 non-null     object \n",
+      " 4   gender              50 non-null     object \n",
+      " 5   age                 50 non-null     int64  \n",
+      " 6   city                50 non-null     object \n",
+      " 7   state               50 non-null     object \n",
+      " 8   country             50 non-null     object \n",
+      " 9   purchase_count      50 non-null     int64  \n",
+      " 10  total_spend         50 non-null     int64  \n",
+      " 11  avg_order_value     50 non-null     float64\n",
+      " 12  last_purchase_date  50 non-null     object \n",
+      "dtypes: float64(1), int64(4), object(8)\n",
+      "memory usage: 5.2+ KB\n",
+      "None\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Print the column names and their data types\n",
+    "print(\"\\nColumn names and their data types:\\n\")\n",
+    "\n",
+    "# insert code here \n",
+    "print(customer_data.) "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3647fd7c-e95c-4647-9770-d08ae34f3f35",
+   "metadata": {},
+   "source": [
+    "Next, you'll use the `df.describe()` function, which generates descriptive statistics for the numerical columns in the DataFrame.\n",
+    "\n",
+    "In the cell below, use `df.describe()` to display summary statistics for the numerical columns in the `customer_data` DataFrame."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "59033260",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Descriptive statistics for numerical columns:\n",
+      "\n",
+      "       customer_id        age  purchase_count  total_spend  avg_order_value\n",
+      "count     50.00000  50.000000        50.00000    50.000000        50.000000\n",
+      "mean    1025.50000  43.440000         8.60000  1491.880000       179.920000\n",
+      "std       14.57738  14.833993         4.28095   968.697666        70.820221\n",
+      "min     1001.00000  19.000000         1.00000   199.000000        53.000000\n",
+      "25%     1013.25000  30.000000         5.00000   819.000000       125.750000\n",
+      "50%     1025.50000  44.500000         8.00000  1350.000000       180.000000\n",
+      "75%     1037.75000  54.000000        12.00000  1916.000000       237.500000\n",
+      "max     1050.00000  69.000000        15.00000  4440.000000       299.000000\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Display descriptive statistics for numerical columns\n",
+    "print(\"\\nDescriptive statistics for numerical columns:\\n\")\n",
+    "\n",
+    "# insert code here \n",
+    "print()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f90ed4d5-9198-4bfd-a26f-e239c0246d0b",
+   "metadata": {},
+   "source": [
+    "Finally, in the code cell below, you'll use the `.mean()` and `.median()` functions on the `'age'` column of your `customer_data` to calculate the average and median age of all your customers. \n",
+    "\n",
+    "The square brackets [] are used for column selection in Pandas. Within the brackets, you specify the name of the column you want to extract, which in this case is 'age'\n",
+    "\n",
+    "Run the cell to see the average and median age of your customers."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "e1c7951d-733d-4661-a012-4c020ba3d11f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Mean Age: 43.44\n",
+      "\n",
+      "Median Age: 44.5\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Calculate the mean of the 'age' column\n",
+    "mean_age = customer_data['age'] # insert code here \n",
+    "\n",
+    "# Print the mean age\n",
+    "print(\"\\nMean Age:\", mean_age)\n",
+    "\n",
+    "# Calculate the median of the 'age' column\n",
+    "median_age = customer_data['age'] # insert code here \n",
+    "\n",
+    "# Print the median age\n",
+    "print(\"\\nMedian Age:\", median_age)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0b3b7f55",
+   "metadata": {},
+   "source": [
+    "## Activity Recap: Charting the Customer Journey with Pandas\n",
+    "\n",
+    "Congratulations! In this activity, you learned how to load a CSV file into a Pandas DataFrame and use various functions to inspect its structure and contents:\n",
+    "\n",
+    "* `pd.read_csv()` is used to load CSV data into a DataFrame.\n",
+    "* `df.head()` shows the first few rows.\n",
+    "* `df.info()` provides a summary of the DataFrame's structure.\n",
+    "* `df.describe()` generates descriptive statistics for numerical columns."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
