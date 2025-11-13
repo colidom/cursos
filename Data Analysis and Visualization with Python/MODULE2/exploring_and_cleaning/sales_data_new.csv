@@ -1,0 +1,86 @@
+date,region,product,sales,price,cost,irrelevant_column_1,irrelevant_column_2
+2024-01-01,North,Widget A,1500,25.00,10.00,extra1,extra2
+2024-01-02,South,Widget B,,20.00,8.00,extra3,extra4
+2024-01-03,North,,1200,15.00,7.50,extra5,extra6
+2024-01-04,East,Widget C,800,,5.00,extra7,extra8
+2024-01-05,West,Widget A,950,22.00,11.00,extra9,extra10
+2024-01-06,,Widget B,,21.00,9.00,extra11,extra12
+2024-01-07,North,Widget A,1000,25.00,10.00,extra13,extra14
+2024-01-08,South,Widget C,700,18.00,8.50,extra15,extra16
+2024-01-09,East,,1100,16.00,7.00,extra17,extra18
+2024-01-10,West,Widget B,,20.00,,extra19,extra20
+2024-01-11,North,Widget A,,24.00,,extra21,extra22
+2024-01-12,South,Widget C,750,18.00,9.00,extra23,extra24
+2024-01-13,East,Widget A,850,26.00,10.50,extra25,extra26
+2024-01-14,West,,1200,17.00,8.00,extra27,extra28
+2024-01-15,,Widget B,1050,,8.50,extra29,extra30
+2024-01-16,North,Widget C,,23.00,9.50,extra31,extra32
+2024-01-17,South,Widget A,1300,20.00,,extra33,extra34
+2024-01-18,East,Widget B,900,,8.00,extra35,extra36
+2024-01-19,West,,1000,15.00,7.00,extra37,extra38
+2024-01-20,North,Widget B,,22.00,,extra39,extra40
+2024-01-21,South,Widget C,,18.00,9.00,extra41,extra42
+2024-01-22,East,Widget A,850,25.00,,extra43,extra44
+2024-01-23,West,Widget C,1100,,extra45,extra46
+2024-01-24,,Widget B,1200,20.00,8.00,extra47,extra48
+2024-01-25,North,,950,,10.00,extra49,extra50
+2024-01-26,South,Widget A,,21.00,8.00,extra51,extra52
+2024-01-27,East,Widget C,800,17.00,,extra53,extra54
+2024-01-28,West,Widget A,1050,24.00,11.00,extra55,extra56
+2024-01-29,North,Widget B,900,,extra57,extra58
+2024-01-30,South,,1200,22.00,,extra59,extra60
+2024-01-31,East,Widget A,950,23.00,,extra61,extra62
+2024-02-01,West,Widget C,,15.00,,extra63,extra64
+2024-02-02,North,Widget C,1000,26.00,12.00,extra65,extra66
+2024-02-03,South,Widget B,800,20.00,7.50,extra67,extra68
+2024-02-04,East,,1100,16.00,,extra69,extra70
+2024-02-05,West,Widget A,,23.00,10.00,extra71,extra72
+2024-02-06,North,Widget B,1050,21.00,,extra73,extra74
+2024-02-07,South,Widget C,950,18.00,,extra75,extra76
+2024-02-08,East,Widget A,,11.00,,extra77,extra78
+2024-02-09,West,Widget B,850,20.00,7.00,extra79,extra80
+2024-02-10,North,,1200,,extra81,extra82
+2024-02-11,South,Widget A,1100,,extra83,extra84
+2024-02-12,East,Widget C,1300,17.00,9.00,extra85,extra86
+2024-02-13,West,,1000,15.00,,extra87,extra88
+2024-02-14,North,Widget C,800,,extra89,extra90
+2024-02-15,South,Widget B,950,,extra91,extra92
+2024-02-16,East,Widget A,,12.00,,extra93,extra94
+2024-02-17,West,Widget C,1150,18.00,,extra95,extra96
+2024-02-18,North,Widget B,,15.00,,extra97,extra98
+2024-02-19,South,Widget A,1200,20.00,,extra99,extra100
+2024-02-20,East,,850,7.50,,extra101,extra102
+2024-02-21,West,Widget B,1000,22.00,extra103,extra104
+2024-02-22,North,Widget A,,24.00,,extra105,extra106
+2024-02-23,South,,1100,,extra107,extra108
+2024-02-24,East,Widget C,950,16.00,,extra109,extra110
+2024-02-25,West,Widget A,1250,25.00,12.00,extra111,extra112
+2024-02-26,North,Widget C,,extra113,extra114
+2024-02-27,South,Widget B,1050,,extra115,extra116
+2024-02-28,East,Widget A,1000,23.00,,extra117,extra118
+2024-02-29,West,,850,,extra119,extra120
+2024-03-01,North,Widget B,980,,extra121,extra122
+2024-03-02,South,Widget C,,20.00,extra123,extra124
+2024-03-03,East,Widget A,1100,,extra125,extra126
+2024-03-04,West,Widget C,950,,extra127,extra128
+2024-03-05,North,,1200,,extra129,extra130
+2024-03-06,South,Widget B,850,,extra131,extra132
+2024-03-07,East,Widget C,,15.00,,extra133,extra134
+2024-03-08,West,Widget A,1000,21.00,extra135,extra136
+2024-03-09,North,Widget C,1050,,extra137,extra138
+2024-03-10,South,Widget A,,20.00,,extra139,extra140
+2024-03-11,East,Widget B,1100,,extra141,extra142
+2024-03-12,West,Widget C,1050,,extra143,extra144
+2024-03-13,North,Widget B,,15.00,,extra145,extra146
+2024-03-14,South,Widget C,950,,extra147,extra148
+2024-03-15,East,,850,7.50,extra149,extra150
+2024-03-16,West,Widget A,1200,,extra151,extra152
+2024-03-17,North,Widget C,,extra153,extra154
+2024-03-18,South,Widget B,1000,,extra155,extra156
+2024-03-19,East,Widget A,,8.00,,extra157,extra158
+2024-03-20,West,Widget C,,12.00,extra159,extra160
+2024-03-21,North,Widget B,1050,,extra161,extra162
+2024-03-22,South,Widget A,,extra163,extra164
+2024-03-23,East,Widget C,950,,extra165,extra166
+2024-03-24,West,Widget B,1100,,extra167,extra168
+2024-03-25,North,Widget C,900,16.00,extra169,extra170
