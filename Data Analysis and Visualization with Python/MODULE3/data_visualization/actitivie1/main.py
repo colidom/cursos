@@ -1,6 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
+import plotly.express as px
+
 
 # Load the dataset
 music_data = pd.read_csv("music_data.csv")
@@ -82,6 +84,16 @@ plt = px.imshow(
     zmin=-1,  # Set the minimum value for the color scale
     zmax=1,  # Set the maximum value for the color scale
     title="Correlation Matrix of Music Features",
+)
+
+plt.show()
+
+plt = px.violin(
+    music_data,
+    x="genre",
+    y="popularity",
+    color="genre",
+    title="Popularity Distribution Across Genres",
 )
 
 plt.show()
