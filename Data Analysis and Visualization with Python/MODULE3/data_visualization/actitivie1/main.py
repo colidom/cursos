@@ -29,3 +29,18 @@ plt.ylabel("Frequency")
 
 # Display the plot using plt.show()
 plt.show()
+
+# Extract the duration_seconds column
+duration_seconds = music_data["duration_seconds"]
+
+# Create a histogram to display the distribution of `duration_seconds`
+plt.figure(figsize=(10, 6))
+plt.hist(duration_seconds, bins=20, color="skyblue", edgecolor="black")
+
+# Add title and labels
+plt.title("Distribution of Song Durations")
+plt.xlabel("Duration (seconds)")
+plt.ylabel("Frequency")
+
+# Display the plot using plt.show()
+plt.show()
