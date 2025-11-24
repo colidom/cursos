@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import plotly.express as px
 
 # Load the dataset
 music_data = pd.read_csv("music_data.csv")
@@ -60,4 +61,27 @@ plt.xlabel("Popularity")
 plt.ylabel("Frequency")
 
 # Display the plot using plt.show()
+plt.show()
+
+
+# Create a new dataframe `numeric_features` containing only the
+# numeric columns we want to analyze
+numeric_features = music_data[
+    ["tempo", "energy", "danceability", "valence", "acousticness", "popularity"]
+]
+
+# Compute the correlation matrix
+correlation_matrix = numeric_features.corr()
+
+# Create and display a heatmap using Plotly
+plt = px.imshow(
+    correlation_matrix,
+    x=correlation_matrix.columns,
+    y=correlation_matrix.columns,
+    color_continuous_scale="RdBu",  # Use a built-in Plotly colorscale
+    zmin=-1,  # Set the minimum value for the color scale
+    zmax=1,  # Set the maximum value for the color scale
+    title="Correlation Matrix of Music Features",
+)
+
 plt.show()
