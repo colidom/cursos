@@ -44,3 +44,20 @@ plt.ylabel("Frequency")
 
 # Display the plot using plt.show()
 plt.show()
+
+# Extract the popularity column
+popularity = music_data["popularity"]
+
+# Create a histogram to display the distribution of popularity
+plt.figure(figsize=(8, 5))  # Set the figure size for better readability
+
+# Plot the histogram with customized bins and colors
+plt.hist(popularity, bins=15, color="lightgreen", edgecolor="black")
+
+# Add title and labels
+plt.title("Distribution of Song Popularity")
+plt.xlabel("Popularity")
+plt.ylabel("Frequency")
+
+# Display the plot using plt.show()
+plt.show()
